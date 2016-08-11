@@ -35,6 +35,9 @@ Designed for elementary OS.
 
 
 %build
+export CFLAGS="-fPIC $RPM_OPT_FLAGS"
+export LDFLAGS="-fPIC $RPM_OPT_FLAGS"
+
 %cmake
 %make_build
 
@@ -81,6 +84,12 @@ fi
 
 
 %changelog
+* Thu Aug 11 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4-1
+- Update to latest snapshot.
+
+* Thu Aug 11 2016 Fabio Valentini <decathorpe@gmail.com>
+- Add -fPIC compiler switch to fix build.
+
 * Thu Aug 11 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4-1
 - Update to version 0.4.
 
