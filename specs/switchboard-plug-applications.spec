@@ -21,6 +21,8 @@ BuildRequires:  pkgconfig(granite)
 BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  pkgconfig(switchboard-2.0)
 
+Supplements:    switchboard
+
 
 %description
 The applications plug is a section in the Switchboard (System Settings) that allows the user to manage application settings.
@@ -51,6 +53,12 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Sun Aug 14 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-1
+- Update to latest snapshot.
+
+* Sun Aug 14 2016 Fabio Valentini <decathorpe@gmail.com>
+- Add Supplements: switchboard tag.
+
 * Sun Aug 14 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-1
 - Update to version 0.1.1.
 
