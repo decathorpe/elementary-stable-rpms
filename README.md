@@ -7,7 +7,7 @@ releases of elementaryOS / pantheon desktop components and applications for fedo
 
 The tables list the packaging status of elementary software.
 
-The current build status for each DONE package can be seen at <https://copr.fedorainfracloud.org/coprs/decathorpe/elementary-nightly/monitor/>.
+The current build status for each DONE package can be seen at <https://copr.fedorainfracloud.org/coprs/decathorpe/elementary-stable/monitor/>.
 
 
 ### official elementary apps
