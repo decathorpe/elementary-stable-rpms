@@ -14,8 +14,8 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 
 | package name          | status                | comment                   | URL                                           | related bugs  |
 | --------------------- | --------------------- | ------------------------- | --------------------------------------------- | ------------- |
-| appcenter             | TBD                   |                           | <https://launchpad.net/appcenter>             |               |
-| audience              | TBD                   |                           | <https://launchpad.net/audience>              |               |
+| appcenter             | WONTFIX               |                           | <https://launchpad.net/appcenter>             |               |
+| audience              | DONE                  |                           | <https://launchpad.net/audience>              |               |
 | maya-calendar         | DONE                  |                           | <https://launchpad.net/maya>                  |               |
 | noise                 | DONE                  |                           | <https://launchpad.net/noise>                 |               |
 | pantheon-calculator   | DONE                  |                           | <https://launchpad.net/pantheon-calculator>   |               |
@@ -104,10 +104,11 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 | wingpanel-indicator-sound         | TBD           |           | <https://launchpad.net/wingpanel-indicator-sound>         |               |
 
 
-### elementary / pantheon libraries
+### elementary / pantheon libraries and shared dependencies
 
 | package name          | status                | comment                   | URL                                           | related bugs  |
 | --------------------- | --------------------- | ------------------------- | --------------------------------------------- | ------------- |
+| cmake-elementary      | DONE                  |                           |                                               |               |
 | granite               | DONE                  |                           | <https://launchpad.net/granite>               |               |
 
 
