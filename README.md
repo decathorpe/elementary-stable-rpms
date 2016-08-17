@@ -45,7 +45,7 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 | capnet-assist                 | TBD               |                       | <https://launchpad.net/capnet-assist>         |               |
 | cerbere                       | TBD               |                       | <https://launchpad.net/cerbere>               |               |
 | contractor                    | DONE              |                       | <https://launchpad.net/contractor>            |               |
-| gala                          | TBD               | waiting for release   | <https://launchpad.net/gala>                  |               |
+| gala                          | DONE              | trunk snapshot        | <https://launchpad.net/gala>                  |               |
 | plank                         | TBD               |                       | <https://launchpad.net/plank>                 |               |
 | pantheon-greeter              | TBD               |                       | <https://launchpad.net/pantheon-greeter>      |               |
 | pantheon-session-settings     | TBD               |                       | <https://github.com/decathorpe/pantheon-session-settings> |   |
