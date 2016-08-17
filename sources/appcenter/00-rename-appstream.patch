@@ -1,0 +1,13 @@
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index c9e7bbc..0421534 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -21,7 +21,7 @@ vala_precompile(VALA_C ${EXEC_NAME}
+     Widgets/PackageRow.vala
+     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
+ PACKAGES
+-    appstream
++    AppStream-1.0
+     gtk+-3.0>=3.12
+     gee-0.8
+     granite
