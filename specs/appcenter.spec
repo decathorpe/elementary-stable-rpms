@@ -1,14 +1,12 @@
 Summary:        Get apps for elementary OS
 Name:           appcenter
-Version:        
-Release:        0%{?dist}
+Version:        0.1
+Release:        1%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/appcenter
 
 Source0:        %{name}-%{version}.tar.xz
 Source1:        %{name}.conf
-
-Patch0:         00-rename-appstream.patch
 
 BuildRequires:  cmake
 BuildRequires:  cmake-elementary
@@ -18,6 +16,8 @@ BuildRequires:  intltool
 BuildRequires:  libappstream-glib
 BuildRequires:  pkgconfig
 BuildRequires:  vala >= 0.26
+
+BuildRequires:  appstream-vala
 
 BuildRequires:  pkgconfig(appstream) >= 0.9.0
 BuildRequires:  pkgconfig(gee-0.8)
@@ -37,7 +37,6 @@ AppCenter is a native Gtk+ app store built on AppStream and Packagekit.
 
 %prep
 %setup -q
-%patch0 -p1
 
 
 %build
@@ -51,8 +50,8 @@ AppCenter is a native Gtk+ app store built on AppStream and Packagekit.
 
 
 %check
-# desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
-# appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/appdata/*.appdata.xml
+desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
+appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/appdata/*.appdata.xml
 
 
 %clean
@@ -76,6 +75,16 @@ fi
 %doc AUTHORS
 %license COPYING
 
+%{_bindir}/appcenter
+
+%{_datadir}/appdata/appcenter.appdata.xml
+%{_datadir}/applications/org.pantheon.appcenter.desktop
+%{_datadir}/applications/org.pantheon.appcenter-daemon.desktop
+%{_datadir}/glib-2.0/schemas/org.pantheon.appcenter.gschema.xml
+
 
 %changelog
+* Thu Aug 18 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1-1
+- Update to version 0.1.
+
 

@@ -14,7 +14,7 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 
 | package name          | status                | comment                   | URL                                           | related bugs  |
 | --------------------- | --------------------- | ------------------------- | --------------------------------------------- | ------------- |
-| appcenter             | WONTFIX               |                           | <https://launchpad.net/appcenter>             |               |
+| appcenter             | DONE                  |                           | <https://launchpad.net/appcenter>             |               |
 | audience              | DONE                  |                           | <https://launchpad.net/audience>              |               |
 | maya-calendar         | DONE                  |                           | <https://launchpad.net/maya>                  |               |
 | noise                 | DONE                  |                           | <https://launchpad.net/noise>                 |               |
