@@ -102,7 +102,7 @@ fi
 
 
 %changelog
-* Wed Aug 10 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4-1
+* Fri Aug 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4-1
 - Update to version 0.4.
 
 
