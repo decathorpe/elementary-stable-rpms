@@ -49,8 +49,8 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 | plank                         | DONE              |                       | <https://launchpad.net/plank>                 |               |
 | pantheon-greeter              | TBD               |                       | <https://launchpad.net/pantheon-greeter>      |               |
 | pantheon-session-settings     | DONE              |                       | <https://github.com/decathorpe/pantheon-session-settings> |   |
-| slingshot-launcher            | TBD               |                       | <https://launchpad.net/slingshot>             |               |
-| wingpanel                     | TBD               | waiting for gala      | <https://launchpad.net/wingpanel>             |               |
+| slingshot-launcher            | DONE              |                       | <https://launchpad.net/slingshot>             |               |
+| wingpanel                     | DONE              |                       | <https://launchpad.net/wingpanel>             |               |
 
 
 ### elementary artwork
