@@ -43,7 +43,7 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 | package name                  | status            | comment               | URL                                           | related bugs  |
 | ----------------------------- | ----------------- | --------------------- | --------------------------------------------- | ------------- |
 | capnet-assist                 | TBD               |                       | <https://launchpad.net/capnet-assist>         |               |
-| cerbere                       | TBD               |                       | <https://launchpad.net/cerbere>               |               |
+| cerbere                       | DONE              |                       | <https://launchpad.net/cerbere>               |               |
 | contractor                    | DONE              |                       | <https://launchpad.net/contractor>            |               |
 | gala                          | DONE              | trunk snapshot        | <https://launchpad.net/gala>                  |               |
 | plank                         | TBD               |                       | <https://launchpad.net/plank>                 |               |
