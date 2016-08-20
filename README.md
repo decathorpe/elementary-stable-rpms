@@ -68,7 +68,7 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 | package name                      | status        | comment   | URL                                                       | related bugs  |
 | --------------------------------- | ------------- | --------- | --------------------------------------------------------- | ------------- |
 | pantheon-plugs                    | TBD           |           | <https://launchpad.net/pantheon-plugs>                    |               |
-| switchboard-plug-about            | TBD           |           | <https://launchpad.net/switchboard-plug-about>            |               |
+| switchboard-plug-about            | DONE          |           | <https://launchpad.net/switchboard-plug-about>            |               |
 | switchboard-plug-a11y             | DONE          |           | <https://launchpad.net/switchboard-plug-a11y>             |               |
 | switchboard-plug-applications     | DONE          |           | <https://launchpad.net/switchboard-plug-applications>     |               |
 | switchboard-plug-datetime         | TBD           |           | <https://launchpad.net/switchboard-plug-datetime>         |               |
