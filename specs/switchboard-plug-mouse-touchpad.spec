@@ -23,9 +23,11 @@ BuildRequires:  pkgconfig(granite)
 BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  pkgconfig(switchboard-2.0)
 
+Supplements:    switchboard
+
 
 %description
-This is a swtichboard plug for elementary os.
+This is a switchboard plug for elementary os.
 
 
 %prep
@@ -52,6 +54,12 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Sun Aug 21 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-1
+- Update to latest snapshot.
+
+* Sat Aug 20 2016 Fabio Valentini <decathorpe@gmail.com>
+- Reverse weak require switchboard.
+
 * Sat Aug 20 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-1
 - Update to version 0.1.1.
 
