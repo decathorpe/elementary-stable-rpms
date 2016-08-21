@@ -92,16 +92,15 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 
 | package name                      | status        | comment   | URL                                                       | related bugs  |
 | --------------------------------- | ------------- | --------- | --------------------------------------------------------- | ------------- |
-| wingpanel-indicator-a11y          | TBD           |           | <https://launchpad.net/wingpanel-indicator-a11y>          |               |
-| wingpanel-indicator-ayatana       | FTBFS         |           | <https://launchpad.net/wingpanel-indicator-ayatana>       |               |
-| wingpanel-indicator-bluetooth     | TBD           |           | <https://launchpad.net/wingpanel-indicator-bluetooth>     |               |
-| wingpanel-indicator-datetime      | TBD           |           | <https://launchpad.net/wingpanel-indicator-datetime>      |               |
-| wingpanel-indicator-keyboard      | TBD           |           | <https://launchpad.net/wingpanel-indicator-keyboard>      |               |
-| wingpanel-indicator-network       | TBD           |           | <https://launchpad.net/wingpanel-indicator-network>       |               |
-| wingpanel-indicator-notifications | TBD           |           | <https://launchpad.net/wingpanel-indicator-notifications> |               |
-| wingpanel-indicator-power         | TBD           |           | <https://launchpad.net/wingpanel-indicator-power>         |               |
-| wingpanel-indicator-session       | TBD           |           | <https://launchpad.net/wingpanel-indicator-session>       |               |
-| wingpanel-indicator-sound         | TBD           |           | <https://launchpad.net/wingpanel-indicator-sound>         |               |
+| wingpanel-indicator-ayatana       | DONE          |           | <https://launchpad.net/wingpanel-indicator-ayatana>       |               |
+| wingpanel-indicator-bluetooth     | DONE          |           | <https://launchpad.net/wingpanel-indicator-bluetooth>     |               |
+| wingpanel-indicator-datetime      | DONE          |           | <https://launchpad.net/wingpanel-indicator-datetime>      |               |
+| wingpanel-indicator-keyboard      | DONE          |           | <https://launchpad.net/wingpanel-indicator-keyboard>      |               |
+| wingpanel-indicator-network       | DONE          |           | <https://launchpad.net/wingpanel-indicator-network>       |               |
+| wingpanel-indicator-notifications | DONE          |           | <https://launchpad.net/wingpanel-indicator-notifications> |               |
+| wingpanel-indicator-power         | DONE          |           | <https://launchpad.net/wingpanel-indicator-power>         |               |
+| wingpanel-indicator-session       | DONE          |           | <https://launchpad.net/wingpanel-indicator-session>       |               |
+| wingpanel-indicator-sound         | DONE          |           | <https://launchpad.net/wingpanel-indicator-sound>         |               |
 
 
 ### elementary / pantheon libraries and shared dependencies
