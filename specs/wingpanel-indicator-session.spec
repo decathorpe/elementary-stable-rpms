@@ -22,6 +22,8 @@ BuildRequires:  pkgconfig(granite)
 BuildRequires:  pkgconfig(gtk+-3.0) >= 3.12.0
 BuildRequires:  pkgconfig(wingpanel-2.0)
 
+Supplements:    wingpanel
+
 
 %description
 A session Indicator for wingpanel.
@@ -53,6 +55,11 @@ rm -rf %{buildroot}
 
 %changelog
 * Sun Aug 21 2016 Fabio Valentini <decathorpe@gmail.com> - 2.0-1
-- Update to version 2.0.
+- Update to latest snapshot.
 
+* Sun Aug 21 2016 Fabio Valentini <decathorpe@gmail.com>
+- Weak inverse require wingpanel.
+
+* Sun Aug 21 2016 Fabio Valentini <decathorpe@gmail.com> - 2.0-1
+- Update to version 2.0.
 
