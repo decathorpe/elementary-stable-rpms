@@ -71,7 +71,6 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 | switchboard-plug-a11y             | DONE          |           | <https://launchpad.net/switchboard-plug-a11y>             |               |
 | switchboard-plug-applications     | DONE          |           | <https://launchpad.net/switchboard-plug-applications>     |               |
 | switchboard-plug-datetime         | DONE          |           | <https://launchpad.net/switchboard-plug-datetime>         |               |
-| switchboard-plug-pantheon-shell   | TBD           |           | <https://launchpad.net/switchboard-plug-pantheon-shell>   |               |
 | switchboard-plug-display          | TBD           |           | <https://launchpad.net/switchboard-plug-display>          |               |
 | switchboard-plug-keyboard         | TBD           |           | <https://launchpad.net/switchboard-plug-keyboard>         |               |
 | switchboard-plug-locale           | TBD           |           | <https://launchpad.net/switchboard-plug-locale>           |               |
@@ -79,6 +78,7 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 | switchboard-plug-networking       | TBD           |           | <https://launchpad.net/switchboard-plug-networking>       |               |
 | switchboard-plug-notifications    | TBD           |           | <https://launchpad.net/switchboard-plug-notifications>    |               |
 | switchboard-plug-onlineaccounts   | TBD           |           | <https://launchpad.net/switchboard-plug-onlineaccounts>   |               |
+| switchboard-plug-pantheon-shell   | DONE          |           | <https://launchpad.net/switchboard-plug-pantheon-shell>   |               |
 | switchboard-plug-parental-controls| TBD           |           | <https://launchpad.net/switchboard-plug-parental-controls>|               |
 | switchboard-plug-power            | TBD           |           | <https://launchpad.net/switchboard-plug-power>            |               |
 | switchboard-plug-printers         | TBD           |           | <https://launchpad.net/switchboard-plug-printers>         |               |
