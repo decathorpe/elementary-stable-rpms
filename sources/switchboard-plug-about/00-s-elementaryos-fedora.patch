@@ -1,0 +1,105 @@
+diff --git a/src/Plug.vala b/src/Plug.vala
+index 0a0817d..32e0e79 100644
+--- a/src/Plug.vala
++++ b/src/Plug.vala
+@@ -75,60 +75,42 @@ public class About.Plug : Switchboard.Plug {
+ 
+         // Operating System
+ 
+-        File file = File.new_for_path("/etc/lsb-release");
++        File file = File.new_for_path("/etc/os-release");
+         try {
+             var dis = new DataInputStream (file.read ());
+             string line;
+             // Read lines until end of file (null) is reached
+             while ((line = dis.read_line (null)) != null) {
+-                if ("DISTRIB_DESCRIPTION=" in line) {
+-                    os = line.replace ("DISTRIB_DESCRIPTION=", "");
++                if ("PRETTY_NAME=" in line) {
++                    os = line.replace ("PRETTY_NAME=", "");
+                     if ("\"" in os) {
+                         os = os.replace ("\"", "");
+                     }
+                 }
+             }
+         } catch (Error e) {
+-            warning("Couldn't read lsb-release file, assuming elementary OS 0.3");
+-            os = "elementary OS";
++            warning("Couldn't read os-release file, assuming Fedora");
++            os = "Fedora";
+         }
+ 
+-        file = File.new_for_path("/etc/upstream-release/lsb-release");
++        file = File.new_for_path("/etc/os-release");
+         try {
+             var dis = new DataInputStream (file.read ());
+             string line;
+             // Read lines until end of file (null) is reached
+             while ((line = dis.read_line (null)) != null) {
+-                if ("DISTRIB_DESCRIPTION=" in line) {
+-                    upstream_release = line.replace ("DISTRIB_DESCRIPTION=", "");
++                if ("PRETTY_NAME=" in line) {
++                    upstream_release = line.replace ("PRETTY_NAME=", "");
+                 }
+             }
+         } catch (Error e) {
+-            warning("Couldn't read upstream lsb-release file, assuming none");
++            warning("Couldn't read upstream os-release file, assuming none");
+             upstream_release = null;
+         }
+ 
+         //Bugtracker and website
+-        file = File.new_for_path("/etc/dpkg/origins/"+os);
+-        bugtracker_url = "";
+-        website_url = "";
+-        try {
+-            var dis = new DataInputStream (file.read ());
+-            string line;
+-            // Read lines until end of file (null) is reached
+-            while ((line = dis.read_line (null)) != null) {
+-                if (line.has_prefix("Bugs:")) {
+-                    bugtracker_url = line.replace ("Bugs: ", "");
+-                }
+-            }
+-        } catch (Error e) {
+-            warning(e.message);
+-            warning("Couldn't find bugtracker/website, using elementary OS defaults");
+-            if (website_url == "")
+-                website_url = "https://elementary.io";
+-            if (bugtracker_url == "")
+-                bugtracker_url = "https://bugs.launchpad.net/elementaryos/+filebug";
+-        }
++        website_url = "https://getfedora.org";
++        bugtracker_url = "https://bugzilla.redhat.com";
+ 
+         // Architecture
+         try {
+@@ -235,8 +217,8 @@ public class About.Plug : Switchboard.Plug {
+     private void setup_ui () {
+         main_grid = new Gtk.EventBox ();
+ 
+-        // Create the section about elementary OS
+-        var logo = new Gtk.Image.from_icon_name ("distributor-logo", Gtk.icon_size_register ("LOGO", 128, 128));
++        // Create the section about Fodora
++        var logo = new Gtk.Image.from_icon_name ("fedora-logo-icon", Gtk.icon_size_register ("LOGO", 128, 128));
+         logo.halign = Gtk.Align.END;
+ 
+         var title = new Gtk.Label (null);
+@@ -252,7 +234,7 @@ public class About.Plug : Switchboard.Plug {
+             based_off.set_selectable (true);
+         }
+ 
+-        var website_label = new Gtk.LinkButton.with_label ("https://elementary.io", _("Website"));
++        var website_label = new Gtk.LinkButton.with_label ("https://getfedora.org", _("Website"));
+         website_label.halign = Gtk.Align.START;
+         website_label.margin_bottom = 24;
+ 
+@@ -297,7 +279,7 @@ public class About.Plug : Switchboard.Plug {
+ 
+         help_button.clicked.connect (() => {
+             try {
+-                AppInfo.launch_default_for_uri ("https://elementary.io/support", null);
++                AppInfo.launch_default_for_uri ("https://fedoraproject.org/wiki/Fedora_Project_Wiki", null);
+             } catch (Error e) {
+                 warning (e.message);
+             }
