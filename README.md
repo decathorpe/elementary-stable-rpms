@@ -66,7 +66,7 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 | switchboard-plug-datetime         | DONE          |           | <https://launchpad.net/switchboard-plug-datetime>         |               |
 | switchboard-plug-display          | DONE          |           | <https://launchpad.net/switchboard-plug-display>          |               |
 | switchboard-plug-keyboard         | DONE          |           | <https://launchpad.net/switchboard-plug-keyboard>         |               |
-| switchboard-plug-locale           | TBD           |           | <https://launchpad.net/switchboard-plug-locale>           |               |
+| switchboard-plug-locale           | DONE          |           | <https://launchpad.net/switchboard-plug-locale>           |               |
 | switchboard-plug-mouse-touchpad   | DONE          |           | <https://launchpad.net/switchboard-plug-mouse-touchpad>   |               |
 | switchboard-plug-networking       | DONE          |           | <https://launchpad.net/switchboard-plug-networking>       |               |
 | switchboard-plug-notifications    | DONE          |           | <https://launchpad.net/switchboard-plug-notifications>    |               |
