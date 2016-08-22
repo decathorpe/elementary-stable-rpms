@@ -1,7 +1,7 @@
 Summary:        Gala window manager
 Name:           gala
 Version:        0.3.0~rev%{rev}
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
 URL:            http://launchpad.net/gala
 
@@ -20,6 +20,7 @@ BuildRequires:  pkgconfig(clutter-gtk-1.0)
 BuildRequires:  pkgconfig(gee-0.8)
 BuildRequires:  pkgconfig(glib-2.0) >= 2.32.0
 BuildRequires:  pkgconfig(gnome-desktop-3.0)
+BuildRequires:  pkgconfig(gnome-settings-daemon)
 BuildRequires:  pkgconfig(granite)
 BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  pkgconfig(libbamf3)
@@ -124,6 +125,12 @@ fi
 
 
 %changelog
+* Mon Aug 22 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3.0~rev539-2
+- Update for packaging changes.
+
+* Mon Aug 22 2016 Fabio Valentini <decathorpe@gmail.com>
+- Add BR: gnome-settings-daemon.
+
 * Mon Aug 22 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3.0~rev539-1
 - Update to latest snapshot.
 
