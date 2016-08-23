@@ -75,7 +75,7 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 | switchboard-plug-parental-controls| DONE          |           | <https://launchpad.net/switchboard-plug-parental-controls>|               |
 | switchboard-plug-power            | DONE          |           | <https://launchpad.net/switchboard-plug-power>            |               |
 | switchboard-plug-printers         | DONE          |           | <https://launchpad.net/switchboard-plug-printers>         |               |
-| switchboard-plug-security-privacy | TBD           |           | <https://launchpad.net/switchboard-plug-security-privacy> |               |
+| switchboard-plug-security-privacy | DONE          |           | <https://launchpad.net/switchboard-plug-security-privacy> |               |
 | switchboard-plug-sharing          | TBD           |           | <https://launchpad.net/switchboard-plug-sharing>          |               |
 | switchboard-plug-useraccounts     | TBD           |           | <https://launchpad.net/switchboard-plug-useraccounts>     |               |
 
