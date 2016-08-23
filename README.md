@@ -21,9 +21,8 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 | pantheon-calculator   | DONE                  |                           | <https://launchpad.net/pantheon-calculator>   |               |
 | pantheon-files        | DONE                  |                           | <https://launchpad.net/pantheon-files>        |               |
 | pantheon-mail         | WONTFIX               | requires gsignon now      | <https://launchpad.net/pantheon-mail>         |               |
-| pantheon-notes        | TBD                   |                           | <https://launchpad.net/pantheon-notes>        |               |
+| pantheon-notes        | TBD                   | no stable release yet     | <https://launchpad.net/pantheon-notes>        |               |
 | pantheon-photos       | DONE                  |                           | <https://launchpad.net/pantheon-photos>       |               |
-| pantheon-print        | TBD                   |                           | <https://launchpad.net/pantheon-print>        |               |
 | pantheon-terminal     | DONE                  |                           | <https://launchpad.net/pantheon-terminal>     |               |
 | scratch-text-editor   | DONE                  |                           | <https://launchpad.net/scratch>               |               |
 | screenshot-tool       | DONE                  |                           | <https://launchpad.net/screenshot-tool>       |               |
@@ -35,25 +34,13 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 
 | package name                  | status            | comment               | URL                                           | related bugs  |
 | ----------------------------- | ----------------- | --------------------- | --------------------------------------------- | ------------- |
-| capnet-assist                 | TBD               |                       | <https://launchpad.net/capnet-assist>         |               |
 | cerbere                       | DONE              |                       | <https://launchpad.net/cerbere>               |               |
 | contractor                    | DONE              |                       | <https://launchpad.net/contractor>            |               |
 | gala                          | DONE              | trunk snapshot        | <https://launchpad.net/gala>                  |               |
 | plank                         | DONE              |                       | <https://launchpad.net/plank>                 |               |
-| pantheon-greeter              | TBD               |                       | <https://launchpad.net/pantheon-greeter>      |               |
 | pantheon-session-settings     | DONE              |                       | <https://github.com/decathorpe/pantheon-session-settings> |   |
 | slingshot-launcher            | DONE              |                       | <https://launchpad.net/slingshot>             |               |
 | wingpanel                     | DONE              |                       | <https://launchpad.net/wingpanel>             |               |
-
-
-### elementary artwork
-
-
-| package name          | status                | comment                   | URL                                           | related bugs  |
-| --------------------- | --------------------- | ------------------------- | --------------------------------------------- | ------------- |
-| egtk                  | TBD                   |                           | <https://launchpad.net/egtk>                  |               |
-| elementary-icons      | TBD                   |                           | <https://launchpad.net/elementaryicons>       |               |
-| elementary-wallpapers | TBD                   |                           | <https://launchpad.net/elementaryos>          |               |
 
 
 ### switchboard plugs
