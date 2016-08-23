@@ -77,7 +77,7 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 | switchboard-plug-printers         | DONE          |           | <https://launchpad.net/switchboard-plug-printers>         |               |
 | switchboard-plug-security-privacy | DONE          |           | <https://launchpad.net/switchboard-plug-security-privacy> |               |
 | switchboard-plug-sharing          | DONE          |           | <https://launchpad.net/switchboard-plug-sharing>          |               |
-| switchboard-plug-useraccounts     | TBD           |           | <https://launchpad.net/switchboard-plug-useraccounts>     |               |
+| switchboard-plug-useraccounts     | DONE          |           | <https://launchpad.net/switchboard-plug-useraccounts>     |               |
 
 
 ### wingpanel indicators
