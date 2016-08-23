@@ -70,11 +70,11 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 | switchboard-plug-mouse-touchpad   | DONE          |           | <https://launchpad.net/switchboard-plug-mouse-touchpad>   |               |
 | switchboard-plug-networking       | DONE          |           | <https://launchpad.net/switchboard-plug-networking>       |               |
 | switchboard-plug-notifications    | DONE          |           | <https://launchpad.net/switchboard-plug-notifications>    |               |
-| switchboard-plug-onlineaccounts   | TBD           |           | <https://launchpad.net/switchboard-plug-onlineaccounts>   |               |
+| switchboard-plug-onlineaccounts   | WONTFIX       |           | <https://launchpad.net/switchboard-plug-onlineaccounts>   |               |
 | switchboard-plug-pantheon-shell   | DONE          |           | <https://launchpad.net/switchboard-plug-pantheon-shell>   |               |
 | switchboard-plug-parental-controls| DONE          |           | <https://launchpad.net/switchboard-plug-parental-controls>|               |
 | switchboard-plug-power            | DONE          |           | <https://launchpad.net/switchboard-plug-power>            |               |
-| switchboard-plug-printers         | TBD           |           | <https://launchpad.net/switchboard-plug-printers>         |               |
+| switchboard-plug-printers         | DONE          |           | <https://launchpad.net/switchboard-plug-printers>         |               |
 | switchboard-plug-security-privacy | TBD           |           | <https://launchpad.net/switchboard-plug-security-privacy> |               |
 | switchboard-plug-sharing          | TBD           |           | <https://launchpad.net/switchboard-plug-sharing>          |               |
 | switchboard-plug-useraccounts     | TBD           |           | <https://launchpad.net/switchboard-plug-useraccounts>     |               |
