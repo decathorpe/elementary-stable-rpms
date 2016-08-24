@@ -25,6 +25,8 @@ BuildRequires:  pkgconfig(zeitgeist-2.0)
 
 Supplements:    switchboard
 
+Requires:       elementary-dpms-helper
+
 
 %description
 The security & privacy plug is a section in Switchboard, the elementary System Settings app, where users can configure the security and the level of privacy according to his needs.
@@ -60,6 +62,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Wed Aug 24 2016 Fabio Valentini <decathorpe@gmail.com>
+- Add Requires: elementary-dpms-helper.
+
 * Tue Aug 23 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-1
 - Update to version 0.1.1.
 
