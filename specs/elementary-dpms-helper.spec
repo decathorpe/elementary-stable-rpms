@@ -68,7 +68,7 @@ fi
 
 
 %changelog
-* Wed Aug 24 2016 Fabio Valentini <decathorpe@gmail.com> - 0~rev129-2
+* Sun Aug 28 2016 Fabio Valentini <decathorpe@gmail.com> - 0~rev129-2
 - Update for packaging changes.
 
 * Wed Aug 24 2016 Fabio Valentini <decathorpe@gmail.com> - 0~rev129-1
