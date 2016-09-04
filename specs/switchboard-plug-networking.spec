@@ -2,7 +2,7 @@
 
 Summary:        Configure all available networks
 Name:           switchboard-plug-networking
-Version:        0.1.0.1
+Version:        0.1.0.2
 Release:        1%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/switchboard-plug-networking
@@ -59,6 +59,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Sun Sep 04 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.0.2-1
+- Update to version 0.1.0.2.
+
 * Tue Aug 23 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.0.1-1
 - Update to version 0.1.0.1.
 
