@@ -25,6 +25,8 @@ BuildRequires:  pkgconfig(switchboard-2.0)
 
 Supplements:    switchboard
 
+Requires:       elementary-dpms-helper
+
 
 %description
 Control system power consumption with this Switchboard preference plug.
@@ -57,7 +59,7 @@ rm -rf %{buildroot}
 
 
 %changelog
-* Mon Aug 22 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3-1
+* Tue Sep 13 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3-1
 - Update to version 0.3.
 
 
