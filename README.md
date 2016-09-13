@@ -49,7 +49,7 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 | ----------------------------- | ----------------- | --------------------- | --------------------------------------------- | ------------- |
 | elementary-icon-theme         | DONE              |                       | <https://launchpad.net/elementaryicons>       |               |
 | elementary-themes             | DONE              |                       | <https://launchpad.net/egtk>                  |               |
-| elementary-wallpapers         | TODO              |                       | <https://github.com/elementary/wallpapers>    |               |
+| elementary-wallpapers         | DONE              |                       | <https://github.com/elementary/wallpapers>    |               |
 
 
 ### switchboard plugs
