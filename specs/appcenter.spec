@@ -1,7 +1,7 @@
 Summary:        Get apps for elementary OS
 Name:           appcenter
 Version:        0.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/appcenter
 
@@ -27,6 +27,8 @@ BuildRequires:  pkgconfig(granite)
 BuildRequires:  pkgconfig(gthread-2.0)
 BuildRequires:  pkgconfig(gtk+-3.0) >= 3.10
 BuildRequires:  pkgconfig(packagekit-glib2)
+
+Requires:       PackageKit
 
 
 %description
@@ -84,6 +86,9 @@ fi
 
 
 %changelog
+* Sat Sep 17 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1-2
+- Require PackageKit.
+
 * Thu Aug 18 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1-1
 - Update to version 0.1.
 
