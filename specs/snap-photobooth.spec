@@ -1,6 +1,6 @@
 Summary:        fast and beautiful camera app
 Name:           snap-photobooth
-Version:        0.3
+Version:        0.3.0.1
 Release:        1%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/snap-elementary
@@ -68,12 +68,15 @@ fi
 %files -f snap-photobooth.lang
 %{_bindir}/snap-photobooth
 
-%{_datadir}/appdata/snap-photobooth.appdata.xml
-%{_datadir}/applications/snap-photobooth.desktop
+%{_datadir}/appdata/org.pantheon.snap.appdata.xml
+%{_datadir}/applications/org.pantheon.snap.desktop
 %{_datadir}/glib-2.0/schemas/org.pantheon.snap.gschema.xml
 
 
 %changelog
+* Sun Sep 18 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3.0.1-1
+- Update to version 0.3.0.1.
+
 * Mon Aug 15 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3-1
 - Update to version 0.3.
 
