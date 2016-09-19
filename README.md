@@ -20,7 +20,7 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 | noise                 | DONE                  |                           | <https://launchpad.net/noise>                 |               |
 | pantheon-calculator   | DONE                  |                           | <https://launchpad.net/pantheon-calculator>   |               |
 | pantheon-files        | DONE                  |                           | <https://launchpad.net/pantheon-files>        |               |
-| pantheon-mail         | WONTFIX               | requires gsignon now      | <https://launchpad.net/pantheon-mail>         |               |
+| pantheon-mail         | TBD                   |                           | <https://launchpad.net/pantheon-mail>         |               |
 | pantheon-notes        | TBD                   | no stable release yet     | <https://launchpad.net/pantheon-notes>        |               |
 | pantheon-photos       | DONE                  |                           | <https://launchpad.net/pantheon-photos>       |               |
 | pantheon-terminal     | DONE                  |                           | <https://launchpad.net/pantheon-terminal>     |               |
@@ -38,6 +38,8 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 | contractor                    | DONE              |                       | <https://launchpad.net/contractor>            |               |
 | gala                          | DONE              | trunk snapshot        | <https://launchpad.net/gala>                  |               |
 | plank                         | DONE              |                       | <https://launchpad.net/plank>                 |               |
+| pantheon-agent-polkit         | DONE              |                       | <https://launchpad.net/pantheon-agent-polkit> |               |
+| pantheon-greeter              | TBD               |                       | <https://launchpad.net/pantheon-greeter>      |               |
 | pantheon-session-settings     | DONE              |                       | <https://github.com/decathorpe/pantheon-session-settings> |   |
 | slingshot-launcher            | DONE              |                       | <https://launchpad.net/slingshot>             |               |
 | wingpanel                     | DONE              |                       | <https://launchpad.net/wingpanel>             |               |
@@ -66,12 +68,12 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 | switchboard-plug-mouse-touchpad   | DONE          |           | <https://launchpad.net/switchboard-plug-mouse-touchpad>   |               |
 | switchboard-plug-networking       | DONE          |           | <https://launchpad.net/switchboard-plug-networking>       |               |
 | switchboard-plug-notifications    | DONE          |           | <https://launchpad.net/switchboard-plug-notifications>    |               |
-| switchboard-plug-onlineaccounts   | WONTFIX       |           | <https://launchpad.net/switchboard-plug-onlineaccounts>   |               |
+| switchboard-plug-onlineaccounts   | TBD           |           | <https://launchpad.net/switchboard-plug-onlineaccounts>   |               |
 | switchboard-plug-pantheon-shell   | DONE          |           | <https://launchpad.net/switchboard-plug-pantheon-shell>   |               |
 | switchboard-plug-parental-controls| DONE          |           | <https://launchpad.net/switchboard-plug-parental-controls>|               |
 | switchboard-plug-power            | DONE          |           | <https://launchpad.net/switchboard-plug-power>            |               |
 | switchboard-plug-printers         | DONE          |           | <https://launchpad.net/switchboard-plug-printers>         |               |
-| switchboard-plug-security-privacy | BROKEN        |           | <https://launchpad.net/switchboard-plug-security-privacy> |               |
+| switchboard-plug-security-privacy | DONE          |           | <https://launchpad.net/switchboard-plug-security-privacy> |               |
 | switchboard-plug-sharing          | DONE          |           | <https://launchpad.net/switchboard-plug-sharing>          |               |
 | switchboard-plug-useraccounts     | DONE          |           | <https://launchpad.net/switchboard-plug-useraccounts>     |               |
 
@@ -91,12 +93,14 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 | wingpanel-indicator-sound         | DONE          |           | <https://launchpad.net/wingpanel-indicator-sound>         |               |
 
 
-### elementary / pantheon libraries and shared dependencies
+### elementary / pantheon libraries and other shared dependencies
 
-| package name          | status                | comment                   | URL                                           | related bugs  |
-| --------------------- | --------------------- | ------------------------- | --------------------------------------------- | ------------- |
-| cmake-elementary      | DONE                  |                           |                                               |               |
-| granite               | DONE                  |                           | <https://launchpad.net/granite>               |               |
+| package name          | status                | comment           | URL                                               | related bugs  |
+| --------------------- | --------------------- | ----------------- | ------------------------------------------------- | ------------- |
+| cmake-elementary      | DONE                  |                   |                                                   |               |
+| gsignond              | DONE                  | git snapshot      | <https://gitlab.com/accounts-sso/gsignond>        |               |
+| granite               | DONE                  |                   | <https://launchpad.net/granite>                   |               |
+| libgsignon-glib       | DONE                  | git snapshot      | <https://gitlab.com/accounts-sso/libgsignon-glib> |               |
 
 
 ## USAGE
