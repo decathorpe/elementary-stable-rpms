@@ -1,7 +1,7 @@
 Summary:        GSignOn daemon
 Name:           gsignond
-Version:        1.0.4~git%{date}~%{rev}
-Release:        2%{?dist}
+Version:        1.0.4~rev%{rev}
+Release:        1%{?dist}
 License:        GPLv3
 URL:            https://gitlab.com/accounts-sso/gsignond
 
@@ -98,10 +98,7 @@ rm -rf %{buildroot}
 
 
 %changelog
-* Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 1.0.4~git160714.200750~9247b24d-2
-- Spec file cosmetics.
-
-* Fri Sep 16 2016 Fabio Valentini <decathorpe@gmail.com> - 1.0.4~git160714.200750~9247b24d-1
+* Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 1.0.4~rev470-1
 - Update to version 1.0.4.
 
 
