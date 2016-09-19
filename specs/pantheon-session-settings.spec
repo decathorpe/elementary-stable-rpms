@@ -84,6 +84,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.6.0~git160919.154120~5d95d50d-1
+- Update to latest snapshot.
+
 * Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.6.0~git160919.122259~bbca0223-1
 - Update to latest snapshot.
 
