@@ -1,7 +1,7 @@
 Summary:        The official elementary calendar
 Name:           maya-calendar
 Version:        0.4.0.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
 URL:            http://launchpad.net/maya
 
@@ -36,7 +36,8 @@ Requires:       hicolor-icon-theme
 
 
 %description
-A slim, lightweight GTK+3 calendar app written in Vala, designed for elementary OS. Also looks and works great on other GTK+ desktops.
+A slim, lightweight GTK+3 calendar app written in Vala, designed for
+elementary OS. Also looks and works great on other GTK+ desktops.
 
 In elementary OS, Maya is known as Calendar.
 
@@ -44,7 +45,8 @@ In elementary OS, Maya is known as Calendar.
 %package devel
 Summary: The official elementary calendar (devel files)
 %description devel
-A slim, lightweight GTK+3 calendar app written in Vala, designed for elementary OS. Also looks and works great on other GTK+ desktops.
+A slim, lightweight GTK+3 calendar app written in Vala, designed for
+elementary OS. Also looks and works great on other GTK+ desktops.
 
 In elementary OS, Maya is known as Calendar.
 
@@ -79,7 +81,6 @@ rm -rf %{buildroot}/RPM_BUILD_ROOT
 /sbin/ldconfig
 /usr/bin/update-desktop-database &> /dev/null || :
 
-
 %postun
 /sbin/ldconfig
 /usr/bin/update-desktop-database &> /dev/null || :
@@ -87,13 +88,8 @@ if [ $1 -eq 0 ] ; then
     /usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
 fi
 
-
 %posttrans
 /usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
-
-
-%post           devel -p /sbin/ldconfig
-%postun         devel -p /sbin/ldconfig
 
 
 %files       -f maya-calendar.lang
@@ -126,6 +122,9 @@ fi
 
 
 %changelog
+* Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4.0.2-2
+- Spec file cosmetics.
+
 * Tue Sep 06 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4.0.2-1
 - Update to version 0.4.0.2.
 

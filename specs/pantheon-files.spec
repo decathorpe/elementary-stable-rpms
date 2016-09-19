@@ -1,7 +1,7 @@
 Summary:        Pantheon file manager
 Name:           pantheon-files
 Version:        0.3.0.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/pantheon-files
 
@@ -42,6 +42,7 @@ Designed for elementary OS.
 Summary: pantheon-files libraries
 %description    libs
 The simple, powerful, and sexy file manager from elementary.
+
 This package contains the libraries.
 
 
@@ -49,6 +50,7 @@ This package contains the libraries.
 Summary: pantheon-files development headers
 %description    devel
 The simple, powerful, and sexy file manager from elementary.
+
 This package contains the development headers.
 
 
@@ -67,8 +69,8 @@ This package contains the development headers.
 
 
 %check
-desktop-file-validate $RPM_BUILD_ROOT/%{_datadir}/applications/org.pantheon.files.desktop
-# appstream-util validate-relax --nonet $RPM_BUILD_ROOT/%{_datadir}/appdata/*.appdata.xml
+desktop-file-validate $RPM_BUILD_ROOT/%{_datadir}/applications/*.desktop
+appstream-util validate-relax --nonet $RPM_BUILD_ROOT/%{_datadir}/appdata/*.appdata.xml
 
 
 %clean
@@ -76,11 +78,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %post
-/sbin/ldconfig
 /usr/bin/update-desktop-database &> /dev/null || :
 
 %postun
-/sbin/ldconfig
 /usr/bin/update-desktop-database &> /dev/null || :
 if [ $1 -eq 0 ] ; then
     /usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
@@ -92,9 +92,6 @@ fi
 
 %post   libs -p /sbin/ldconfig
 %postun libs -p /sbin/ldconfig
-
-%post   devel -p /sbin/ldconfig
-%postun devel -p /sbin/ldconfig
 
 
 %files      -f pantheon-files.lang
@@ -144,6 +141,9 @@ fi
 
 
 %changelog
+* Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3.0.2-2
+- Spec file cosmetics.
+
 * Fri Sep 02 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3.0.2-1
 - Update to version 0.3.0.2.
 

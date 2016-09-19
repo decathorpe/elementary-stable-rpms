@@ -1,7 +1,7 @@
 Summary:        elementary Icons
 Name:           elementary-icon-theme
 Version:        4.0.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
 URL:            http://launchpad.net/elementaryicons
 
@@ -12,7 +12,8 @@ BuildArch:      noarch
 
 
 %description
-An original set of vector icons designed specifically for elementary OS and its desktop environment: Pantheon.
+An original set of vector icons designed specifically for elementary OS
+and its desktop environment: Pantheon.
 
 
 %prep
@@ -46,6 +47,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 4.0.1-2
+- Spec file cosmetics.
+
 * Tue Sep 13 2016 Fabio Valentini <decathorpe@gmail.com> - 4.0.1-1
 - Update to version 4.0.1.
 

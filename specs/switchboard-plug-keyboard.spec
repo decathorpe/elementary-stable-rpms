@@ -3,7 +3,7 @@
 Summary:        Adjust keyboard settings from Switchboard
 Name:           switchboard-plug-keyboard
 Version:        0.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/switchboard-plug-keyboard
 
@@ -25,7 +25,10 @@ Supplements:    switchboard
 
 
 %description
-This plug can be used to change several keyboard settings, for example the delay and speed of the key repetition, or the cursor blinking speed. You can change your keyboard layout, and use multiple layouts at the same time. Keyboard shortcuts are also part of this plug.
+This plug can be used to change several keyboard settings, for example
+the delay and speed of the key repetition, or the cursor blinking speed.
+You can change your keyboard layout, and use multiple layouts at the
+same time. Keyboard shortcuts are also part of this plug.
 
 Designed for elementary OS.
 
@@ -53,6 +56,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3-2
+- Spec file cosmetics.
+
 * Mon Aug 22 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3-1
 - Update to version 0.3.
 

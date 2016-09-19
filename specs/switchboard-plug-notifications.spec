@@ -3,7 +3,7 @@
 Summary:        Notification configuration management
 Name:           switchboard-plug-notifications
 Version:        0.1.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/switchboard-plug-notifications
 
@@ -27,7 +27,8 @@ Supplements:    switchboard
 %description
 Configure which apps should be allowed to show notifications
 
-A GModule plugin for Switchboard that configures gsettings keys related to the Notifications plugin for Gala.
+A GModule plugin for Switchboard that configures gsettings keys related
+to the Notifications plugin for Gala.
 
 
 %prep
@@ -53,6 +54,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-2
+- Spec file cosmetics.
+
 * Sun Aug 21 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-1
 - Update to version 0.1.1.
 

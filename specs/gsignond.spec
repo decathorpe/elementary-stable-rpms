@@ -1,14 +1,13 @@
 Summary:        GSignOn daemon
 Name:           gsignond
 Version:        1.0.4~git%{date}~%{rev}
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
 URL:            https://gitlab.com/accounts-sso/gsignond
 
 Source0:        %{name}-%{version}.tar.gz
 Source1:        %{name}.conf
 
-BuildRequires:  desktop-file-utils
 BuildRequires:  libtool
 BuildRequires:  gettext
 BuildRequires:  gtk-doc
@@ -23,19 +22,28 @@ BuildRequires:  pkgconfig(sqlite3)
 
 
 %description
-The GSignOn daemon is a D-Bus service which performs user authentication on behalf of its clients. There are currently authentication plugins for OAuth 1.0 and 2.0, SASL, Digest-MD5, and plain username/password combination.
+The GSignOn daemon is a D-Bus service which performs user authentication
+on behalf of its clients. There are currently authentication plugins for
+OAuth 1.0 and 2.0, SASL, Digest-MD5, and plain username/password
+combination.
 
 
 %package        libs
 Summary:        GSignOn daemon libraries
 %description    libs
-The GSignOn daemon is a D-Bus service which performs user authentication on behalf of its clients. There are currently authentication plugins for OAuth 1.0 and 2.0, SASL, Digest-MD5, and plain username/password combination.
+The GSignOn daemon is a D-Bus service which performs user authentication
+on behalf of its clients. There are currently authentication plugins for
+OAuth 1.0 and 2.0, SASL, Digest-MD5, and plain username/password
+combination.
 
 
 %package        devel
 Summary:        GSignOn daemon development files
 %description    devel
-The GSignOn daemon is a D-Bus service which performs user authentication on behalf of its clients. There are currently authentication plugins for OAuth 1.0 and 2.0, SASL, Digest-MD5, and plain username/password combination.
+The GSignOn daemon is a D-Bus service which performs user authentication
+on behalf of its clients. There are currently authentication plugins for
+OAuth 1.0 and 2.0, SASL, Digest-MD5, and plain username/password
+combination.
 
 
 %prep
@@ -58,14 +66,8 @@ rm %{buildroot}/%{_libdir}/*.la
 rm -rf %{buildroot}
 
 
-%post   -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
-
 %post    libs -p /sbin/ldconfig
 %postun  libs -p /sbin/ldconfig
-
-%post    devel -p /sbin/ldconfig
-%postun  devel -p /sbin/ldconfig
 
 
 %files
@@ -96,6 +98,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 1.0.4~git160714.200750~9247b24d-2
+- Spec file cosmetics.
+
 * Fri Sep 16 2016 Fabio Valentini <decathorpe@gmail.com> - 1.0.4~git160714.200750~9247b24d-1
 - Update to version 1.0.4.
 

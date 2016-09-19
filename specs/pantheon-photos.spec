@@ -1,7 +1,7 @@
 Summary:        The elementary continuation of Shotwell
 Name:           pantheon-photos
 Version:        0.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        LGPLv2.1
 URL:            http://launchpad.net/pantheon-photos
 
@@ -37,7 +37,9 @@ BuildRequires:  pkgconfig(webkit2gtk-4.0) >= 2.0.0
 
 
 %description
-The elementary continuation of Shotwell, originally written by Yorba Foundation.
+The elementary continuation of Shotwell, originally written by Yorba
+Foundation.
+
 Designed for elementary OS. Works and looks great on any GTK+ desktop.
 
 
@@ -56,10 +58,8 @@ Designed for elementary OS. Works and looks great on any GTK+ desktop.
 
 
 %check
-# desktop-file-validate $RPM_BUILD_ROOT/%{_datadir}/applications/pantheon-photos.desktop
-desktop-file-validate $RPM_BUILD_ROOT/%{_datadir}/applications/pantheon-photos-viewer.desktop
-
-# appstream-util validate-relax --nonet $RPM_BUILD_ROOT/%{_datadir}/appdata/*.appdata.xml
+desktop-file-validate $RPM_BUILD_ROOT/%{_datadir}/applications/*.desktop
+appstream-util validate-relax --nonet $RPM_BUILD_ROOT/%{_datadir}/appdata/*.appdata.xml
 
 
 %clean
@@ -95,6 +95,9 @@ fi
 
 
 %changelog
+* Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.2-2
+- Spec file cosmetics.
+
 * Thu Aug 11 2016 Fabio Valentini <decathorpe@gmail.com> - 0.2-1
 - Update to version 0.2.
 

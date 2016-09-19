@@ -1,7 +1,7 @@
 Summary:        The terminal of the 21st century.
 Name:           pantheon-terminal
 Version:        0.4
-Release:        1%{?dist}
+Release:        3%{?dist}
 License:        GPLv3
 URL:            http://launchpad.net/pantheon-terminal
 
@@ -25,7 +25,9 @@ BuildRequires:  pkgconfig(vte-2.91)
 
 
 %description
-A super lightweight, beautiful, and simple terminal. It's designed to be setup with sane defaults and little to no configuration. It's just a terminal, nothing more, nothing less.
+A super lightweight, beautiful, and simple terminal. It's designed to be
+setup with sane defaults and little to no configuration. It's just a
+terminal, nothing more, nothing less.
 
 Designed for elementary OS.
 
@@ -48,9 +50,8 @@ export LDFLAGS="-fPIC $RPM_OPT_FLAGS"
 
 
 %check
-desktop-file-validate $RPM_BUILD_ROOT/%{_datadir}/applications/org.pantheon.terminal.desktop
-
-# appstream-util validate-relax --nonet $RPM_BUILD_ROOT/%{_datadir}/appdata/*.appdata.xml
+desktop-file-validate $RPM_BUILD_ROOT/%{_datadir}/applications/*.desktop
+appstream-util validate-relax --nonet $RPM_BUILD_ROOT/%{_datadir}/appdata/*.appdata.xml
 
 
 %clean
@@ -84,10 +85,10 @@ fi
 
 
 %changelog
-* Thu Aug 11 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4-1
-- Update to latest snapshot.
+* Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4-3
+- Spec file cosmetics.
 
-* Thu Aug 11 2016 Fabio Valentini <decathorpe@gmail.com>
+* Thu Aug 11 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4-2
 - Add -fPIC compiler switch to fix build.
 
 * Thu Aug 11 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4-1

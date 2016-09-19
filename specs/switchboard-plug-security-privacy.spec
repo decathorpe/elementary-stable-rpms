@@ -3,7 +3,7 @@
 Summary:        Switchboard Privacy and Security Plug
 Name:           switchboard-plug-security-privacy
 Version:        0.1.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        LGPLv2.1, LGPLv3
 URL:            https://launchpad.net/switchboard-plug-security-privacy
 
@@ -29,7 +29,9 @@ Requires:       elementary-dpms-helper
 
 
 %description
-The security & privacy plug is a section in Switchboard, the elementary System Settings app, where users can configure the security and the level of privacy according to his needs.
+The security & privacy plug is a section in Switchboard, the elementary
+System Settings app, where users can configure the security and the
+level of privacy according to his needs.
 
 Designed for elementary OS.
 
@@ -62,6 +64,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-2
+- Spec file cosmetics.
+
 * Wed Aug 24 2016 Fabio Valentini <decathorpe@gmail.com>
 - Add Requires: elementary-dpms-helper.
 

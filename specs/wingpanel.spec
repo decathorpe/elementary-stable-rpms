@@ -1,7 +1,7 @@
 Summary:        Stylish top panel
 Name:           wingpanel
 Version:        2.0.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        LGPLv3
 URL:            http://launchpad.net/wingpanel
 
@@ -22,7 +22,8 @@ BuildRequires:  pkgconfig(libnotify)
 
 
 %description
-Stylish top panel that holds indicators and spawns an application launcher
+Stylish top panel that holds indicators and spawns an application
+launcher
 
 Designed for elementary OS.
 
@@ -30,7 +31,8 @@ Designed for elementary OS.
 %package        devel
 Summary:        Stylish top panel (development files)
 %description    devel
-Stylish top panel that holds indicators and spawns an application launcher
+Stylish top panel that holds indicators and spawns an application
+launcher
 
 Designed for elementary OS.
 
@@ -74,10 +76,6 @@ fi
 /usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
 
 
-%post           devel -p /sbin/ldconfig
-%postun         devel -p /sbin/ldconfig
-
-
 %files -f wingpanel.lang
 %license COPYING
 
@@ -102,6 +100,9 @@ fi
 
 
 %changelog
+* Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 2.0.1-2
+- Spec file cosmetics.
+
 * Sun Aug 21 2016 Fabio Valentini <decathorpe@gmail.com> - 2.0.1-1
 - Update to version 2.0.1.
 

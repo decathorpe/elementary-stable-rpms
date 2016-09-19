@@ -3,7 +3,7 @@
 Summary:        Configure various aspects of the Pantheon desktop environment
 Name:           switchboard-plug-pantheon-shell
 Version:        0.2.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/switchboard-plug-pantheon-shell
 
@@ -29,7 +29,10 @@ Supplements:    switchboard
 
 
 %description
-The desktop plug is a section in Switchboard, the elementary System Settings app, where users can configure the wallpaper, dock, and hotcorners. In the future the desktop plug might also handle other desktop settings such as the panel, app launcher, and window manager.
+The desktop plug is a section in Switchboard, the elementary System
+Settings app, where users can configure the wallpaper, dock, and
+hotcorners. In the future the desktop plug might also handle other
+desktop settings such as the panel, app launcher, and window manager.
 
 Designed for elementary OS.
 
@@ -61,6 +64,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.2.3-2
+- Spec file cosmetics.
+
 * Sun Aug 21 2016 Fabio Valentini <decathorpe@gmail.com> - 0.2.3-1
 - Update to version 0.2.3.
 

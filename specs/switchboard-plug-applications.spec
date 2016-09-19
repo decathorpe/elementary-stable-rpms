@@ -3,7 +3,7 @@
 Summary:        Application configuration management
 Name:           switchboard-plug-applications
 Version:        0.1.1
-Release:        1%{?dist}
+Release:        3%{?dist}
 License:        LGPLv3
 URL:            http://launchpad.net/switchboard-plug-applications
 
@@ -25,7 +25,8 @@ Supplements:    switchboard
 
 
 %description
-The applications plug is a section in the Switchboard (System Settings) that allows the user to manage application settings.
+The applications plug is a section in the Switchboard (System Settings)
+that allows the user to manage application settings.
 
 Built for elementary OS.
 
@@ -53,10 +54,10 @@ rm -rf %{buildroot}
 
 
 %changelog
-* Sun Aug 14 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-1
-- Update to latest snapshot.
+* Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-3
+- Spec file cosmetics.
 
-* Sun Aug 14 2016 Fabio Valentini <decathorpe@gmail.com>
+* Sun Aug 14 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-2
 - Add Supplements: switchboard tag.
 
 * Sun Aug 14 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-1

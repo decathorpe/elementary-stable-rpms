@@ -1,7 +1,7 @@
 Summary:        Granite Toolkit
 Name:           granite
 Version:        0.4.0.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        LGPLv3
 URL:            http://launchpad.net/granite
 
@@ -22,13 +22,16 @@ Requires: hicolor-icon-theme
 
 
 %description
-Granite is a library of toolkit addons to GTK+ and is part of the elementary project.
+Granite is a library of toolkit addons to GTK+ and is part of the
+elementary project.
 
 
 %package        devel
 Summary:        Granite Toolkit development headers
 %description    devel
-Granite is a library of toolkit addons to GTK+ and is part of the elementary project.
+Granite is a library of toolkit addons to GTK+ and is part of the
+elementary project.
+
 This package contains files needed for developing with granite.
 
 
@@ -47,7 +50,7 @@ This package contains files needed for developing with granite.
 
 
 %check
-desktop-file-validate %{buildroot}/%{_datadir}/applications/granite-demo.desktop
+desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
 
 
 %clean
@@ -99,6 +102,9 @@ fi
 
 
 %changelog
+* Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4.0.1-2
+- Spec file cosmetics.
+
 * Tue Aug 09 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4.0.1-1
 - Update to version 0.4.0.1.
 

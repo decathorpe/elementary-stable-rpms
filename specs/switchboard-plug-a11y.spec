@@ -3,7 +3,7 @@
 Summary:        Accessibility plug for Switchboard
 Name:           switchboard-plug-a11y
 Version:        0.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/switchboard-plug-a11y
 
@@ -26,7 +26,8 @@ Supplements:    switchboard
 
 
 %description
-The accessibility plug is a section in the Switchboard (System Settings) that allows the user to manage accessibility settings.
+The accessibility plug is a section in the Switchboard (System Settings)
+that allows the user to manage accessibility settings.
 
 Built for elementary OS.
 
@@ -54,6 +55,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1-2
+- Spec file cosmetics.
+
 * Mon Aug 15 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1-1
 - Update to version 0.1.
 

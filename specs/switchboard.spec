@@ -1,7 +1,7 @@
 Summary:        Modular Desktop Settings Hub
 Name:           switchboard
 Version:        2.1.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        LGPLv2.1, LGPLv3
 URL:            http://launchpad.net/switchboard
 
@@ -12,6 +12,7 @@ BuildRequires:  cmake
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
 BuildRequires:  intltool
+BuildRequires:  libappstream-glib
 BuildRequires:  vala >= 0.21.0
 
 BuildRequires:  pkgconfig(clutter-gtk-1.0)
@@ -22,7 +23,9 @@ BuildRequires:  pkgconfig(gtk+-3.0) >= 3.10
 
 
 %description
-This project is about the container app only and its library. For plugins that handle the settings, please refer to https://launchpad.net/pantheon-plugs.
+This project is about the container app only and its library. For
+plugins that handle the settings, please refer to
+https://launchpad.net/pantheon-plugs.
 
 Designed for elementary OS.
 
@@ -30,7 +33,9 @@ Designed for elementary OS.
 %package        devel
 Summary:        Modular Desktop Settings Hub (development files)
 %description    devel
-This project is about the container app only and its library. For plugins that handle the settings, please refer to https://launchpad.net/pantheon-plugs.
+This project is about the container app only and its library. For
+plugins that handle the settings, please refer to
+https://launchpad.net/pantheon-plugs.
 
 Designed for elementary OS.
 
@@ -57,9 +62,8 @@ mkdir -p %{buildroot}/%{_libdir}/switchboard/system
 
 
 %check
-desktop-file-validate %{buildroot}/%{_datadir}/applications/switchboard.desktop
-
-# appstream-util validate-relax --nonet $RPM_BUILD_ROOT/%{_datadir}/appdata/*.appdata.xml
+desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
+appstream-util validate-relax --nonet $RPM_BUILD_ROOT/%{_datadir}/appdata/*.appdata.xml
 
 
 %clean
@@ -79,10 +83,6 @@ fi
 
 %posttrans
 /usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
-
-
-%post           devel -p /sbin/ldconfig
-%postun         devel -p /sbin/ldconfig
 
 
 %files -f switchboard.lang
@@ -110,6 +110,9 @@ fi
 
 
 %changelog
+* Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 2.1.0-2
+- Spec file cosmetics.
+
 * Wed Aug 10 2016 Fabio Valentini <decathorpe@gmail.com> - 2.1.0-1
 - Update to version 2.1.0.
 

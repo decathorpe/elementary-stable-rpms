@@ -1,7 +1,7 @@
 Summary:        simple service to relaunch Pantheon components
 Name:           cerbere
 Version:        0.2.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv2
 URL:            https://launchpad.net/cerbere
 
@@ -23,7 +23,10 @@ Recommends:     wingpanel
 
 
 %description
-Cerbere is a sort of watchdog designed for Pantheon. It monitors a predefined list of processes (configurable through dconf) and relaunches them if they end. This is helpful to keep the panel, dock, and wallpaper running, even if they crash or are killed by another process.
+Cerbere is a sort of watchdog designed for Pantheon. It monitors a
+predefined list of processes (configurable through dconf) and relaunches
+them if they end. This is helpful to keep the panel, dock, and wallpaper
+running, even if they crash or are killed by another process.
 
 Designed for elementary OS.
 
@@ -66,6 +69,9 @@ fi
 
 
 %changelog
+* Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.2.2-2
+- Spec file cosmetics.
+
 * Fri Aug 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.2.2-1
 - Update to version 0.2.2.
 

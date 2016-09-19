@@ -1,7 +1,7 @@
 Summary:        fast and beautiful camera app
 Name:           snap-photobooth
 Version:        0.3.0.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/snap-elementary
 
@@ -9,7 +9,9 @@ Source0:        %{name}-%{version}.tar.xz
 Source1:        %{name}.conf
 
 BuildRequires:  cmake
+BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
+BuildRequires:  libappstream-glib
 BuildRequires:  pkgconfig
 BuildRequires:  vala >= 0.24
 BuildRequires:  vala-tools
@@ -44,8 +46,8 @@ Designed for elementary OS.
 
 
 %check
-# desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
-# appstream-util validate-relax --nonet $RPM_BUILD_ROOT/%{_datadir}/appdata/*.appdata.xml
+desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
+appstream-util validate-relax --nonet $RPM_BUILD_ROOT/%{_datadir}/appdata/*.appdata.xml
 
 
 %clean
@@ -74,6 +76,9 @@ fi
 
 
 %changelog
+* Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3.0.1-2
+- Spec file cosmetics.
+
 * Sun Sep 18 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3.0.1-1
 - Update to version 0.3.0.1.
 

@@ -1,7 +1,7 @@
 Summary:        The official elementary music player
 Name:           noise
 Version:        0.4
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
 URL:            http://launchpad.net/noise
 
@@ -36,7 +36,9 @@ Requires:       libgda-sqlite
 
 
 %description
-Noise is a fast and beautiful GTK3 audio player with a focus on music and libraries. It handles external devices, CDs, and album art. Noise utilizes Granite for a consistent and slick UI.
+Noise is a fast and beautiful GTK3 audio player with a focus on music
+and libraries. It handles external devices, CDs, and album art. Noise
+utilizes Granite for a consistent and slick UI.
 
 In elementary OS, Noise is known as Music.
 
@@ -44,7 +46,9 @@ In elementary OS, Noise is known as Music.
 %package        devel
 Summary:        noise development headers
 %description    devel
-Noise is a fast and beautiful GTK3 audio player with a focus on music and libraries. It handles external devices, CDs, and album art. Noise utilizes Granite for a consistent and slick UI.
+Noise is a fast and beautiful GTK3 audio player with a focus on music
+and libraries. It handles external devices, CDs, and album art. Noise
+utilizes Granite for a consistent and slick UI.
 
 In elementary OS, Noise is known as Music.
 
@@ -67,7 +71,7 @@ This package contains files needed for developing with noise.
 
 %check
 desktop-file-validate $RPM_BUILD_ROOT/%{_datadir}/applications/*.desktop
-# appstream-util validate-relax --nonet $RPM_BUILD_ROOT/%{_datadir}/metainfo/*.appdata.xml
+appstream-util validate-relax --nonet $RPM_BUILD_ROOT/%{_datadir}/metainfo/*.appdata.xml
 
 
 %clean
@@ -91,10 +95,6 @@ fi
 %posttrans
 /usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
 /usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
-
-
-%post           devel -p /usr/sbin/ldconfig
-%postun         devel -p /usr/sbin/ldconfig
 
 
 %files       -f noise.lang
@@ -126,6 +126,9 @@ fi
 
 
 %changelog
+* Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4-2
+- Spec file cosmetics.
+
 * Thu Aug 11 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4-1
 - Update to version 0.4.
 

@@ -1,13 +1,14 @@
 Summary:        Gala window manager
 Name:           gala
 Version:        0.3.0~rev%{rev}
-Release:        2%{?dist}
+Release:        3%{?dist}
 License:        GPLv3
 URL:            http://launchpad.net/gala
 
 Source0:        %{name}-%{version}.tar.gz
 Source1:        %{name}.conf
 
+BuildRequires:  bzr
 BuildRequires:  desktop-file-utils
 BuildRequires:  libtool
 BuildRequires:  gettext
@@ -36,15 +37,19 @@ Gala is Pantheon's Window Manager, part of the elementary project.
 
 
 %package        libs
-Summary: Gala window manager libraries
+Summary:        Gala window manager libraries
 %description    libs
-Gala is Pantheon's Window Manager, part of the elementary project. This package contains the shared libraries.
+Gala is Pantheon's Window Manager, part of the elementary project.
+
+This package contains the shared libraries.
 
 
 %package        devel
-Summary: Gala window manager
+Summary:        Gala window manager development files
 %description    devel
-Gala is Pantheon's Window Manager, part of the elementary project. This package contains the development headers.
+Gala is Pantheon's Window Manager, part of the elementary project.
+
+This package contains the development headers.
 
 
 %prep
@@ -65,17 +70,19 @@ rm -f %{buildroot}/%{_libdir}/*.la
 rm -f %{buildroot}/%{_libdir}/plank/*.la
 
 
+%check
+desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
+
+
 %clean
 rm -rf %{buildroot}
 
 
 %post
-/sbin/ldconfig
 /usr/bin/update-desktop-database &> /dev/null || :
 /bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null || :
 
 %postun
-/sbin/ldconfig
 /usr/bin/update-desktop-database &> /dev/null || :
 if [ $1 -eq 0 ] ; then
     /usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
@@ -90,9 +97,6 @@ fi
 
 %post           libs -p /sbin/ldconfig
 %postun         libs -p /sbin/ldconfig
-
-%post           devel -p /sbin/ldconfig
-%postun         devel -p /sbin/ldconfig
 
 
 %files       -f gala.lang
@@ -125,6 +129,9 @@ fi
 
 
 %changelog
+* Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3.0~rev539-3
+- Spec file cosmetics.
+
 * Mon Aug 22 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3.0~rev539-2
 - Update for packaging changes.
 
