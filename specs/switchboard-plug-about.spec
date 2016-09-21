@@ -2,7 +2,7 @@
 
 Summary:        Switchboard plug to show system information
 Name:           switchboard-plug-about
-Version:        0.2.1
+Version:        0.2.1.1
 Release:        1%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/switchboard-plug-about
@@ -58,6 +58,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Wed Sep 21 2016 Fabio Valentini <decathorpe@gmail.com> - 0.2.1.1-1
+- Update to version 0.2.1.1.
+
 * Sun Aug 21 2016 Fabio Valentini <decathorpe@gmail.com> - 0.2.1-1
 - Update to version 0.2.1.
 
