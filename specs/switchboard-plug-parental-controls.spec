@@ -2,7 +2,7 @@
 
 Summary:        An easy parental controls plug
 Name:           switchboard-plug-parental-controls
-Version:        0.1
+Version:        0.1.1
 Release:        1%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/switchboard-plug-parental-controls
@@ -43,11 +43,9 @@ An easy parental controls plug
 
 %install
 %make_install
-
-mv %{buildroot}/lib %{buildroot}/usr/lib
-rm %{buildroot}/%{_libdir}/*.a
-
 %find_lang pantheon-parental-controls-plug
+
+rm %{buildroot}/%{_libdir}/*.a
 
 
 %clean
@@ -55,7 +53,7 @@ rm -rf %{buildroot}
 
 
 %check
-# desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
+desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
 
 
 %post
@@ -74,7 +72,6 @@ rm -rf %{buildroot}
 
 %{_sysconfdir}/dbus-1/system.d/org.pantheon.ParentalControls.conf
 
-%{_bindir}/pantheon-parental-controls-cli
 %{_bindir}/pantheon-parental-controls-client
 %{_bindir}/pantheon-parental-controls-daemon
 
@@ -84,10 +81,13 @@ rm -rf %{buildroot}
 %{_datadir}/dbus-1/system-services/org.pantheon.ParentalControls.service
 %{_datadir}/polkit-1/actions/org.pantheon.switchboard.parental-controls.policy
 
-%{_unitdir}/pantheon-parental-controls.service
+#%{_unitdir}/pantheon-parental-controls.service
 
 
 %changelog
+* Thu Sep 22 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-1
+- Update to version 0.1.1.
+
 * Mon Aug 22 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1-1
 - Update to version 0.1.
 
