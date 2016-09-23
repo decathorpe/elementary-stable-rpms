@@ -3,7 +3,7 @@
 Summary:        An easy parental controls plug
 Name:           switchboard-plug-parental-controls
 Version:        0.1.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/switchboard-plug-parental-controls
 
@@ -45,6 +45,10 @@ An easy parental controls plug
 %make_install
 %find_lang pantheon-parental-controls-plug
 
+mkdir -p %{buildroot}/%{_unitdir}
+
+sed 's!@CMAKE_INSTALL_PREFIX@!%{_prefix}!' debian/pantheon-parental-controls.service > %{buildroot}/%{_unitdir}/pantheon-parental-controls.service
+
 rm %{buildroot}/%{_libdir}/*.a
 
 
@@ -81,10 +85,13 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
 %{_datadir}/dbus-1/system-services/org.pantheon.ParentalControls.service
 %{_datadir}/polkit-1/actions/org.pantheon.switchboard.parental-controls.policy
 
-#%{_unitdir}/pantheon-parental-controls.service
+%{_unitdir}/pantheon-parental-controls.service
 
 
 %changelog
+* Fri Sep 23 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-2
+- Add systemd service file back again.
+
 * Thu Sep 22 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-1
 - Update to version 0.1.1.
 
