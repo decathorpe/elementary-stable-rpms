@@ -1,7 +1,7 @@
 Summary:        elementary GTK+ Stylesheet
 Name:           elementary-themes
-Version:        5.0.1
-Release:        2%{?dist}
+Version:        5.0.2
+Release:        1%{?dist}
 License:        GPLv3
 URL:            http://launchpad.net/egtk
 
@@ -46,6 +46,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Sat Sep 24 2016 Fabio Valentini <decathorpe@gmail.com> - 5.0.2-1
+- Update to version 5.0.2.
+
 * Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 5.0.1-2
 - Spec file cosmetics.
 
