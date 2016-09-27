@@ -1,7 +1,7 @@
 Summary:        The official elementary calendar
 Name:           maya-calendar
 Version:        0.4.0.2
-Release:        2%{?dist}
+Release:        3%{?dist}
 License:        GPLv3
 URL:            http://launchpad.net/maya
 
@@ -68,8 +68,7 @@ This package contains the development files.
 
 
 %check
-desktop-file-validate $RPM_BUILD_ROOT/%{_datadir}/applications/maya-calendar.desktop
-# desktop-file-validate $RPM_BUILD_ROOT/%{_datadir}/applications/maya-calendar-daemon.desktop
+desktop-file-validate $RPM_BUILD_ROOT/%{_datadir}/applications/*.desktop
 appstream-util validate-relax --nonet $RPM_BUILD_ROOT/%{_datadir}/appdata/*.appdata.xml
 
 
@@ -122,6 +121,9 @@ fi
 
 
 %changelog
+* Tue Sep 27 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4.0.2-3
+- Validate all .desktop files.
+
 * Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4.0.2-2
 - Spec file cosmetics.
 
