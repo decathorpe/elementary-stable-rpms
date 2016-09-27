@@ -1,7 +1,7 @@
 Summary:        SSO library for GLib development files
 Name:           libgsignon-glib
-Version:        2.4.1~rev%{rev}
-Release:        1%{?dist}
+Version:        
+Release:        0%{?dist}
 License:        LGPLv2.1
 URL:            https://gitlab.com/accounts-sso/libgsignon-glib
 
@@ -82,7 +82,4 @@ rm -rf %{buildroot}
 
 
 %changelog
-* Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 2.4.1~rev470-1
-- Update to version 2.4.1.
-
 
