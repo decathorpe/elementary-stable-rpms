@@ -1,7 +1,7 @@
 Summary:        simple service to relaunch Pantheon components
 Name:           cerbere
 Version:        0.2.2
-Release:        2%{?dist}
+Release:        3%{?dist}
 License:        GPLv2
 URL:            https://launchpad.net/cerbere
 
@@ -9,6 +9,7 @@ Source0:        %{name}-%{version}.tar.xz
 Source1:        %{name}.conf
 
 BuildRequires:  cmake
+BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
 BuildRequires:  pkgconfig
 BuildRequires:  vala >= 0.16
@@ -45,7 +46,7 @@ Designed for elementary OS.
 
 
 %check
-# desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
+desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
 
 
 %clean
@@ -69,6 +70,9 @@ fi
 
 
 %changelog
+* Tue Sep 27 2016 Fabio Valentini <decathorpe@gmail.com> - 0.2.2-3
+- Validate .desktop file.
+
 * Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.2.2-2
 - Spec file cosmetics.
 
