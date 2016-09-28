@@ -1,7 +1,7 @@
 Summary:        simple screen capture tool
 Name:           screenshot-tool
 Version:        0.1.0.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
 URL:            http://launchpad.net/screenshot-tool
 
@@ -11,6 +11,7 @@ Source1:        %{name}.conf
 BuildRequires:  cmake
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
+BuildRequires:  intltool
 BuildRequires:  libappstream-glib
 BuildRequires:  pkgconfig
 BuildRequires:  vala >= 0.24
@@ -71,6 +72,9 @@ fi
 
 
 %changelog
+* Wed Sep 28 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.0.3-2
+- Add BR: intltool to hopefully fix f25 build.
+
 * Wed Sep 28 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.0.3-1
 - Update to version 0.1.0.3.
 
