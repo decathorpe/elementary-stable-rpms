@@ -1,7 +1,7 @@
 Summary:        fast and beautiful camera app
 Name:           snap-photobooth
 Version:        0.3.0.1
-Release:        2%{?dist}
+Release:        3%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/snap-elementary
 
@@ -54,19 +54,6 @@ appstream-util validate-relax --nonet $RPM_BUILD_ROOT/%{_datadir}/appdata/*.appd
 rm -rf %{buildroot}
 
 
-%post
-/usr/bin/update-desktop-database &> /dev/null || :
-
-%postun
-/usr/bin/update-desktop-database &> /dev/null || :
-if [ $1 -eq 0 ] ; then
-    /usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
-fi
-
-%posttrans
-/usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
-
-
 %files -f snap-photobooth.lang
 %{_bindir}/snap-photobooth
 
@@ -76,6 +63,9 @@ fi
 
 
 %changelog
+* Wed Sep 28 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3.0.1-3
+- Spec file cleanups.
+
 * Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3.0.1-2
 - Spec file cosmetics.
 

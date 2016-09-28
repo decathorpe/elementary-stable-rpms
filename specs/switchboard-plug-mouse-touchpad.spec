@@ -55,12 +55,6 @@ rm -rf %{buildroot}
 
 %changelog
 * Sun Aug 21 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-1
-- Update to latest snapshot.
-
-* Sat Aug 20 2016 Fabio Valentini <decathorpe@gmail.com>
-- Reverse weak require switchboard.
-
-* Sat Aug 20 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-1
 - Update to version 0.1.1.
 
 

@@ -1,7 +1,7 @@
 Summary:        Granite Toolkit
 Name:           granite
 Version:        0.4.0.1
-Release:        2%{?dist}
+Release:        3%{?dist}
 License:        LGPLv3
 URL:            http://launchpad.net/granite
 
@@ -59,12 +59,10 @@ rm -rf %{buildroot}
 
 %post
 /sbin/ldconfig
-/usr/bin/update-desktop-database &> /dev/null || :
 /bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null || :
 
 %postun
 /sbin/ldconfig
-/usr/bin/update-desktop-database &> /dev/null || :
 if [ $1 -eq 0 ] ; then
     /bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null
     /usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
@@ -102,6 +100,9 @@ fi
 
 
 %changelog
+* Wed Sep 28 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4.0.1-3
+- Spec file cleanups.
+
 * Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4.0.1-2
 - Spec file cosmetics.
 
@@ -110,4 +111,5 @@ fi
 
 * Sat Jun 18 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4-1
 - Update to version 0.4.
+
 

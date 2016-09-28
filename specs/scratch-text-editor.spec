@@ -1,7 +1,7 @@
 Summary:        Scratch - the text editor that works.
 Name:           scratch-text-editor
 Version:        2.3
-Release:        2%{?dist}
+Release:        3%{?dist}
 License:        GPLv3
 URL:            http://launchpad.net/scratch
 
@@ -15,7 +15,6 @@ BuildRequires:  intltool
 BuildRequires:  libappstream-glib
 BuildRequires:  pkgconfig
 BuildRequires:  vala
-BuildRequires:  vala-devel
 
 BuildRequires:  pkgconfig(gee-0.8)
 BuildRequires:  pkgconfig(glib-2.0)
@@ -26,6 +25,15 @@ BuildRequires:  pkgconfig(gtk+-3.0) >= 3.10
 BuildRequires:  pkgconfig(libpeas-1.0)
 BuildRequires:  pkgconfig(libpeas-gtk-1.0)
 BuildRequires:  pkgconfig(libsoup-2.4)
+
+%if %{?fedora} == 24
+BuildRequires:  pkgconfig(libvala-0.32)
+%endif
+
+%if %{?fedora} == 25
+BuildRequires:  pkgconfig(libvala-0.34)
+%endif
+
 BuildRequires:  pkgconfig(vte-2.91)
 BuildRequires:  pkgconfig(webkitgtk-3.0)
 BuildRequires:  pkgconfig(zeitgeist-2.0)
@@ -102,6 +110,7 @@ appstream-util validate-relax --nonet $RPM_BUILD_ROOT/%{_datadir}/appdata/*.appd
 rm -rf %{buildroot}
 
 
+%if %{?fedora} == 24
 %post
 /usr/sbin/ldconfig
 /usr/bin/update-desktop-database &> /dev/null || :
@@ -109,12 +118,12 @@ rm -rf %{buildroot}
 %postun
 /usr/sbin/ldconfig
 /usr/bin/update-desktop-database &> /dev/null || :
-if [ $1 -eq 0 ] ; then
-    /usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
-fi
+%endif
 
-%posttrans
-/usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
+%if %{?fedora} == 25
+%post -p /usr/sbin/ldconfig
+%postun -p /usr/sbin/ldconfig
+%endif
 
 
 %files -f scratch-text-editor.lang
@@ -130,11 +139,7 @@ fi
 %{_datadir}/appdata/scratch-text-editor.appdata.xml
 %{_datadir}/applications/scratch-text-editor.desktop
 
-%{_datadir}/glib-2.0/schemas/org.pantheon.scratch.gschema.xml
-%{_datadir}/glib-2.0/schemas/org.pantheon.scratch.plugins.file-manager.gschema.xml
-%{_datadir}/glib-2.0/schemas/org.pantheon.scratch.plugins.folder-manager.gschema.xml
-%{_datadir}/glib-2.0/schemas/org.pantheon.scratch.plugins.spell.gschema.xml
-%{_datadir}/glib-2.0/schemas/org.pantheon.scratch.plugins.terminal.gschema.xml
+%{_datadir}/glib-2.0/schemas/org.pantheon.scratch*.gschema.xml
 
 %{_datadir}/scratch/
 
@@ -150,6 +155,9 @@ fi
 
 
 %changelog
+* Wed Sep 28 2016 Fabio Valentini <decathorpe@gmail.com> - 2.3-3
+- Spec file cleanups.
+
 * Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 2.3-2
 - Spec file cosmetics.
 

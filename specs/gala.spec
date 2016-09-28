@@ -8,10 +8,9 @@ URL:            http://launchpad.net/gala
 Source0:        %{name}-%{version}.tar.gz
 Source1:        %{name}.conf
 
-BuildRequires:  bzr
 BuildRequires:  desktop-file-utils
-BuildRequires:  libtool
 BuildRequires:  gettext
+BuildRequires:  libtool
 BuildRequires:  pkgconfig
 BuildRequires:  vala
 BuildRequires:  vala-tools
@@ -79,19 +78,15 @@ rm -rf %{buildroot}
 
 
 %post
-/usr/bin/update-desktop-database &> /dev/null || :
 /bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null || :
 
 %postun
-/usr/bin/update-desktop-database &> /dev/null || :
 if [ $1 -eq 0 ] ; then
-    /usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
     /bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null
     /usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 fi
 
 %posttrans
-/usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
 /usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 
 
@@ -99,7 +94,7 @@ fi
 %postun         libs -p /sbin/ldconfig
 
 
-%files       -f gala.lang
+%files -f gala.lang
 %{_bindir}/gala
 
 %{_libdir}/gala/
@@ -129,6 +124,12 @@ fi
 
 
 %changelog
+* Wed Sep 28 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3.0+rev541-1
+- Update to latest snapshot.
+
+* Wed Sep 28 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3.0+rev539-2
+- Spec file cleanups.
+
 * Thu Sep 22 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3.0+rev539-1
 - Update to version 0.3.0.
 
@@ -215,3 +216,5 @@ fi
 
 * Wed May 04 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3.0~rev518-1
 - Update to latest snapshot.
+
+

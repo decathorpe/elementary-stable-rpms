@@ -1,7 +1,7 @@
 Summary:        Modular Desktop Settings Hub
 Name:           switchboard
 Version:        2.1.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 License:        LGPLv2.1, LGPLv3
 URL:            http://launchpad.net/switchboard
 
@@ -70,19 +70,8 @@ appstream-util validate-relax --nonet $RPM_BUILD_ROOT/%{_datadir}/appdata/*.appd
 rm -rf %{buildroot}
 
 
-%post
-/sbin/ldconfig
-/usr/bin/update-desktop-database &> /dev/null || :
-
-%postun
-/sbin/ldconfig
-/usr/bin/update-desktop-database &> /dev/null || :
-if [ $1 -eq 0 ] ; then
-    /usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
-fi
-
-%posttrans
-/usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
+%post -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 
 %files -f switchboard.lang
@@ -92,7 +81,7 @@ fi
 
 %{_libdir}/libswitchboard-2.0.so.0
 %{_libdir}/libswitchboard-2.0.so.2.0
-%{_libdir}/switchboard
+%{_libdir}/switchboard/
 
 %{_datadir}/appdata/switchboard.appdata.xml
 %{_datadir}/applications/switchboard.desktop
@@ -110,6 +99,9 @@ fi
 
 
 %changelog
+* Wed Sep 28 2016 Fabio Valentini <decathorpe@gmail.com> - 2.1.0-3
+- Spec file cleanups.
+
 * Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 2.1.0-2
 - Spec file cosmetics.
 

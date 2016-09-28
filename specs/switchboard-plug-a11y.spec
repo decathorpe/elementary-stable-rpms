@@ -3,7 +3,7 @@
 Summary:        Accessibility plug for Switchboard
 Name:           switchboard-plug-a11y
 Version:        0.1
-Release:        2%{?dist}
+Release:        3%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/switchboard-plug-a11y
 
@@ -51,10 +51,13 @@ rm -rf %{buildroot}
 
 
 %files -f pantheon-accessibility-plug.lang
-%{_libdir}/switchboard/system/pantheon-accessibility/libpantheon-accessibility.so
+%{_libdir}/switchboard/system/pantheon-accessibility/
 
 
 %changelog
+* Wed Sep 28 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1-3
+- Spec file cleanups.
+
 * Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1-2
 - Spec file cosmetics.
 

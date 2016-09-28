@@ -1,7 +1,7 @@
 Summary:        Audience video player
 Name:           audience
 Version:        0.2.0.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
 URL:            http://launchpad.net/audience
 
@@ -56,20 +56,16 @@ appstream-util validate-relax --nonet $RPM_BUILD_ROOT/%{_datadir}/appdata/*.appd
 rm -rf %{buildroot}
 
 
+%if %{?fedora} < 25
 %post
 /usr/bin/update-desktop-database &> /dev/null || :
 
 %postun
 /usr/bin/update-desktop-database &> /dev/null || :
-if [ $1 -eq 0 ] ; then
-    /usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
-fi
-
-%posttrans
-/usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
+%endif
 
 
-%files       -f audience.lang
+%files -f audience.lang
 %doc AUTHORS README
 %license COPYING
 
@@ -81,6 +77,9 @@ fi
 
 
 %changelog
+* Wed Sep 28 2016 Fabio Valentini <decathorpe@gmail.com> - 0.2.0.2-2
+- Spec file cleanups.
+
 * Wed Sep 21 2016 Fabio Valentini <decathorpe@gmail.com> - 0.2.0.2-1
 - Update to version 0.2.0.2.
 

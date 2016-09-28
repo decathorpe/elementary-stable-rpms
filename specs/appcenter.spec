@@ -1,7 +1,7 @@
 Summary:        Get apps for elementary OS
 Name:           appcenter
 Version:        0.1.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/appcenter
 
@@ -38,7 +38,7 @@ AppCenter is a native Gtk+ app store built on AppStream and Packagekit.
 
 
 %prep
-%setup -q
+%autosetup
 
 
 %build
@@ -60,17 +60,13 @@ appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/appdata/*.appdata
 rm -rf %{buildroot}
 
 
+%if %{?fedora} < 25
 %post
 /usr/bin/update-desktop-database &> /dev/null || :
 
 %postun
 /usr/bin/update-desktop-database &> /dev/null || :
-if [ $1 -eq 0 ] ; then
-    /usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
-fi
-
-%posttrans
-/usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
+%endif
 
 
 %files -f appcenter.lang
@@ -86,6 +82,9 @@ fi
 
 
 %changelog
+* Wed Sep 28 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-2
+- Spec file cleanups.
+
 * Tue Sep 27 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-1
 - Update to version 0.1.1.
 

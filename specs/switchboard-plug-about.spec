@@ -3,7 +3,7 @@
 Summary:        Switchboard plug to show system information
 Name:           switchboard-plug-about
 Version:        0.2.1.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/switchboard-plug-about
 
@@ -53,11 +53,13 @@ rm -rf %{buildroot}
 
 
 %files -f about-plug.lang
-%{_libdir}/switchboard/system/pantheon-about/about.plugin
-%{_libdir}/switchboard/system/pantheon-about/libabout.so
+%{_libdir}/switchboard/system/pantheon-about/
 
 
 %changelog
+* Wed Sep 28 2016 Fabio Valentini <decathorpe@gmail.com> - 0.2.1.1-2
+- Spec file cleanups.
+
 * Wed Sep 21 2016 Fabio Valentini <decathorpe@gmail.com> - 0.2.1.1-1
 - Update to version 0.2.1.1.
 

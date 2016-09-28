@@ -1,7 +1,7 @@
 Summary:        The terminal of the 21st century.
 Name:           pantheon-terminal
 Version:        0.4
-Release:        3%{?dist}
+Release:        4%{?dist}
 License:        GPLv3
 URL:            http://launchpad.net/pantheon-terminal
 
@@ -37,8 +37,8 @@ Designed for elementary OS.
 
 
 %build
-export CFLAGS="-fPIC $RPM_OPT_FLAGS"
-export LDFLAGS="-fPIC $RPM_OPT_FLAGS"
+export CFLAGS="$RPM_OPT_FLAGS -fPIC"
+export LDFLAGS="$RPM_OPT_FLAGS -fPIC"
 
 %cmake
 %make_build
@@ -50,25 +50,12 @@ export LDFLAGS="-fPIC $RPM_OPT_FLAGS"
 
 
 %check
-desktop-file-validate $RPM_BUILD_ROOT/%{_datadir}/applications/*.desktop
-appstream-util validate-relax --nonet $RPM_BUILD_ROOT/%{_datadir}/appdata/*.appdata.xml
+desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
+appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/appdata/*.appdata.xml
 
 
 %clean
-rm -rf $RPM_BUILD_ROOT
-
-
-%post
-/usr/bin/update-desktop-database &> /dev/null || :
-
-%postun
-/usr/bin/update-desktop-database &> /dev/null || :
-if [ $1 -eq 0 ] ; then
-    /usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
-fi
-
-%posttrans
-/usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
+rm -rf %{buildroot}
 
 
 %files -f pantheon-terminal.lang
@@ -85,6 +72,9 @@ fi
 
 
 %changelog
+* Wed Sep 28 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4-4
+- Spec file cleanups.
+
 * Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4-3
 - Spec file cosmetics.
 

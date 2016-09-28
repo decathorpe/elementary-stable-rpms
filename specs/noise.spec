@@ -1,7 +1,7 @@
 Summary:        The official elementary music player
 Name:           noise
 Version:        0.4.0.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
 URL:            http://launchpad.net/noise
 
@@ -80,20 +80,26 @@ rm -rf %{buildroot}
 
 %post
 /sbin/ldconfig
+
+%if %{?fedora} < 25
 /usr/bin/update-desktop-database &> /dev/null || :
+%endif
+
 /bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null || :
 
 %postun
 /sbin/ldconfig
+
+%if %{?fedora} < 25
 /usr/bin/update-desktop-database &> /dev/null || :
+%endif
+
 if [ $1 -eq 0 ] ; then
     /bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null
-    /usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
     /usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 fi
 
 %posttrans
-/usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
 /usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 
 
@@ -126,6 +132,9 @@ fi
 
 
 %changelog
+* Wed Sep 28 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4.0.1-2
+- Spec file cleanups.
+
 * Tue Sep 20 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4.0.1-1
 - Update to version 0.4.0.1.
 

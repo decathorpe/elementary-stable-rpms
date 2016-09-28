@@ -1,7 +1,7 @@
 Summary:        Stupidly simple Dock
 Name:           plank
 Version:        0.11.2
-Release:        2%{?dist}
+Release:        4%{?dist}
 License:        GPLv3
 URL:            http://launchpad.net/plank
 
@@ -10,6 +10,7 @@ Source1:        %{name}.conf
 
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
+BuildRequires:  intltool
 BuildRequires:  libappstream-glib
 BuildRequires:  libtool
 BuildRequires:  vala
@@ -99,19 +100,15 @@ rm -rf %{buildroot}
 
 
 %post
-/usr/bin/update-desktop-database &> /dev/null || :
 /bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null || :
 
 %postun
-/usr/bin/update-desktop-database &> /dev/null || :
 if [ $1 -eq 0 ] ; then
-    /usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
     /bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null
     /usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 fi
 
 %posttrans
-/usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
 /usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 
 
@@ -149,6 +146,12 @@ fi
 
 
 %changelog
+* Wed Sep 28 2016 Fabio Valentini <decathorpe@gmail.com> - 0.11.2-4
+- Add missing BR: intltool.
+
+* Wed Sep 28 2016 Fabio Valentini <decathorpe@gmail.com> - 0.11.2-3
+- Spec file cleanups.
+
 * Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.11.2-2
 - Spec file cosmetics.
 

@@ -1,7 +1,7 @@
 Summary:        The elementary continuation of Shotwell
 Name:           pantheon-photos
 Version:        0.2
-Release:        2%{?dist}
+Release:        3%{?dist}
 License:        LGPLv2.1
 URL:            http://launchpad.net/pantheon-photos
 
@@ -58,25 +58,21 @@ Designed for elementary OS. Works and looks great on any GTK+ desktop.
 
 
 %check
-desktop-file-validate $RPM_BUILD_ROOT/%{_datadir}/applications/*.desktop
-appstream-util validate-relax --nonet $RPM_BUILD_ROOT/%{_datadir}/appdata/*.appdata.xml
+desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
+appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/appdata/*.appdata.xml
 
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 
+%if %{?fedora} < 25
 %post
 /usr/bin/update-desktop-database &> /dev/null || :
 
 %postun
 /usr/bin/update-desktop-database &> /dev/null || :
-if [ $1 -eq 0 ] ; then
-    /usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
-fi
-
-%posttrans
-/usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
+%endif
 
 
 %files -f pantheon-photos.lang
@@ -95,6 +91,9 @@ fi
 
 
 %changelog
+* Wed Sep 28 2016 Fabio Valentini <decathorpe@gmail.com> - 0.2-3
+- Spec file cleanups.
+
 * Mon Sep 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.2-2
 - Spec file cosmetics.
 

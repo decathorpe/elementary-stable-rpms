@@ -1,7 +1,7 @@
 Summary:        The official elementary calendar
 Name:           maya-calendar
 Version:        0.4.0.2
-Release:        3%{?dist}
+Release:        5%{?dist}
 License:        GPLv3
 URL:            http://launchpad.net/maya
 
@@ -68,30 +68,39 @@ This package contains the development files.
 
 
 %check
-desktop-file-validate $RPM_BUILD_ROOT/%{_datadir}/applications/*.desktop
-appstream-util validate-relax --nonet $RPM_BUILD_ROOT/%{_datadir}/appdata/*.appdata.xml
+desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
+appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/appdata/*.appdata.xml
 
 
 %clean
-rm -rf %{buildroot}/RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 
 %post
 /sbin/ldconfig
+/bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null || :
+
+%if %{?fedora} < 25
 /usr/bin/update-desktop-database &> /dev/null || :
+%endif
 
 %postun
 /sbin/ldconfig
-/usr/bin/update-desktop-database &> /dev/null || :
+
 if [ $1 -eq 0 ] ; then
-    /usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
+    /bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null
+    /usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 fi
 
+%if %{?fedora} < 25
+/usr/bin/update-desktop-database &> /dev/null || :
+%endif
+
 %posttrans
-/usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
+/usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 
 
-%files       -f maya-calendar.lang
+%files -f maya-calendar.lang
 %doc AUTHORS COPYRIGHT HACKING
 %license COPYING
 
@@ -110,7 +119,7 @@ fi
 %{_datadir}/maya-calendar/
 
 
-%files devel
+%files          devel
 %{_includedir}/maya-calendar/
 
 %{_libdir}/libmaya-calendar.so
@@ -121,6 +130,12 @@ fi
 
 
 %changelog
+* Wed Sep 28 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4.0.2-5
+- Spec file cleanups.
+
+* Wed Sep 28 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4.0.2-4
+- Spec file cleanups.
+
 * Tue Sep 27 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4.0.2-3
 - Validate all .desktop files.
 

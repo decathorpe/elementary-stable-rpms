@@ -1,7 +1,7 @@
 Summary:        simple screen capture tool
 Name:           screenshot-tool
 Version:        0.1.0.3
-Release:        2%{?dist}
+Release:        3%{?dist}
 License:        GPLv3
 URL:            http://launchpad.net/screenshot-tool
 
@@ -50,19 +50,6 @@ appstream-util validate-relax --nonet $RPM_BUILD_ROOT/%{_datadir}/appdata/*.appd
 rm -rf %{buildroot}
 
 
-%post
-/usr/bin/update-desktop-database &> /dev/null || :
-
-%postun
-/usr/bin/update-desktop-database &> /dev/null || :
-if [ $1 -eq 0 ] ; then
-    /usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
-fi
-
-%posttrans
-/usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
-
-
 %files -f screenshot-tool.lang
 %{_bindir}/screenshot-tool
 
@@ -72,6 +59,9 @@ fi
 
 
 %changelog
+* Wed Sep 28 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.0.3-3
+- Spec file cleanups.
+
 * Wed Sep 28 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.0.3-2
 - Add BR: intltool to hopefully fix f25 build.
 
