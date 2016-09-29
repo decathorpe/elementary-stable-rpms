@@ -3,7 +3,7 @@
 Summary:        An easy parental controls plug
 Name:           switchboard-plug-parental-controls
 Version:        0.1.1
-Release:        2%{?dist}
+Release:        3%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/switchboard-plug-parental-controls
 
@@ -89,6 +89,9 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
 
 
 %changelog
+* Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-3
+- Mass rebuild.
+
 * Fri Sep 23 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-2
 - Add systemd service file back again.
 

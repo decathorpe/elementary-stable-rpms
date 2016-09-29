@@ -1,7 +1,7 @@
 Summary:        DPMS helper for elementary
 Name:           elementary-dpms-helper
 Version:        0+rev%{rev}
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
 URL:            https://code.launchpad.net/~codygarver/+junk/elementary-dpms-helper
 
@@ -54,6 +54,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 0+rev129-2
+- Mass rebuild.
+
 * Wed Sep 28 2016 Fabio Valentini <decathorpe@gmail.com> - 0+rev129-1
 - Update to version 0.
 

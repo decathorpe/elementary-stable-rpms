@@ -1,7 +1,7 @@
 Summary:        Pantheon Polkit Agent
 Name:           pantheon-agent-polkit
 Version:        0.1
-Release:        2%{?dist}
+Release:        3%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/pantheon-agent-polkit
 
@@ -64,6 +64,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1-3
+- Mass rebuild.
+
 * Wed Sep 21 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1-2
 - Add autostart file yoinked from debian packaging files.
 

@@ -1,6 +1,6 @@
 Summary:        Wallpapers for elementary OS
 Name:           elementary-wallpapers
-Version:        0~git%{date}~%{rev}
+Version:        0+git%{date}.%{rev}
 Release:        1%{?dist}
 License:        CC-BY-SA
 URL:            http://github.com/elementary/wallpapers
@@ -38,6 +38,12 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 0+git160615.091501.71cd2c90-1
+- Update to version 0.
+
+* Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 0~git160615.091501~71cd2c90-2
+- Mass rebuild.
+
 * Tue Sep 13 2016 Fabio Valentini <decathorpe@gmail.com> - 0~git160615.091501~71cd2c90-1
 - Update to version 0.
 

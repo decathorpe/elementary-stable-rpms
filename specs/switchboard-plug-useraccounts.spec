@@ -3,7 +3,7 @@
 Summary:        Switchboard User Accounts Plug
 Name:           switchboard-plug-useraccounts
 Version:        0.1.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        LGPLv3
 URL:            https://launchpad.net/switchboard-plug-useraccounts
 
@@ -63,6 +63,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.3-2
+- Mass rebuild.
+
 * Tue Aug 23 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.3-1
 - Update to version 0.1.3.
 

@@ -1,6 +1,6 @@
 Summary:        CMake modules for elementary
 Name:           cmake-elementary
-Version:        0~rev%{rev}
+Version:        0+rev%{rev}
 Release:        1%{?dist}
 License:        GPLv3
 URL:            https://code.launchpad.net/~elementary-os/+junk/cmake-modules
@@ -44,6 +44,12 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 0+rev27-1
+- Update to version 0.
+
+* Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 0~rev27-2
+- Mass rebuild.
+
 * Wed Aug 17 2016 Fabio Valentini <decathorpe@gmail.com> - 0~rev27-1
 - Update to version 0.
 

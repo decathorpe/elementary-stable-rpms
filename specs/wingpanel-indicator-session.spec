@@ -3,7 +3,7 @@
 Summary:        Session Indicator for wingpanel
 Name:           wingpanel-indicator-session
 Version:        2.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3, LGPLv3
 URL:            https://launchpad.net/wingpanel-indicator-session
 
@@ -54,6 +54,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 2.0-2
+- Mass rebuild.
+
 * Sun Aug 21 2016 Fabio Valentini <decathorpe@gmail.com> - 2.0-1
 - Update to latest snapshot.
 

@@ -1,7 +1,7 @@
 Summary:        Stupidly simple Dock
 Name:           plank
 Version:        0.11.2
-Release:        4%{?dist}
+Release:        5%{?dist}
 License:        GPLv3
 URL:            http://launchpad.net/plank
 
@@ -146,6 +146,9 @@ fi
 
 
 %changelog
+* Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 0.11.2-5
+- Mass rebuild.
+
 * Wed Sep 28 2016 Fabio Valentini <decathorpe@gmail.com> - 0.11.2-4
 - Add missing BR: intltool.
 

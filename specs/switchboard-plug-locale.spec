@@ -3,7 +3,7 @@
 Summary:        Adjust Locale settings from Switchboard
 Name:           switchboard-plug-locale
 Version:        0.2.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        LGPLv3
 URL:            https://launchpad.net/switchboard-plug-locale
 
@@ -62,6 +62,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 0.2.1-2
+- Mass rebuild.
+
 * Mon Aug 22 2016 Fabio Valentini <decathorpe@gmail.com> - 0.2.1-1
 - Update to version 0.2.1.
 

@@ -1,7 +1,7 @@
 Summary:        fast and beautiful camera app
 Name:           snap-photobooth
 Version:        0.3.0.1
-Release:        4%{?dist}
+Release:        5%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/snap-elementary
 
@@ -64,6 +64,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3.0.1-5
+- Mass rebuild.
+
 * Wed Sep 28 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3.0.1-4
 - Add missing BR: intltool.
 
