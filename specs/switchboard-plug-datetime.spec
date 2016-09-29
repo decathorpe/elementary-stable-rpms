@@ -3,7 +3,7 @@
 Summary:        Switchboard plug to configure DateTime settings
 Name:           switchboard-plug-datetime
 Version:        0.1.1.1
-Release:        2%{?dist}
+Release:        3%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/switchboard-plug-datetime
 
@@ -50,11 +50,13 @@ rm -rf %{buildroot}
 
 
 %files -f pantheon-datetime-plug.lang
-%{_libdir}/switchboard/system/pantheon-datetime/libpantheon-datetime.so
-%{_libdir}/switchboard/system/pantheon-datetime/images/*
+%{_libdir}/switchboard/system/pantheon-datetime/
 
 
 %changelog
+* Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1.1-3
+- Clean up spec.
+
 * Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1.1-2
 - Mass rebuild.
 
