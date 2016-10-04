@@ -2,8 +2,8 @@
 
 Summary:        Ayatana indicator for wingpanel
 Name:           wingpanel-indicator-ayatana
-Version:        2.0.1
-Release:        2%{?dist}
+Version:        2.0.2
+Release:        1%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/wingpanel-indicator-ayatana
 
@@ -51,6 +51,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Tue Oct 04 2016 Fabio Valentini <decathorpe@gmail.com> - 2.0.2-1
+- Update to version 2.0.2.
+
 * Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 2.0.1-2
 - Mass rebuild.
 
