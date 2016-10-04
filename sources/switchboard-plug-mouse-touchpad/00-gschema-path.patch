@@ -1,7 +1,8 @@
-=== modified file 'src/Backend/TouchpadSettings.vala'
---- src/Backend/TouchpadSettings.vala	2016-06-18 18:12:17 +0000
-+++ src/Backend/TouchpadSettings.vala	2016-08-20 02:12:02 +0000
-@@ -22,7 +22,7 @@
+diff --git a/src/Backend/TouchpadSettings.vala b/src/Backend/TouchpadSettings.vala
+index 72c716c..942c87a 100755
+--- a/src/Backend/TouchpadSettings.vala
++++ b/src/Backend/TouchpadSettings.vala
+@@ -22,7 +22,7 @@ public class MouseTouchpad.Backend.TouchpadSettings : Granite.Services.Settings
      public string click_method { get; set; }
      public double speed { get; set; }
      public string left_handed  { get; set; }
@@ -10,43 +11,34 @@
      public bool natural_scroll { get; set; }
  
      public TouchpadSettings () {
-
-=== modified file 'src/Widgets/TouchpadSection.vala'
---- src/Widgets/TouchpadSection.vala	2016-06-18 18:42:34 +0000
-+++ src/Widgets/TouchpadSection.vala	2016-08-20 02:23:09 +0000
-@@ -24,7 +24,7 @@
-     private Gtk.Switch tap_to_click_switch;
-     private Gtk.ComboBoxText click_method_combobox;
-     private Gtk.Scale pointer_speed_scale;
--    private Gtk.ComboBoxText scrolling_combobox;
-+    private Gtk.Switch scrolling_switch;
-     private Gtk.Switch horizontal_scrolling_switch;
-     private Gtk.Switch natural_scrolling_switch;
+diff --git a/src/Widgets/TouchpadSection.vala b/src/Widgets/TouchpadSection.vala
+index 682406b..b383b1e 100755
+--- a/src/Widgets/TouchpadSection.vala
++++ b/src/Widgets/TouchpadSection.vala
+@@ -50,10 +50,8 @@ public class MouseTouchpad.Widgets.TouchpadSection : Gtk.Grid {
+         pointer_speed_scale.add_mark (0, Gtk.PositionType.BOTTOM, null);
+         Plug.end_size_group.add_widget (pointer_speed_scale);
  
-@@ -56,10 +56,8 @@
-         pointer_speed_scale.draw_value = false;
-         pointer_speed_scale.set_size_request (160, -1);
- 
--        scrolling_combobox = new Gtk.ComboBoxText ();
+-        var scrolling_combobox = new Gtk.ComboBoxText ();
 -        scrolling_combobox.append ("two-finger-scrolling", _("Two-finger"));
 -        scrolling_combobox.append ("edge-scrolling", _("Edge"));
 -        scrolling_combobox.append ("disabled", _("Disabled"));
-+	scrolling_switch = new Gtk.Switch ();
++        var scrolling_switch = new Gtk.Switch ();
 +        scrolling_switch.halign = Gtk.Align.START;
  
-         horizontal_scrolling_switch = new Gtk.Switch ();
+         var horizontal_scrolling_switch = new Gtk.Switch ();
          horizontal_scrolling_switch.halign = Gtk.Align.START;
-@@ -71,15 +69,15 @@
-         //this.add_entry (_("Disable while typing:"), disable_while_typing_switch);
-         this.add_entry (_("Tap to click:"), tap_to_click_switch);
-         this.add_entry (_("Physical clicking:"), click_method_combobox);
--        this.add_entry (_("Scrolling:"), scrolling_combobox);
-+        this.add_entry (_("Edge Scrolling:"), scrolling_switch);
-         //this.add_entry (_("Horizontal scrolling:"), horizontal_scrolling_switch);
-         this.add_entry (_("Natural scrolling:"), natural_scrolling_switch);
-     }
+@@ -71,14 +69,14 @@ public class MouseTouchpad.Widgets.TouchpadSection : Gtk.Grid {
+         attach (tap_to_click_switch, 1, 2, 1, 1);
+         attach (new SettingLabel (_("Physical clicking:")), 0, 3, 1, 1);
+         attach (click_method_combobox, 1, 3, 1, 1);
+-        attach (new SettingLabel (_("Scrolling:")), 0, 4, 1, 1);
+-        attach (scrolling_combobox, 1, 4, 1, 1);
++        attach (new SettingLabel (_("Edge Scrolling:")), 0, 4, 1, 1);
++        attach (scrolling_switch, 1, 4, 1, 1);
+         attach (new SettingLabel (_("Natural scrolling:")), 0, 5, 1, 1);
+         attach (natural_scrolling_switch, 1, 5, 1, 1);
  
-     private void create_bindings () {
 -        touchpad_settings.bind_property ("scroll-method",
 -                                         scrolling_combobox,
 -                                         "active-id",
@@ -56,4 +48,3 @@
                                           BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE);
  
          touchpad_settings.bind_property ("tap-to-click",
-
