@@ -21,8 +21,8 @@ Obsoletes:      pantheon-xsession-settings
 
 %description
 This package installs a fully usable X login session and provides some
-session-specific configuration files and defaults. Installing this
-ackage will add a session called Pantheon to your login screen.
+session-specific configuration files and defaults. Installing this package will
+add a session called Pantheon to your login screen.
 
 
 %package        overrides
@@ -66,8 +66,14 @@ install -p wayland-sessions/pantheon-wayland.desktop %{buildroot}/%{_datadir}/wa
 install -p xsessions/pantheon.desktop %{buildroot}/%{_datadir}/xsessions/
 install -p overrides/20-org.pantheon.desktop-interface.gschema.override %{buildroot}/%{_datadir}/glib-2.0/schemas/
 
-%clean
-rm -rf %{buildroot}
+
+%postun         overrides
+if [ $1 -eq 0 ] ; then
+    /usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
+fi
+
+%posttrans      overrides
+/usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
 
 
 %files
@@ -84,6 +90,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Wed Oct 05 2016 Fabio Valentini <decathorpe@gmail.com> - 0.6.0+git160919.154120.5d95d50d-2
+- Add glib-compile-schemas scriptlet to -overrides subpackage.
+
 * Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 0.6.0+git160919.154120.5d95d50d-1
 - Update to version 0.6.0.
 
