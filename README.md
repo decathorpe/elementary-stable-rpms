@@ -20,8 +20,7 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 | noise                 | DONE                  |                           | <https://launchpad.net/noise>                 |               |
 | pantheon-calculator   | DONE                  |                           | <https://launchpad.net/pantheon-calculator>   |               |
 | pantheon-files        | DONE                  |                           | <https://launchpad.net/pantheon-files>        |               |
-| pantheon-mail         | TBD                   |                           | <https://launchpad.net/pantheon-mail>         |               |
-| pantheon-notes        | TBD                   | no stable release yet     | <https://launchpad.net/pantheon-notes>        |               |
+| pantheon-mail         | TBD                   | needs gsignond, libgsignon-glib | <https://launchpad.net/pantheon-mail>   |               |
 | pantheon-photos       | DONE                  |                           | <https://launchpad.net/pantheon-photos>       |               |
 | pantheon-terminal     | DONE                  |                           | <https://launchpad.net/pantheon-terminal>     |               |
 | scratch-text-editor   | DONE                  |                           | <https://launchpad.net/scratch>               |               |
@@ -39,7 +38,7 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 | gala                          | DONE              | trunk snapshot        | <https://launchpad.net/gala>                  |               |
 | plank                         | DONE              |                       | <https://launchpad.net/plank>                 |               |
 | pantheon-agent-polkit         | DONE              |                       | <https://launchpad.net/pantheon-agent-polkit> |               |
-| pantheon-greeter              | TBD               |                       | <https://launchpad.net/pantheon-greeter>      |               |
+| pantheon-greeter              | TBD               | FTBFS                 | <https://launchpad.net/pantheon-greeter>      |               |
 | pantheon-session-settings     | DONE              |                       | <https://github.com/decathorpe/pantheon-session-settings> |   |
 | slingshot-launcher            | DONE              |                       | <https://launchpad.net/slingshot>             |               |
 | wingpanel                     | DONE              |                       | <https://launchpad.net/wingpanel>             |               |
@@ -68,7 +67,7 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 | switchboard-plug-mouse-touchpad   | DONE          |           | <https://launchpad.net/switchboard-plug-mouse-touchpad>   |               |
 | switchboard-plug-networking       | DONE          |           | <https://launchpad.net/switchboard-plug-networking>       |               |
 | switchboard-plug-notifications    | DONE          |           | <https://launchpad.net/switchboard-plug-notifications>    |               |
-| switchboard-plug-onlineaccounts   | TBD           |           | <https://launchpad.net/switchboard-plug-onlineaccounts>   |               |
+| switchboard-plug-onlineaccounts   | TBD           | needs gsignond, libgsignon-glib | <https://launchpad.net/switchboard-plug-onlineaccounts> | |
 | switchboard-plug-pantheon-shell   | DONE          |           | <https://launchpad.net/switchboard-plug-pantheon-shell>   |               |
 | switchboard-plug-parental-controls| DONE          |           | <https://launchpad.net/switchboard-plug-parental-controls>|               |
 | switchboard-plug-power            | DONE          |           | <https://launchpad.net/switchboard-plug-power>            |               |
@@ -98,9 +97,9 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 | package name          | status                | comment           | URL                                               | related bugs  |
 | --------------------- | --------------------- | ----------------- | ------------------------------------------------- | ------------- |
 | cmake-elementary      | DONE                  |                   |                                                   |               |
-| gsignond              | DONE                  | git snapshot      | <https://gitlab.com/accounts-sso/gsignond>        |               |
+| gsignond              | TBD                   | seems broken      | <https://gitlab.com/accounts-sso/gsignond>        |               |
 | granite               | DONE                  |                   | <https://launchpad.net/granite>                   |               |
-| libgsignon-glib       | DONE                  | git snapshot      | <https://gitlab.com/accounts-sso/libgsignon-glib> |               |
+| libgsignon-glib       | TBD                   | seems broken      | <https://gitlab.com/accounts-sso/libgsignon-glib> |               |
 
 
 ## USAGE
