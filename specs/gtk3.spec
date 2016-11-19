@@ -335,6 +335,9 @@ gtk-query-immodules-3.0-%{__isa_bits} --update-cache
 %{_datadir}/installed-tests
 
 %changelog
+* Sat Nov 19 2016 Fabio Valentini <decathorpe@gmail.com> - 3.22.3+git161119.121559.4bc2904d-1
+- Update to latest snapshot.
+
 * Fri Nov 18 2016 Fabio Valentini <decathorpe@gmail.com> - 3.22.3+git161118.091504.042e37e6-1
 - Update to latest snapshot.
 
