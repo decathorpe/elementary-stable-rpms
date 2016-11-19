@@ -3,7 +3,7 @@
 Summary:        Switchboard Privacy and Security Plug
 Name:           switchboard-plug-security-privacy
 Version:        0.1.1
-Release:        3%{?dist}
+Release:        4%{?dist}
 License:        LGPLv2.1, LGPLv3
 URL:            https://launchpad.net/switchboard-plug-security-privacy
 
@@ -26,6 +26,7 @@ BuildRequires:  pkgconfig(zeitgeist-2.0)
 Supplements:    switchboard
 
 Requires:       elementary-dpms-helper
+Requires:       light-locker
 
 
 %description
@@ -50,9 +51,6 @@ Designed for elementary OS.
 %find_lang pantheon-security-privacy-plug
 
 
-%clean
-rm -rf %{buildroot}
-
 
 %files -f pantheon-security-privacy-plug.lang
 %doc AUTHORS
@@ -64,6 +62,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Sat Nov 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-4
+- Add Requires: light-locker.
+
 * Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-3
 - Mass rebuild.
 
