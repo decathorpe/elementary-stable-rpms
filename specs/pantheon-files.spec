@@ -1,6 +1,6 @@
 Summary:        Pantheon file manager
 Name:           pantheon-files
-Version:        0.3.0.3.1
+Version:        0.3.0.4
 Release:        1%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/pantheon-files
@@ -13,7 +13,7 @@ BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
 BuildRequires:  intltool
 BuildRequires:  libappstream-glib
-BuildRequires:  vala
+BuildRequires:  vala >= 0.34.0
 
 BuildRequires:  pkgconfig(dbus-glib-1)
 BuildRequires:  pkgconfig(gail-3.0)
@@ -137,6 +137,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Sat Nov 19 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3.0.4-1
+- Update to version 0.3.0.4.
+
 * Mon Oct 10 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3.0.3.1-1
 - Update to version 0.3.0.3.1.
 
