@@ -12,21 +12,21 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 
 ### official elementary apps
 
-| package name          | status                | comment                   | URL                                           | related bugs  |
-| --------------------- | --------------------- | ------------------------- | --------------------------------------------- | ------------- |
-| appcenter             | DONE                  |                           | <https://launchpad.net/appcenter>             |               |
-| audience              | DONE                  |                           | <https://launchpad.net/audience>              |               |
-| maya-calendar         | DONE                  |                           | <https://launchpad.net/maya>                  |               |
-| noise                 | DONE                  |                           | <https://launchpad.net/noise>                 |               |
-| pantheon-calculator   | DONE                  |                           | <https://launchpad.net/pantheon-calculator>   |               |
-| pantheon-files        | DONE                  |                           | <https://launchpad.net/pantheon-files>        |               |
-| pantheon-mail         | TBD                   | needs gsignond, libgsignon-glib | <https://launchpad.net/pantheon-mail>   |               |
-| pantheon-photos       | DONE                  |                           | <https://launchpad.net/pantheon-photos>       |               |
-| pantheon-terminal     | DONE                  |                           | <https://launchpad.net/pantheon-terminal>     |               |
-| scratch-text-editor   | DONE                  |                           | <https://launchpad.net/scratch>               |               |
-| screenshot-tool       | DONE                  |                           | <https://launchpad.net/screenshot-tool>       |               |
-| snap-photobooth       | DONE                  |                           | <https://launchpad.net/snap-elementary>       |               |
-| switchboard           | DONE                  |                           | <https://launchpad.net/switchboard>           |               |
+| package name          | status                | comment       | URL                                           | related bugs  |
+| --------------------- | --------------------- | ------------- | --------------------------------------------- | ------------- |
+| appcenter             | DONE                  |               | <https://launchpad.net/appcenter>             |               |
+| audience              | DONE                  |               | <https://launchpad.net/audience>              |               |
+| maya-calendar         | DONE                  |               | <https://launchpad.net/maya>                  |               |
+| noise                 | DONE                  |               | <https://launchpad.net/noise>                 |               |
+| pantheon-calculator   | DONE                  |               | <https://launchpad.net/pantheon-calculator>   |               |
+| pantheon-files        | DONE                  |               | <https://launchpad.net/pantheon-files>        |               |
+| pantheon-mail         | WONTFIX               | !gsignond     | <https://launchpad.net/pantheon-mail>         |               |
+| pantheon-photos       | DONE                  |               | <https://launchpad.net/pantheon-photos>       |               |
+| pantheon-terminal     | DONE                  |               | <https://launchpad.net/pantheon-terminal>     |               |
+| scratch-text-editor   | DONE                  |               | <https://launchpad.net/scratch>               |               |
+| screenshot-tool       | DONE                  |               | <https://launchpad.net/screenshot-tool>       |               |
+| snap-photobooth       | DONE                  |               | <https://launchpad.net/snap-elementary>       |               |
+| switchboard           | DONE                  |               | <https://launchpad.net/switchboard>           |               |
 
 
 ### pantheon desktop core
@@ -38,7 +38,7 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 | gala                          | DONE              | trunk snapshot        | <https://launchpad.net/gala>                  |               |
 | plank                         | DONE              |                       | <https://launchpad.net/plank>                 |               |
 | pantheon-agent-polkit         | DONE              |                       | <https://launchpad.net/pantheon-agent-polkit> |               |
-| pantheon-greeter              | TBD               | FTBFS                 | <https://launchpad.net/pantheon-greeter>      |               |
+| pantheon-greeter              | DONE              |                       | <https://launchpad.net/pantheon-greeter>      |               |
 | pantheon-session-settings     | DONE              |                       | <https://github.com/decathorpe/pantheon-session-settings> |   |
 | slingshot-launcher            | DONE              |                       | <https://launchpad.net/slingshot>             |               |
 | wingpanel                     | DONE              |                       | <https://launchpad.net/wingpanel>             |               |
@@ -67,7 +67,7 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 | switchboard-plug-mouse-touchpad   | DONE          |           | <https://launchpad.net/switchboard-plug-mouse-touchpad>   |               |
 | switchboard-plug-networking       | DONE          |           | <https://launchpad.net/switchboard-plug-networking>       |               |
 | switchboard-plug-notifications    | DONE          |           | <https://launchpad.net/switchboard-plug-notifications>    |               |
-| switchboard-plug-onlineaccounts   | TBD           | needs gsignond, libgsignon-glib | <https://launchpad.net/switchboard-plug-onlineaccounts> | |
+| switchboard-plug-onlineaccounts   | WONTFIX       | !gsignond | <https://launchpad.net/switchboard-plug-onlineaccounts> | |
 | switchboard-plug-pantheon-shell   | DONE          |           | <https://launchpad.net/switchboard-plug-pantheon-shell>   |               |
 | switchboard-plug-parental-controls| DONE          |           | <https://launchpad.net/switchboard-plug-parental-controls>|               |
 | switchboard-plug-power            | DONE          |           | <https://launchpad.net/switchboard-plug-power>            |               |
@@ -97,9 +97,9 @@ The current build status for each DONE package can be seen at <https://copr.fedo
 | package name          | status                | comment           | URL                                               | related bugs  |
 | --------------------- | --------------------- | ----------------- | ------------------------------------------------- | ------------- |
 | cmake-elementary      | DONE                  |                   |                                                   |               |
-| gsignond              | TBD                   | seems broken      | <https://gitlab.com/accounts-sso/gsignond>        |               |
+| gsignond              | WONTFIX               | seems broken      | <https://gitlab.com/accounts-sso/gsignond>        |               |
 | granite               | DONE                  |                   | <https://launchpad.net/granite>                   |               |
-| libgsignon-glib       | TBD                   | seems broken      | <https://gitlab.com/accounts-sso/libgsignon-glib> |               |
+| libgsignon-glib       | WONTFIX               | seems broken      | <https://gitlab.com/accounts-sso/libgsignon-glib> |               |
 
 
 ## USAGE
