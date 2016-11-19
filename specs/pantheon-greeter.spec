@@ -1,7 +1,9 @@
+%global debug_package %{nil}
+
 Summary:        Pantheon's LightDM Login Screen
 Name:           pantheon-greeter
-Version:        
-Release:        0%{?dist}
+Version:        3.0
+Release:        1%{?dist}
 License:        GPLv3
 URL:            http://launchpad.net/pantheon-greeter
 
@@ -35,22 +37,28 @@ Designed for elementary OS.
 
 
 %build
-%cmake
+mkdir build && cd build
+%cmake ..
 %make_build
 
 
 %install
+pushd build
 %make_install
-# %find_lang pantheon-greeter
+popd
+%find_lang pantheon-greeter
 
 
-%clean
-rm -rf %{buildroot}
+%files -f pantheon-greeter.lang
+%{_sbindir}/pantheon-greeter
 
+%{_sysconfdir}/lightdm/pantheon-greeter.conf
 
-%files
-# -f pantheon-greeter.lang
+%{_datadir}/xgreeters/pantheon-greeter.desktop
 
 
 %changelog
+* Sat Nov 19 2016 Fabio Valentini <decathorpe@gmail.com> - 3.0-1
+- Update to version 3.0.
+
 
