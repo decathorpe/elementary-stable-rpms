@@ -1,7 +1,7 @@
 Summary:        Get apps for elementary OS
 Name:           appcenter
 Version:        0.1.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/appcenter
 
@@ -42,12 +42,18 @@ AppCenter is a native Gtk+ app store built on AppStream and Packagekit.
 
 
 %build
-%cmake
+mkdir build
+pushd build
+%cmake ..
 %make_build
+popd
 
 
 %install
+pushd build
 %make_install
+popd
+
 %find_lang appcenter
 
 
@@ -69,6 +75,9 @@ appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/appdata/*.appdata
 
 
 %changelog
+* Sun Nov 20 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.2-2
+- Build out of tree.
+
 * Sat Oct 29 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.2-1
 - Update to version 0.1.2.
 
