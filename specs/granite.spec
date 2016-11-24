@@ -1,11 +1,13 @@
-Summary:        Granite Toolkit
+%global series 0.4
+
 Name:           granite
+Summary:        elementary Development Library
 Version:        0.4.0.1
-Release:        4%{?dist}
+Release:        5%{?dist}
 License:        LGPLv3
 URL:            http://launchpad.net/granite
 
-Source0:        %{name}-%{version}.tar.xz
+Source0:        https://launchpad.net/%{name}/%{series}/%{version}/+download/%{name}-%{version}.tar.xz
 Source1:        %{name}.conf
 
 BuildRequires:  cmake
@@ -18,21 +20,21 @@ BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  pkgconfig(gobject-introspection-1.0)
 
-Requires: hicolor-icon-theme
+Requires:       hicolor-icon-theme
 
 
 %description
-Granite is a library of toolkit addons to GTK+ and is part of the
-elementary project.
+An extension to GTK+ that provides several useful widgets and classes
+to ease application development.
 
 
 %package        devel
 Summary:        Granite Toolkit development headers
 %description    devel
-Granite is a library of toolkit addons to GTK+ and is part of the
-elementary project.
+An extension to GTK+ that provides several useful widgets and classes
+to ease application development.
 
-This package contains files needed for developing with granite.
+This package contains the development headers.
 
 
 %prep
@@ -40,21 +42,22 @@ This package contains files needed for developing with granite.
 
 
 %build
-%cmake
+mkdir build && pushd build
+%cmake ..
 %make_build
+popd
 
 
 %install
+pushd build
 %make_install
+popd
+
 %find_lang granite
 
 
 %check
 desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
-
-
-%clean
-rm -rf %{buildroot}
 
 
 %post
@@ -100,6 +103,9 @@ fi
 
 
 %changelog
+* Thu Nov 24 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4.0.1-5
+- Spec file cosmetics.
+
 * Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4.0.1-4
 - Mass rebuild.
 
