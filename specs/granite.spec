@@ -3,9 +3,9 @@
 Name:           granite
 Summary:        elementary Development Library
 Version:        0.4.0.1
-Release:        5%{?dist}
-License:        LGPLv3
-URL:            http://launchpad.net/granite
+Release:        7%{?dist}
+License:        LGPLv3+
+URL:            https://launchpad.net/granite
 
 Source0:        https://launchpad.net/%{name}/%{series}/%{version}/+download/%{name}-%{version}.tar.xz
 Source1:        %{name}.conf
@@ -20,6 +20,7 @@ BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  pkgconfig(gobject-introspection-1.0)
 
+# granite provides and needs some generic icons
 Requires:       hicolor-icon-theme
 
 
@@ -30,6 +31,7 @@ to ease application development.
 
 %package        devel
 Summary:        Granite Toolkit development headers
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 %description    devel
 An extension to GTK+ that provides several useful widgets and classes
 to ease application development.
@@ -57,7 +59,7 @@ popd
 
 
 %check
-desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
+desktop-file-validate %{buildroot}/%{_datadir}/applications/granite-demo.desktop
 
 
 %post
@@ -103,6 +105,13 @@ fi
 
 
 %changelog
+* Sun Nov 27 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4.0.1-7
+- Check granite-demo.desktop file explicitly.
+- Correct license (s/LGPLv3/LGPLv3+).
+
+* Sun Nov 27 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4.0.1-6
+- Add missing Requires to -devel.
+
 * Thu Nov 24 2016 Fabio Valentini <decathorpe@gmail.com> - 0.4.0.1-5
 - Spec file cosmetics.
 
