@@ -1,9 +1,9 @@
 Summary:        pantheon session configuration files
 Name:           pantheon-session-settings
 Version:        0.6.0+git%{date}.%{rev}
-Release:        1%{?dist}
+Release:        3%{?dist}
 License:        GPLv2
-URL:            http://github.com/decathorpe/pantheon-session-settings
+URL:            https://github.com/decathorpe/pantheon-session-settings
 
 Source0:        %{name}-%{version}.tar.gz
 Source1:        %{name}.conf
@@ -37,6 +37,17 @@ default settings.
 
 Requires:       google-roboto-mono-fonts
 Requires:       open-sans-fonts
+
+
+%package        wayland
+Summary:        Pantheon session settings for wayland
+%description    wayland
+This package installs a fully usable X login session and provides some
+session-specific configuration files and defaults. Installing this
+ackage will add a session called Pantheon to your login screen.
+
+This subpackage contains the settings files for the (not yet supported)
+wayland session.
 
 
 %prep
@@ -80,16 +91,21 @@ fi
 %{_sysconfdir}/xdg/autostart/*.desktop
 
 %{_datadir}/gnome-session/sessions/pantheon.session
-%{_datadir}/gnome-session/sessions/pantheon-wayland.session
 %{_datadir}/pantheon/
-%{_datadir}/wayland-sessions/pantheon-wayland.desktop
 %{_datadir}/xsessions/pantheon.desktop
 
 %files      overrides
 %{_datadir}/glib-2.0/schemas/20-org.pantheon.desktop-interface.gschema.override
 
+%files      wayland
+%{_datadir}/gnome-session/sessions/pantheon-wayland.session
+%{_datadir}/wayland-sessions/pantheon-wayland.desktop
+
 
 %changelog
+* Fri Dec 02 2016 Fabio Valentini <decathorpe@gmail.com> - 0.6.0+git160919.154120.5d95d50d-3
+- Move wayland files into a subpackage.
+
 * Wed Oct 05 2016 Fabio Valentini <decathorpe@gmail.com> - 0.6.0+git160919.154120.5d95d50d-2
 - Add glib-compile-schemas scriptlet to -overrides subpackage.
 
