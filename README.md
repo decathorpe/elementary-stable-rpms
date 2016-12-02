@@ -3,7 +3,13 @@ I use this repository to keep track of files related to packaging / building sta
 releases of elementaryOS / pantheon desktop components and applications for fedora.
 
 
-## packaging progress
+## Known Issues
+
+- GTK3 > 3.18 is not yet supported by the elementary GTK theme
+- the pantheon wayland session doesn't work yet
+
+
+## Packaging Progress
 
 The tables list the packaging status of elementary software.
 
