@@ -59,7 +59,7 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 - pantheon-session-settings is a fork of the ubuntu-specific session settings bzr branch for fedora, which has no official release yet (blame me!)
 
 
-## elementary artwork
+### elementary artwork
 
 | package name                          | f24                   | f25                   | Upstream Project URL                                          |
 | ------------------------------------- | --------------------- | --------------------- | ------------------------------------------------------------- |
