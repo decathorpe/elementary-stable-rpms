@@ -1,7 +1,7 @@
 Summary:        Pantheon Polkit Agent
 Name:           pantheon-agent-polkit
-Version:        0.1
-Release:        3%{?dist}
+Version:        0.1.1
+Release:        1%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/pantheon-agent-polkit
 
@@ -64,6 +64,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Thu Dec 08 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-1
+- Update to version 0.1.1.
+
 * Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1-3
 - Mass rebuild.
 

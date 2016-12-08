@@ -48,13 +48,14 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 | contractor                            | DONE                  | DONE                  | <https://launchpad.net/contractor>                            |
 | gala                                  | DONE (bzr snapshot)   | DONE (bzr snapshot)   | <https://launchpad.net/gala>                                  |
 | plank                                 | DONE                  | DONE                  | <https://launchpad.net/plank>                                 |
-| pantheon-agent-polkit                 | DONE                  | DONE                  | <https://launchpad.net/pantheon-agent-polkit>                 |
+| pantheon-agent-polkit                 | OOD (up to 0.1)       | DONE                  | <https://launchpad.net/pantheon-agent-polkit>                 |
 | pantheon-greeter                      | WONTFIX               | DONE                  | <https://launchpad.net/pantheon-greeter>                      |
 | pantheon-session-settings             | DONE (git snapshot)   | DONE (git snapshot)   | <https://github.com/decathorpe/pantheon-session-settings>     |
 | slingshot-launcher                    | DONE                  | DONE                  | <https://launchpad.net/slingshot>                             |
 | wingpanel                             | DONE                  | DONE                  | <https://launchpad.net/wingpanel>                             |
 
 - gala does not yet provide a stable release
+- pantheon-agent-polkit requires `vala >= 0.34.0` (not available on f24) since version `0.1.1`
 - pantheon-greeter requires a newer version of lightdm than the one available on f24
 - pantheon-session-settings is a fork of the ubuntu-specific session settings bzr branch for fedora, which has no official release yet (blame me!)
 
