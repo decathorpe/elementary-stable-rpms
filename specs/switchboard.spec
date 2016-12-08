@@ -1,7 +1,7 @@
 Summary:        Modular Desktop Settings Hub
 Name:           switchboard
-Version:        2.1.0
-Release:        4%{?dist}
+Version:        2.2.0
+Release:        1%{?dist}
 License:        LGPLv2.1, LGPLv3
 URL:            http://launchpad.net/switchboard
 
@@ -47,18 +47,18 @@ This package contains the files required for developing for switchboard.
 
 
 %build
-%cmake -DUSE_UNITY:BOOL=OFF
+mkdir build && pushd build
+%cmake -DUSE_UNITY:BOOL=OFF ..
 %make_build
+popd
 
 
 %install
+pushd build
 %make_install
-%find_lang switchboard
+popd
 
-mkdir -p %{buildroot}/%{_libdir}/switchboard/hardware
-mkdir -p %{buildroot}/%{_libdir}/switchboard/network
-mkdir -p %{buildroot}/%{_libdir}/switchboard/personal
-mkdir -p %{buildroot}/%{_libdir}/switchboard/system
+%find_lang switchboard
 
 
 %check
@@ -84,7 +84,7 @@ rm -rf %{buildroot}
 %{_libdir}/switchboard/
 
 %{_datadir}/appdata/switchboard.appdata.xml
-%{_datadir}/applications/switchboard.desktop
+%{_datadir}/applications/org.pantheon.switchboard.desktop
 %{_datadir}/glib-2.0/schemas/org.pantheon.switchboard.gschema.xml
 
 
@@ -99,6 +99,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Thu Dec 08 2016 Fabio Valentini <decathorpe@gmail.com> - 2.2.0-1
+- Update to version 2.2.0.
+
 * Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 2.1.0-4
 - Mass rebuild.
 
