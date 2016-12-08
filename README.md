@@ -92,7 +92,7 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 | switchboard-plug-sharing              | DONE                  | DONE                  | <https://launchpad.net/switchboard-plug-sharing>              |
 | switchboard-plug-useraccounts         | DONE                  | DONE                  | <https://launchpad.net/switchboard-plug-useraccounts>         |
 
-- switchboard-plug-networking builds currentrly don't build due to a bug in `vala` which lead to corrupt `.vapi` files being generated for `NetworkManager`
+- switchboard-plug-networking builds currently don't build due to a bug in `vala` which lead to corrupt `.vapi` files being generated for `NetworkManager`
 - switchboard-plug-onlineaccounts requires `gsignond`, which doesn't compile on fedora
 
 
