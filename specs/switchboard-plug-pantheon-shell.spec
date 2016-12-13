@@ -2,8 +2,8 @@
 
 Summary:        Configure various aspects of the Pantheon desktop environment
 Name:           switchboard-plug-pantheon-shell
-Version:        0.2.3
-Release:        3%{?dist}
+Version:        0.2.4
+Release:        1%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/switchboard-plug-pantheon-shell
 
@@ -64,6 +64,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Tue Dec 13 2016 Fabio Valentini <decathorpe@gmail.com> - 0.2.4-1
+- Update to version 0.2.4.
+
 * Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 0.2.3-3
 - Mass rebuild.
 
