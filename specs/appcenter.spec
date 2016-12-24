@@ -1,7 +1,7 @@
 Summary:        Get apps for elementary OS
 Name:           appcenter
 Version:        0.1.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/appcenter
 
@@ -27,6 +27,7 @@ BuildRequires:  pkgconfig(granite)
 BuildRequires:  pkgconfig(gthread-2.0)
 BuildRequires:  pkgconfig(gtk+-3.0) >= 3.10
 BuildRequires:  pkgconfig(packagekit-glib2)
+BuildRequires:  pkgconfig(unity) >= 4.0.0
 
 Requires:       PackageKit
 
@@ -75,6 +76,9 @@ appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/appdata/*.appdata
 
 
 %changelog
+* Sat Dec 24 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.3-2
+- Enable libunity support.
+
 * Mon Dec 05 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.3-1
 - Update to version 0.1.3.
 

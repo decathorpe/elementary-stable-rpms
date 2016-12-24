@@ -1,7 +1,7 @@
 Summary:        Pantheon file manager
 Name:           pantheon-files
 Version:        0.3.0.5
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/pantheon-files
 
@@ -30,6 +30,7 @@ BuildRequires:  pkgconfig(libnotify) >= 0.7.2
 BuildRequires:  pkgconfig(pango) >= 1.1.2
 BuildRequires:  pkgconfig(plank)
 BuildRequires:  pkgconfig(sqlite3)
+BuildRequires:  pkgconfig(unity) >= 4.0.0
 BuildRequires:  pkgconfig(zeitgeist-2.0)
 
 
@@ -39,7 +40,7 @@ Designed for elementary OS.
 
 
 %package        libs
-Summary: pantheon-files libraries
+Summary:        pantheon-files libraries
 %description    libs
 The simple, powerful, and sexy file manager from elementary.
 
@@ -47,7 +48,7 @@ This package contains the libraries.
 
 
 %package        devel
-Summary: pantheon-files development headers
+Summary:        pantheon-files development headers
 %description    devel
 The simple, powerful, and sexy file manager from elementary.
 
@@ -71,19 +72,6 @@ This package contains the development headers.
 %check
 desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
 appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/appdata/*.appdata.xml
-
-
-%clean
-rm -rf %{buildroot}
-
-
-%if %{?fedora} < 25
-%post
-/usr/bin/update-desktop-database &> /dev/null || :
-
-%postun
-/usr/bin/update-desktop-database &> /dev/null || :
-%endif
 
 
 %post   libs -p /sbin/ldconfig
@@ -137,6 +125,10 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Sat Dec 24 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3.0.5-2
+- Enable libunity support.
+- Clean up spec.
+
 * Sat Dec 17 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3.0.5-1
 - Update to version 0.3.0.5.
 

@@ -1,7 +1,7 @@
 Summary:        Modular Desktop Settings Hub
 Name:           switchboard
 Version:        2.2.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        LGPLv2.1, LGPLv3
 URL:            http://launchpad.net/switchboard
 
@@ -20,6 +20,7 @@ BuildRequires:  pkgconfig(gee-0.8)
 BuildRequires:  pkgconfig(glib-2.0) >= 2.32
 BuildRequires:  pkgconfig(granite)
 BuildRequires:  pkgconfig(gtk+-3.0) >= 3.10
+BuildRequires:  pkgconfig(unity) >= 4.0.0
 
 
 %description
@@ -48,7 +49,7 @@ This package contains the files required for developing for switchboard.
 
 %build
 mkdir build && pushd build
-%cmake -DUSE_UNITY:BOOL=OFF ..
+%cmake ..
 %make_build
 popd
 
@@ -64,10 +65,6 @@ popd
 %check
 desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
 appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/appdata/*.appdata.xml
-
-
-%clean
-rm -rf %{buildroot}
 
 
 %post -p /sbin/ldconfig
@@ -99,6 +96,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Sat Dec 24 2016 Fabio Valentini <decathorpe@gmail.com> - 2.2.0-2
+- Enable libunity support.
+
 * Thu Dec 08 2016 Fabio Valentini <decathorpe@gmail.com> - 2.2.0-1
 - Update to version 2.2.0.
 

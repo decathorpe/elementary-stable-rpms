@@ -3,7 +3,7 @@
 Summary:        Lightweight and stylish app launcher
 Name:           slingshot-launcher
 Version:        2.0
-Release:        3%{?dist}
+Release:        4%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/slingshot
 
@@ -25,6 +25,7 @@ BuildRequires:  pkgconfig(libgnome-menu-3.0)
 BuildRequires:  pkgconfig(libsoup-2.4)
 BuildRequires:  pkgconfig(plank) >= 0.10.9
 BuildRequires:  pkgconfig(switchboard-2.0)
+BuildRequires:  pkgconfig(unity)
 BuildRequires:  pkgconfig(wingpanel-2.0)
 BuildRequires:  pkgconfig(zeitgeist-2.0)
 
@@ -42,17 +43,13 @@ Designed for elementary OS.
 
 
 %build
-%cmake -DUSE_UNITY:BOOL=OFF -DUSE_ZEITGEIST:BOOL=ON
+%cmake
 %make_build
 
 
 %install
 %make_install
 %find_lang slingshot
-
-
-%clean
-rm -rf %{buildroot}
 
 
 %files -f slingshot.lang
@@ -67,6 +64,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Sat Dec 24 2016 Fabio Valentini <decathorpe@gmail.com> - 2.0-4
+- Enable libunity support.
+
 * Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 2.0-3
 - Mass rebuild.
 

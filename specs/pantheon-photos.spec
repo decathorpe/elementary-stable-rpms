@@ -1,7 +1,7 @@
 Summary:        The elementary continuation of Shotwell
 Name:           pantheon-photos
 Version:        0.2
-Release:        4%{?dist}
+Release:        5%{?dist}
 License:        LGPLv2.1
 URL:            http://launchpad.net/pantheon-photos
 
@@ -33,6 +33,7 @@ BuildRequires:  pkgconfig(libsoup-2.4) >= 2.26.0
 BuildRequires:  pkgconfig(libxml-2.0) >= 2.6.32
 BuildRequires:  pkgconfig(rest-0.7) >= 0.7
 BuildRequires:  pkgconfig(sqlite3) >= 3.5.9
+BuildRequires:  pkgconfig(unity) >= 4.0.0
 BuildRequires:  pkgconfig(webkit2gtk-4.0) >= 2.0.0
 
 
@@ -62,10 +63,6 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
 appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/appdata/*.appdata.xml
 
 
-%clean
-rm -rf %{buildroot}
-
-
 %if %{?fedora} < 25
 %post
 /usr/bin/update-desktop-database &> /dev/null || :
@@ -91,6 +88,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Sat Dec 24 2016 Fabio Valentini <decathorpe@gmail.com> - 0.2-5
+- Enable libunity support.
+
 * Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 0.2-4
 - Mass rebuild.
 
