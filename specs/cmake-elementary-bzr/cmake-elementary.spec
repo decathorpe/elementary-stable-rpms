@@ -6,7 +6,7 @@ License:        GPLv3
 URL:            https://code.launchpad.net/~elementary-os/+junk/cmake-modules
 
 Source0:        %{name}-%{version}.tar.gz
-Source1:        %{name}.conf
+Source1:        cmake-elementary-bzr.conf
 
 BuildRequires:  cmake
 BuildRequires:  pkgconfig

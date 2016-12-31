@@ -6,7 +6,7 @@ License:        CC-BY-SA
 URL:            http://github.com/elementary/wallpapers
 
 Source0:        %{name}-%{version}.tar.gz
-Source1:        %{name}.conf
+Source1:        elementary-wallpapers-git.conf
 
 BuildArch:      noarch
 

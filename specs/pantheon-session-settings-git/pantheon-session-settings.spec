@@ -6,7 +6,7 @@ License:        GPLv2
 URL:            https://github.com/decathorpe/pantheon-session-settings
 
 Source0:        %{name}-%{version}.tar.gz
-Source1:        %{name}.conf
+Source1:        pantheon-session-settings-git.conf
 
 BuildArch:      noarch
 

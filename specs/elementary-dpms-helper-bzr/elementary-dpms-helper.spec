@@ -6,7 +6,7 @@ License:        GPLv3
 URL:            https://code.launchpad.net/~codygarver/+junk/elementary-dpms-helper
 
 Source0:        %{name}-%{version}.tar.gz
-Source1:        %{name}.conf
+Source1:        elementary-dpms-helper-bzr.conf
 
 BuildRequires:  cmake
 BuildRequires:  desktop-file-utils
