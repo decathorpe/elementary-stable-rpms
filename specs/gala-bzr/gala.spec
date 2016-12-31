@@ -1,12 +1,12 @@
 Summary:        Gala window manager
 Name:           gala
 Version:        0.3.0+rev%{rev}
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
 URL:            http://launchpad.net/gala
 
 Source0:        %{name}-%{version}.tar.gz
-Source1:        %{name}.conf
+Source1:        gala-bzr.conf
 
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
@@ -125,6 +125,9 @@ fi
 
 
 %changelog
+* Sat Dec 31 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3.0+rev551-2
+- Fix a typo in Source1.
+
 * Sat Dec 31 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3.0+rev551-1
 - Update to latest snapshot.
 
