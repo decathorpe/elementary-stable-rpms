@@ -3,12 +3,14 @@
 Summary:        Switchboard Privacy and Security Plug
 Name:           switchboard-plug-security-privacy
 Version:        0.1.1.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        LGPLv2.1, LGPLv3
 URL:            https://launchpad.net/switchboard-plug-security-privacy
 
-Source0:        %{name}-%{version}.tar.xz
+Source0:        https://launchpad.net/switchboard-plug-security-privacy/loki/0.1.1.1/+download/switchboard-plug-security-privacy-0.1.1.1.tar.xz
 Source1:        %{name}.conf
+
+Patch0:         0001-Use-Firewalld-instead-of-UFW.patch
 
 BuildRequires:  cmake
 BuildRequires:  gettext
@@ -38,7 +40,7 @@ Designed for elementary OS.
 
 
 %prep
-%autosetup
+%autosetup -p1
 
 
 %build
@@ -58,10 +60,11 @@ Designed for elementary OS.
 
 %{_libdir}/switchboard/personal/pantheon-security-privacy/
 
-%{_datadir}/polkit-1/actions/org.pantheon.security-privacy.policy
-
 
 %changelog
+* Mon Jan 02 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.1.1-2
+- Add patch to support firewalld instead of UFW.
+
 * Thu Dec 08 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1.1-1
 - Update to version 0.1.1.1.
 
