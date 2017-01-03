@@ -3,7 +3,7 @@
 Summary:        Switchboard Privacy and Security Plug
 Name:           switchboard-plug-security-privacy
 Version:        0.1.1.1
-Release:        2%{?dist}
+Release:        3%{?dist}
 License:        LGPLv2.1, LGPLv3
 URL:            https://launchpad.net/switchboard-plug-security-privacy
 
@@ -28,6 +28,7 @@ BuildRequires:  pkgconfig(zeitgeist-2.0)
 Supplements:    switchboard
 
 Requires:       elementary-dpms-helper
+Requires:       firewalld
 Requires:       light-locker
 
 
@@ -62,6 +63,9 @@ Designed for elementary OS.
 
 
 %changelog
+* Tue Jan 03 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.1.1-3
+- Add missing Requires: firewalld.
+
 * Mon Jan 02 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.1.1-2
 - Add patch to support firewalld instead of UFW.
 
