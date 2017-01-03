@@ -2,12 +2,12 @@
 
 Summary:        Network indicator for wingpanel
 Name:           wingpanel-indicator-network
-Version:        2.0.1
-Release:        3%{?dist}
+Version:        2.0.2
+Release:        1%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/wingpanel-indicator-network
 
-Source0:        %{name}-%{version}.tar.xz
+Source0:        https://launchpad.net/%{name}/loki/%{version}/+download/%{name}-%{version}.tar.xz
 Source1:        %{name}.conf
 
 BuildRequires:  cmake
@@ -56,6 +56,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Tue Jan 03 2017 Fabio Valentini <decathorpe@gmail.com> - 2.0.2-1
+- Update to version 2.0.2.
+
 * Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 2.0.1-3
 - Mass rebuild.
 
