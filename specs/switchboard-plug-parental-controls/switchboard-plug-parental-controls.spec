@@ -2,12 +2,12 @@
 
 Summary:        An easy parental controls plug
 Name:           switchboard-plug-parental-controls
-Version:        0.1.1
-Release:        3%{?dist}
+Version:        0.1.2
+Release:        1%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/switchboard-plug-parental-controls
 
-Source0:        %{name}-%{version}.tar.xz
+Source0:        https://launchpad.net/%{name}/loki/%{version}/+download/%{name}-%{version}.tar.xz
 Source1:        %{name}.conf
 
 BuildRequires:  cmake
@@ -47,13 +47,9 @@ An easy parental controls plug
 
 mkdir -p %{buildroot}/%{_unitdir}
 
-sed 's!@CMAKE_INSTALL_PREFIX@!%{_prefix}!' debian/pantheon-parental-controls.service > %{buildroot}/%{_unitdir}/pantheon-parental-controls.service
+mv %{buildroot}/lib/systemd/system/pantheon-parental-controls.service %{buildroot}/%{_unitdir}/
 
 rm %{buildroot}/%{_libdir}/*.a
-
-
-%clean
-rm -rf %{buildroot}
 
 
 %check
@@ -83,12 +79,16 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
 
 %{_datadir}/applications/pantheon-parental-controls-client.desktop
 %{_datadir}/dbus-1/system-services/org.pantheon.ParentalControls.service
+%{_datadir}/pantheon-parental-controls/
 %{_datadir}/polkit-1/actions/org.pantheon.switchboard.parental-controls.policy
 
 %{_unitdir}/pantheon-parental-controls.service
 
 
 %changelog
+* Tue Jan 03 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.2-1
+- Update to version 0.1.2.
+
 * Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-3
 - Mass rebuild.
 
