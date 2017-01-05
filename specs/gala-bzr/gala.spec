@@ -1,7 +1,7 @@
 Summary:        Gala window manager
 Name:           gala
 Version:        0.3.0+rev%{rev}
-Release:        2%{?dist}
+Release:        1%{?dist}
 License:        GPLv3
 URL:            http://launchpad.net/gala
 
@@ -125,6 +125,9 @@ fi
 
 
 %changelog
+* Thu Jan 05 2017 Fabio Valentini <decathorpe@gmail.com> - 0.3.0+rev552-1
+- Update to version 0.3.0.
+
 * Sat Dec 31 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3.0+rev551-2
 - Fix a typo in Source1.
 
