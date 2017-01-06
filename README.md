@@ -22,17 +22,9 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 | package name                          | f25                   | Upstream Project URL                                          |
 | ------------------------------------- | --------------------- | ------------------------------------------------------------- |
 | appcenter                             | DONE                  | <https://launchpad.net/appcenter>                             |
-| audience                              | DONE                  | <https://launchpad.net/audience>                              |
-| maya-calendar                         | DONE                  | <https://launchpad.net/maya>                                  |
-| noise                                 | DONE                  | <https://launchpad.net/noise>                                 |
-| pantheon-calculator                   | DONE                  | <https://launchpad.net/pantheon-calculator>                   |
 | pantheon-files                        | DONE                  | <https://launchpad.net/pantheon-files>                        |
 | pantheon-mail                         | WONTFIX               | <https://launchpad.net/pantheon-mail>                         |
 | pantheon-photos                       | DONE                  | <https://launchpad.net/pantheon-photos>                       |
-| pantheon-terminal                     | DONE                  | <https://launchpad.net/pantheon-terminal>                     |
-| scratch-text-editor                   | DONE                  | <https://launchpad.net/scratch>                               |
-| screenshot-tool                       | DONE                  | <https://launchpad.net/screenshot-tool>                       |
-| snap-photobooth                       | DONE                  | <https://launchpad.net/snap-elementary>                       |
 | switchboard                           | DONE                  | <https://launchpad.net/switchboard>                           |
 
 - pantheon-mail requires `gsignond`, which doesn't compile on fedora
@@ -43,8 +35,6 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 | package name                          | f25                   | Upstream Project URL                                          |
 | ------------------------------------- | --------------------- | ------------------------------------------------------------- |
 | cerbere                               | DONE                  | <https://launchpad.net/cerbere>                               |
-| contractor                            | DONE                  | <https://launchpad.net/contractor>                            |
-| gala                                  | DONE (bzr snapshot)   | <https://launchpad.net/gala>                                  |
 | plank                                 | DONE                  | <https://launchpad.net/plank>                                 |
 | pantheon-agent-polkit                 | DONE                  | <https://launchpad.net/pantheon-agent-polkit>                 |
 | pantheon-greeter                      | DONE                  | <https://launchpad.net/pantheon-greeter>                      |
@@ -93,8 +83,8 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 
 ### wingpanel indicators
 
-| package name                          | f24                   | f25                   | Upstream Project URL                                          |
-| ------------------------------------- | --------------------- | --------------------- | ------------------------------------------------------------- |
+| package name                          | f25                   | Upstream Project URL                                          |
+| ------------------------------------- | --------------------- | ------------------------------------------------------------- |
 | wingpanel-indicator-ayatana           | DONE                  | <https://launchpad.net/wingpanel-indicator-ayatana>           |
 | wingpanel-indicator-bluetooth         | DONE                  | <https://launchpad.net/wingpanel-indicator-bluetooth>         |
 | wingpanel-indicator-datetime          | DONE                  | <https://launchpad.net/wingpanel-indicator-datetime>          |
@@ -112,7 +102,6 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 | ------------------------------------- | --------------------- | ------------------------------------------------------------- |
 | cmake-elementary                      | DONE (bzr snapshot)   |                                                               |
 | gsignond                              | WONTFIX               | <https://gitlab.com/accounts-sso/gsignond>                    |
-| granite                               | PROPER                | <https://launchpad.net/granite>                               |
 | libgsignon-glib                       | WONTFIX               | <https://gitlab.com/accounts-sso/libgsignon-glib>             |
 
 - cmake-elementary does not yet provide a stable release
