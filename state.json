@@ -21,13 +21,6 @@
             "rpm_last_release":"1%{?dist}",
             "rpm_last_version":"4.0.1.1"
         },
-        "6":{
-            "name":"wingpanel",
-            "package_name":"wingpanel",
-            "package_version":"2.0.1",
-            "rpm_last_release":"5%{?dist}",
-            "rpm_last_version":"2.0.1"
-        },
         "7":{
             "name":"wingpanel-indicator-ayatana",
             "package_name":"wingpanel-indicator-ayatana",
