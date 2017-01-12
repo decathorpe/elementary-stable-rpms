@@ -22,10 +22,8 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 | package name                          | f25                   | Upstream Project URL                                          |
 | ------------------------------------- | --------------------- | ------------------------------------------------------------- |
 | appcenter                             | DONE                  | <https://launchpad.net/appcenter>                             |
-| pantheon-files                        | DONE                  | <https://launchpad.net/pantheon-files>                        |
 | pantheon-mail                         | WONTFIX               | <https://launchpad.net/pantheon-mail>                         |
 | pantheon-photos                       | DONE                  | <https://launchpad.net/pantheon-photos>                       |
-| switchboard                           | DONE                  | <https://launchpad.net/switchboard>                           |
 
 - pantheon-mail requires `gsignond`, which doesn't compile on fedora
 
@@ -35,12 +33,10 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 | package name                          | f25                   | Upstream Project URL                                          |
 | ------------------------------------- | --------------------- | ------------------------------------------------------------- |
 | cerbere                               | DONE                  | <https://launchpad.net/cerbere>                               |
-| plank                                 | DONE                  | <https://launchpad.net/plank>                                 |
 | pantheon-agent-polkit                 | DONE                  | <https://launchpad.net/pantheon-agent-polkit>                 |
 | pantheon-greeter                      | DONE                  | <https://launchpad.net/pantheon-greeter>                      |
 | pantheon-session-settings             | DONE (git snapshot)   | <https://github.com/decathorpe/pantheon-session-settings>     |
 | slingshot-launcher                    | DONE                  | <https://launchpad.net/slingshot>                             |
-| wingpanel                             | DONE                  | <https://launchpad.net/wingpanel>                             |
 
 - gala does not yet provide a stable release
 - pantheon-session-settings is a fork of the ubuntu-specific session settings bzr branch for fedora, which has no official release yet (blame me!)
@@ -52,7 +48,6 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 | ------------------------------------- | --------------------- | ------------------------------------------------------------- |
 | elementary-icon-theme                 | DONE                  | <https://launchpad.net/elementaryicons>                       |
 | elementary-themes                     | DONE                  | <https://launchpad.net/egtk>                                  |
-| elementary-wallpapers                 | DONE                  | <https://github.com/elementary/wallpapers>                    |
 
 
 ### switchboard plugs
@@ -100,7 +95,6 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 
 | package name                          | f25                   | Upstream Project URL                                          |
 | ------------------------------------- | --------------------- | ------------------------------------------------------------- |
-| cmake-elementary                      | DONE (bzr snapshot)   |                                                               |
 | gsignond                              | WONTFIX               | <https://gitlab.com/accounts-sso/gsignond>                    |
 | libgsignon-glib                       | WONTFIX               | <https://gitlab.com/accounts-sso/libgsignon-glib>             |
 
