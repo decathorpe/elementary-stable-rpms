@@ -1,12 +1,5 @@
 {
     "_default":{
-        "2":{
-            "name":"appcenter",
-            "package_name":"appcenter",
-            "package_version":"0.1.3",
-            "rpm_last_release":"2%{?dist}",
-            "rpm_last_version":"0.1.3"
-        },
         "3":{
             "name":"cerbere",
             "package_name":"cerbere",
@@ -206,13 +199,6 @@
             "rpm_last_release":"2%{?dist}",
             "rpm_last_version":"0.1.3"
         },
-        "35":{
-            "name":"slingshot-launcher",
-            "package_name":"slingshot-launcher",
-            "package_version":"2.0.1",
-            "rpm_last_release":"1%{?dist}",
-            "rpm_last_version":"2.0.1"
-        },
         "38":{
             "name":"plank",
             "package_name":"plank",
@@ -234,13 +220,6 @@
             "rpm_last_release":"2%{?dist}",
             "rpm_last_version":"3.0"
         },
-        "42":{
-            "name":"pantheon-files",
-            "package_name":"pantheon-files",
-            "package_version":"0.3.0.5",
-            "rpm_last_release":"2%{?dist}",
-            "rpm_last_version":"0.3.0.5"
-        },
         "44":{
             "name":"pantheon-agent-polkit",
             "package_name":"pantheon-agent-polkit",
@@ -254,16 +233,6 @@
             "package_version":"5.0.2",
             "rpm_last_release":"2%{?dist}",
             "rpm_last_version":"5.0.2"
-        },
-        "49":{
-            "bzr_branch":"",
-            "bzr_last_rev":"27",
-            "bzr_rev":"",
-            "name":"cmake-elementary-bzr",
-            "package_name":"cmake-elementary",
-            "package_version":"0",
-            "rpm_last_release":"1%{?dist}",
-            "rpm_last_version":"0+rev%{rev}"
         },
         "50":{
             "bzr_branch":"",
