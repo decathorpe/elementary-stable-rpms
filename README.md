@@ -21,7 +21,6 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 
 | package name                          | f25                   | Upstream Project URL                                          |
 | ------------------------------------- | --------------------- | ------------------------------------------------------------- |
-| appcenter                             | DONE                  | <https://launchpad.net/appcenter>                             |
 | pantheon-mail                         | WONTFIX               | <https://launchpad.net/pantheon-mail>                         |
 | pantheon-photos                       | DONE                  | <https://launchpad.net/pantheon-photos>                       |
 
@@ -36,18 +35,9 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 | pantheon-agent-polkit                 | DONE                  | <https://launchpad.net/pantheon-agent-polkit>                 |
 | pantheon-greeter                      | DONE                  | <https://launchpad.net/pantheon-greeter>                      |
 | pantheon-session-settings             | DONE (git snapshot)   | <https://github.com/decathorpe/pantheon-session-settings>     |
-| slingshot-launcher                    | DONE                  | <https://launchpad.net/slingshot>                             |
 
 - gala does not yet provide a stable release
 - pantheon-session-settings is a fork of the ubuntu-specific session settings bzr branch for fedora, which has no official release yet (blame me!)
-
-
-### elementary artwork
-
-| package name                          | f25                   | Upstream Project URL                                          |
-| ------------------------------------- | --------------------- | ------------------------------------------------------------- |
-| elementary-icon-theme                 | DONE                  | <https://launchpad.net/elementaryicons>                       |
-| elementary-themes                     | DONE                  | <https://launchpad.net/egtk>                                  |
 
 
 ### switchboard plugs
