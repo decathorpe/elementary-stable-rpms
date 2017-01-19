@@ -36,7 +36,6 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 | pantheon-greeter                      | DONE                  | <https://launchpad.net/pantheon-greeter>                      |
 | pantheon-session-settings             | DONE (git snapshot)   | <https://github.com/decathorpe/pantheon-session-settings>     |
 
-- gala does not yet provide a stable release
 - pantheon-session-settings is a fork of the ubuntu-specific session settings bzr branch for fedora, which has no official release yet (blame me!)
 
 
@@ -73,12 +72,8 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 | wingpanel-indicator-ayatana           | DONE                  | <https://launchpad.net/wingpanel-indicator-ayatana>           |
 | wingpanel-indicator-bluetooth         | DONE                  | <https://launchpad.net/wingpanel-indicator-bluetooth>         |
 | wingpanel-indicator-datetime          | DONE                  | <https://launchpad.net/wingpanel-indicator-datetime>          |
-| wingpanel-indicator-keyboard          | DONE                  | <https://launchpad.net/wingpanel-indicator-keyboard>          |
-| wingpanel-indicator-network           | DONE                  | <https://launchpad.net/wingpanel-indicator-network>           |
 | wingpanel-indicator-notifications     | DONE                  | <https://launchpad.net/wingpanel-indicator-notifications>     |
-| wingpanel-indicator-power             | DONE                  | <https://launchpad.net/wingpanel-indicator-power>             |
 | wingpanel-indicator-session           | DONE                  | <https://launchpad.net/wingpanel-indicator-session>           |
-| wingpanel-indicator-sound             | DONE                  | <https://launchpad.net/wingpanel-indicator-sound>             |
 
 
 ### elementary / pantheon libraries and other shared dependencies
@@ -88,7 +83,6 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 | gsignond                              | WONTFIX               | <https://gitlab.com/accounts-sso/gsignond>                    |
 | libgsignon-glib                       | WONTFIX               | <https://gitlab.com/accounts-sso/libgsignon-glib>             |
 
-- cmake-elementary does not yet provide a stable release
 - gsignond doesn't compile on fedora
 - libgsignon-glib depends on `gsignond`
 
