@@ -7,13 +7,6 @@
             "rpm_last_release":"5%{?dist}",
             "rpm_last_version":"0.2.2"
         },
-        "5":{
-            "name":"elementary-icon-theme",
-            "package_name":"elementary-icon-theme",
-            "package_version":"4.0.1.1",
-            "rpm_last_release":"1%{?dist}",
-            "rpm_last_version":"4.0.1.1"
-        },
         "7":{
             "name":"wingpanel-indicator-ayatana",
             "package_name":"wingpanel-indicator-ayatana",
