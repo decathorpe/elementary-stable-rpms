@@ -191,13 +191,6 @@
             "rpm_last_release":"1%{?dist}",
             "rpm_last_version":"0.1.1"
         },
-        "46":{
-            "name":"elementary-themes",
-            "package_name":"elementary-themes",
-            "package_version":"5.0.2",
-            "rpm_last_release":"2%{?dist}",
-            "rpm_last_version":"5.0.2"
-        },
         "50":{
             "bzr_branch":"",
             "bzr_last_rev":"212",
@@ -218,6 +211,14 @@
             "package_version":"0.6.0",
             "rpm_last_release":"3%{?dist}",
             "rpm_last_version":"0.6.0+git%{date}.%{rev}"
+        },
+        "55":{
+            "name":"elementary-theme",
+            "package_name":"elementary-theme",
+            "package_version":"5.0.3",
+            "rpm_last_release":"1%{?dist}",
+            "rpm_last_version":"5.0.3",
+            "url_last_version":"5.0.3"
         }
     }
 }
