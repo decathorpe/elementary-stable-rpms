@@ -36,8 +36,6 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 | pantheon-greeter                      | DONE                  | <https://launchpad.net/pantheon-greeter>                      |
 | pantheon-session-settings             | DONE (git snapshot)   | <https://github.com/decathorpe/pantheon-session-settings>     |
 
-- pantheon-session-settings is a fork of the ubuntu-specific session settings bzr branch for fedora, which has no official release yet (blame me!)
-
 
 ### switchboard plugs
 
@@ -63,17 +61,6 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 | switchboard-plug-useraccounts         | DONE                  | <https://launchpad.net/switchboard-plug-useraccounts>         |
 
 - switchboard-plug-onlineaccounts requires `gsignond`, which doesn't compile on fedora
-
-
-### wingpanel indicators
-
-| package name                          | f25                   | Upstream Project URL                                          |
-| ------------------------------------- | --------------------- | ------------------------------------------------------------- |
-| wingpanel-indicator-ayatana           | DONE                  | <https://launchpad.net/wingpanel-indicator-ayatana>           |
-| wingpanel-indicator-bluetooth         | DONE                  | <https://launchpad.net/wingpanel-indicator-bluetooth>         |
-| wingpanel-indicator-datetime          | DONE                  | <https://launchpad.net/wingpanel-indicator-datetime>          |
-| wingpanel-indicator-notifications     | DONE                  | <https://launchpad.net/wingpanel-indicator-notifications>     |
-| wingpanel-indicator-session           | DONE                  | <https://launchpad.net/wingpanel-indicator-session>           |
 
 
 ### elementary / pantheon libraries and other shared dependencies
