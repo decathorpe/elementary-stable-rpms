@@ -1,12 +1,5 @@
 {
     "_default":{
-        "3":{
-            "name":"cerbere",
-            "package_name":"cerbere",
-            "package_version":"0.2.2",
-            "rpm_last_release":"5%{?dist}",
-            "rpm_last_version":"0.2.2"
-        },
         "17":{
             "name":"switchboard-plug-a11y",
             "package_name":"switchboard-plug-a11y",

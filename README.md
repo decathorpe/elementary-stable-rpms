@@ -22,7 +22,6 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 | package name                          | f25                   | Upstream Project URL                                          |
 | ------------------------------------- | --------------------- | ------------------------------------------------------------- |
 | pantheon-mail                         | WONTFIX               | <https://launchpad.net/pantheon-mail>                         |
-| pantheon-photos                       | DONE                  | <https://launchpad.net/pantheon-photos>                       |
 
 - pantheon-mail requires `gsignond`, which doesn't compile on fedora
 
@@ -31,7 +30,6 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 
 | package name                          | f25                   | Upstream Project URL                                          |
 | ------------------------------------- | --------------------- | ------------------------------------------------------------- |
-| cerbere                               | DONE                  | <https://launchpad.net/cerbere>                               |
 | pantheon-agent-polkit                 | DONE                  | <https://launchpad.net/pantheon-agent-polkit>                 |
 | pantheon-greeter                      | DONE                  | <https://launchpad.net/pantheon-greeter>                      |
 | pantheon-session-settings             | DONE (git snapshot)   | <https://github.com/decathorpe/pantheon-session-settings>     |
