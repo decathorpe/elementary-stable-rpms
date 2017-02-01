@@ -1,13 +1,11 @@
-%global debug_package %{nil}
-
 Name:           pantheon-greeter
 Summary:        Pantheon's LightDM Login Screen
-Version:        3.0
-Release:        2%{?dist}
+Version:        3.1.0
+Release:        1%{?dist}
 License:        GPLv3
 URL:            http://launchpad.net/pantheon-greeter
 
-Source0:        %{name}-%{version}.tar.xz
+Source0:        https://launchpad.net/%{name}/loki/%{version}/+download/%{name}-%{version}.tar.xz
 Source1:        %{name}.conf
 
 # From http://bazaar.launchpad.net/~elementary-os/pantheon-greeter/deb-packaging/files/head:/debian/
@@ -78,10 +76,14 @@ install -pm 0644 %{SOURCE3} %{buildroot}%{_sysconfdir}/wingpanel.d
 %config(noreplace) %{_sysconfdir}/lightdm/lightdm.conf.d/40-lightdm-pantheon-greeter.conf
 %config(noreplace) %{_sysconfdir}/wingpanel.d/pantheon-greeter.whitelist
 
+%{_datadir}/pantheon-greeter/
 %{_datadir}/xgreeters/pantheon-greeter.desktop
 
 
 %changelog
+* Wed Feb 01 2017 Fabio Valentini <decathorpe@gmail.com> - 3.1.0-1
+- Update to version 3.1.0.
+
 * Sun Nov 27 2016 Fabio Valentini <decathorpe@gmail.com> - 3.0-2
 - Add missing configuration files.
 - Add missing Provides and Requires.

@@ -124,9 +124,9 @@
         "41":{
             "name":"pantheon-greeter",
             "package_name":"pantheon-greeter",
-            "package_version":"3.0",
-            "rpm_last_release":"2%{?dist}",
-            "rpm_last_version":"3.0"
+            "package_version":"3.1.0",
+            "rpm_last_release":"1%{?dist}",
+            "rpm_last_version":"3.1.0"
         },
         "44":{
             "name":"pantheon-agent-polkit",
