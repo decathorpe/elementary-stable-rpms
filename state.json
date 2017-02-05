@@ -1,12 +1,5 @@
 {
     "_default":{
-        "17":{
-            "name":"switchboard-plug-a11y",
-            "package_name":"switchboard-plug-a11y",
-            "package_version":"0.1",
-            "rpm_last_release":"4%{?dist}",
-            "rpm_last_version":"0.1"
-        },
         "18":{
             "name":"switchboard-plug-about",
             "package_name":"switchboard-plug-about",
@@ -14,26 +7,12 @@
             "rpm_last_release":"3%{?dist}",
             "rpm_last_version":"0.2.1.1"
         },
-        "19":{
-            "name":"switchboard-plug-applications",
-            "package_name":"switchboard-plug-applications",
-            "package_version":"0.1.1",
-            "rpm_last_release":"4%{?dist}",
-            "rpm_last_version":"0.1.1"
-        },
         "20":{
             "name":"switchboard-plug-datetime",
             "package_name":"switchboard-plug-datetime",
             "package_version":"0.1.1.1",
             "rpm_last_release":"3%{?dist}",
             "rpm_last_version":"0.1.1.1"
-        },
-        "21":{
-            "name":"switchboard-plug-display",
-            "package_name":"switchboard-plug-display",
-            "package_version":"0.1.2.1",
-            "rpm_last_release":"1%{?dist}",
-            "rpm_last_version":"0.1.2.1"
         },
         "22":{
             "name":"switchboard-plug-keyboard",
@@ -48,27 +27,6 @@
             "package_version":"0.2.1",
             "rpm_last_release":"2%{?dist}",
             "rpm_last_version":"0.2.1"
-        },
-        "24":{
-            "name":"switchboard-plug-mouse-touchpad",
-            "package_name":"switchboard-plug-mouse-touchpad",
-            "package_version":"0.1.1.2",
-            "rpm_last_release":"1%{?dist}",
-            "rpm_last_version":"0.1.1.2"
-        },
-        "25":{
-            "name":"switchboard-plug-networking",
-            "package_name":"switchboard-plug-networking",
-            "package_version":"0.1.0.3",
-            "rpm_last_release":"1%{?dist}",
-            "rpm_last_version":"0.1.0.3"
-        },
-        "26":{
-            "name":"switchboard-plug-notifications",
-            "package_name":"switchboard-plug-notifications",
-            "package_version":"0.1.1",
-            "rpm_last_release":"3%{?dist}",
-            "rpm_last_version":"0.1.1"
         },
         "27":{
             "name":"switchboard-plug-pantheon-shell",
