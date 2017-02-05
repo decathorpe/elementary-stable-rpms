@@ -32,7 +32,6 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 | ------------------------------------- | --------------------- | ------------------------------------------------------------- |
 | pantheon-agent-polkit                 | DONE                  | <https://launchpad.net/pantheon-agent-polkit>                 |
 | pantheon-greeter                      | DONE                  | <https://launchpad.net/pantheon-greeter>                      |
-| pantheon-session-settings             | DONE (git snapshot)   | <https://github.com/decathorpe/pantheon-session-settings>     |
 
 
 ### switchboard plugs
@@ -40,15 +39,9 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 | package name                          | f25                   | Upstream Project URL                                          |
 | ------------------------------------- | --------------------- | ------------------------------------------------------------- |
 | switchboard-plug-about                | DONE                  | <https://launchpad.net/switchboard-plug-about>                |
-| switchboard-plug-a11y                 | DONE                  | <https://launchpad.net/switchboard-plug-a11y>                 |
-| switchboard-plug-applications         | DONE                  | <https://launchpad.net/switchboard-plug-applications>         |
 | switchboard-plug-datetime             | DONE                  | <https://launchpad.net/switchboard-plug-datetime>             |
-| switchboard-plug-display              | DONE                  | <https://launchpad.net/switchboard-plug-display>              |
 | switchboard-plug-keyboard             | DONE                  | <https://launchpad.net/switchboard-plug-keyboard>             |
 | switchboard-plug-locale               | DONE                  | <https://launchpad.net/switchboard-plug-locale>               |
-| switchboard-plug-mouse-touchpad       | DONE                  | <https://launchpad.net/switchboard-plug-mouse-touchpad>       |
-| switchboard-plug-networking           | DONE                  | <https://launchpad.net/switchboard-plug-networking>           |
-| switchboard-plug-notifications        | DONE                  | <https://launchpad.net/switchboard-plug-notifications>        |
 | switchboard-plug-onlineaccounts       | WONTFIX               | <https://launchpad.net/switchboard-plug-onlineaccounts>       |
 | switchboard-plug-pantheon-shell       | DONE                  | <https://launchpad.net/switchboard-plug-pantheon-shell>       |
 | switchboard-plug-parental-controls    | DONE                  | <https://launchpad.net/switchboard-plug-parental-controls>    |
