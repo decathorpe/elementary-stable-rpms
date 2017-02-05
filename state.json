@@ -14,13 +14,6 @@
             "rpm_last_release":"3%{?dist}",
             "rpm_last_version":"0.1.1.1"
         },
-        "22":{
-            "name":"switchboard-plug-keyboard",
-            "package_name":"switchboard-plug-keyboard",
-            "package_version":"0.3.1",
-            "rpm_last_release":"1%{?dist}",
-            "rpm_last_version":"0.3.1"
-        },
         "23":{
             "name":"switchboard-plug-locale",
             "package_name":"switchboard-plug-locale",
@@ -49,13 +42,6 @@
             "package_version":"0.3",
             "rpm_last_release":"2%{?dist}",
             "rpm_last_version":"0.3"
-        },
-        "30":{
-            "name":"switchboard-plug-printers",
-            "package_name":"switchboard-plug-printers",
-            "package_version":"0.1",
-            "rpm_last_release":"2%{?dist}",
-            "rpm_last_version":"0.1"
         },
         "31":{
             "name":"switchboard-plug-security-privacy",

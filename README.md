@@ -40,13 +40,11 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 | ------------------------------------- | --------------------- | ------------------------------------------------------------- |
 | switchboard-plug-about                | DONE                  | <https://launchpad.net/switchboard-plug-about>                |
 | switchboard-plug-datetime             | DONE                  | <https://launchpad.net/switchboard-plug-datetime>             |
-| switchboard-plug-keyboard             | DONE                  | <https://launchpad.net/switchboard-plug-keyboard>             |
 | switchboard-plug-locale               | DONE                  | <https://launchpad.net/switchboard-plug-locale>               |
 | switchboard-plug-onlineaccounts       | WONTFIX               | <https://launchpad.net/switchboard-plug-onlineaccounts>       |
 | switchboard-plug-pantheon-shell       | DONE                  | <https://launchpad.net/switchboard-plug-pantheon-shell>       |
 | switchboard-plug-parental-controls    | DONE                  | <https://launchpad.net/switchboard-plug-parental-controls>    |
 | switchboard-plug-power                | DONE                  | <https://launchpad.net/switchboard-plug-power>                |
-| switchboard-plug-printers             | DONE                  | <https://launchpad.net/switchboard-plug-printers>             |
 | switchboard-plug-security-privacy     | DONE                  | <https://launchpad.net/switchboard-plug-security-privacy>     |
 | switchboard-plug-sharing              | DONE                  | <https://launchpad.net/switchboard-plug-sharing>              |
 | switchboard-plug-useraccounts         | DONE                  | <https://launchpad.net/switchboard-plug-useraccounts>         |
