@@ -2,12 +2,12 @@
 
 Summary:        Switchboard Sharing Plug
 Name:           switchboard-plug-sharing
-Version:        0.1
-Release:        2%{?dist}
+Version:        0.1.1
+Release:        1%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/switchboard-plug-sharing
 
-Source0:        %{name}-%{version}.tar.xz
+Source0:        https://launchpad.net/%{name}/loki/%{version}/+download/%{name}-%{version}.tar.xz
 Source1:        %{name}.conf
 
 BuildRequires:  cmake
@@ -56,6 +56,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Tue Feb 07 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-1
+- Update to version 0.1.1.
+
 * Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1-2
 - Mass rebuild.
 
