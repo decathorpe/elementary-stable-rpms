@@ -1,6 +1,6 @@
 Name:           pantheon-greeter
 Summary:        Pantheon's LightDM Login Screen
-Version:        3.1.0
+Version:        3.1.1
 Release:        1%{?dist}
 License:        GPLv3
 URL:            http://launchpad.net/pantheon-greeter
@@ -81,6 +81,9 @@ install -pm 0644 %{SOURCE3} %{buildroot}%{_sysconfdir}/wingpanel.d
 
 
 %changelog
+* Thu Mar 02 2017 Fabio Valentini <decathorpe@gmail.com> - 3.1.1-1
+- Update to version 3.1.1.
+
 * Wed Feb 01 2017 Fabio Valentini <decathorpe@gmail.com> - 3.1.0-1
 - Update to version 3.1.0.
 
