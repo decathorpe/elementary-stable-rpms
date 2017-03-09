@@ -7,11 +7,12 @@ URL:            https://launchpad.net/capnet-assist
 
 Source0:        https://launchpad.net/%{name}/loki/%{version}/+download/%{name}-%{version}.tar.xz
 
+Patch0:         00-fix-cmake-cflags.patch
+
 BuildRequires:  cmake
 BuildRequires:  desktop-file-utils
-#BuildRequires:  gettext
+BuildRequires:  gettext
 BuildRequires:  vala >= 0.26
-#BuildRequires:  vala-tools
 
 BuildRequires:  pkgconfig(gcr-3)
 BuildRequires:  pkgconfig(gcr-ui-3)
@@ -25,16 +26,17 @@ Requires:       NetworkManager
 
 %description
 Assists users in connective to Captive Portals such as those found on
-public access points in train stations, coffee shops, universities, etc.
+public access points in train stations, coffee shops, universities,
+etc.
 
-Upon detection, the assistant appears showing the captive portal. Once a
-connection is known to have been established, it dismisses itself.
+Upon detection, the assistant appears showing the captive portal. Once
+a connection is known to have been established, it dismisses itself.
 
 Written in Vala and using WebkitGtk+.
 
 
 %prep
-%autosetup
+%autosetup -p0
 
 
 %build
@@ -49,15 +51,20 @@ pushd build
 %make_install
 popd
 
-# %find_lang
+%find_lang captive-login
 
 
 %check
-desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
+desktop-file-validate %{buildroot}/%{_datadir}/applications/org.pantheon.capnet-assist.desktop
 
 
-%files
-# -f pantheon-agent-polkit.lang
+%files -f captive-login.lang
+%{_bindir}/captive-login
+
+%config(noreplace) %{_sysconfdir}/NetworkManager/dispatcher.d/90captive_portal_test
+
+%{_datadir}/applications/org.pantheon.capnet-assist.desktop
+%{_datadir}/glib-2.0/schemas/org.pantheon.capnet-assist.gschema.xml
 
 
 %changelog
