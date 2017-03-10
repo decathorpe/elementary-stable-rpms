@@ -7,6 +7,7 @@ URL:            https://launchpad.net/capnet-assist
 
 Source0:        https://launchpad.net/%{name}/loki/%{version}/+download/%{name}-%{version}.tar.xz
 
+# Backported patch to fix the CFLAGS in CMake
 Patch0:         00-fix-cmake-cflags.patch
 
 BuildRequires:  cmake
@@ -59,9 +60,12 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/org.pantheon.capnet-
 
 
 %files -f captive-login.lang
+%license COPYING
+%doc AUTHORS README
+
 %{_bindir}/captive-login
 
-%config(noreplace) %{_sysconfdir}/NetworkManager/dispatcher.d/90captive_portal_test
+%{_sysconfdir}/NetworkManager/dispatcher.d/90captive_portal_test
 
 %{_datadir}/applications/org.pantheon.capnet-assist.desktop
 %{_datadir}/glib-2.0/schemas/org.pantheon.capnet-assist.gschema.xml
