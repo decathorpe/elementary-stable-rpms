@@ -7,7 +7,7 @@ Release:        2%{?dist}
 License:        LGPLv3
 URL:            https://launchpad.net/switchboard-plug-locale
 
-Source0:        %{name}-%{version}.tar.xz
+Source0:        https://launchpad.net/switchboard-plug-locale/loki/0.2.1/+download/switchboard-plug-locale-0.2.1.tar.xz
 Source1:        %{name}.conf
 
 BuildRequires:  cmake

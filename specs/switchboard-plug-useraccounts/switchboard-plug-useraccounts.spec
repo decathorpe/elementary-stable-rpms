@@ -7,7 +7,7 @@ Release:        2%{?dist}
 License:        LGPLv3
 URL:            https://launchpad.net/switchboard-plug-useraccounts
 
-Source0:        %{name}-%{version}.tar.xz
+Source0:        https://launchpad.net/switchboard-plug-useraccounts/loki/0.1.3/+download/switchboard-plug-useraccounts-0.1.3.tar.xz
 Source1:        %{name}.conf
 
 BuildRequires:  cmake

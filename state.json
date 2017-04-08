@@ -5,28 +5,32 @@
             "package_name":"switchboard-plug-about",
             "package_version":"0.2.1.1",
             "rpm_last_release":"3%{?dist}",
-            "rpm_last_version":"0.2.1.1"
+            "rpm_last_version":"0.2.1.1",
+            "url_last_version":"0.2.1.1"
         },
         "20":{
             "name":"switchboard-plug-datetime",
             "package_name":"switchboard-plug-datetime",
             "package_version":"0.1.1.1",
             "rpm_last_release":"3%{?dist}",
-            "rpm_last_version":"0.1.1.1"
+            "rpm_last_version":"0.1.1.1",
+            "url_last_version":"0.1.1.1"
         },
         "23":{
             "name":"switchboard-plug-locale",
             "package_name":"switchboard-plug-locale",
             "package_version":"0.2.1",
             "rpm_last_release":"2%{?dist}",
-            "rpm_last_version":"0.2.1"
+            "rpm_last_version":"0.2.1",
+            "url_last_version":"0.2.1"
         },
         "27":{
             "name":"switchboard-plug-pantheon-shell",
             "package_name":"switchboard-plug-pantheon-shell",
             "package_version":"0.2.4",
             "rpm_last_release":"1%{?dist}",
-            "rpm_last_version":"0.2.4"
+            "rpm_last_version":"0.2.4",
+            "url_last_version":"0.2.4"
         },
         "28":{
             "name":"switchboard-plug-parental-controls",
@@ -41,7 +45,8 @@
             "package_name":"switchboard-plug-power",
             "package_version":"0.3",
             "rpm_last_release":"2%{?dist}",
-            "rpm_last_version":"0.3"
+            "rpm_last_version":"0.3",
+            "url_last_version":"0.3"
         },
         "31":{
             "name":"switchboard-plug-security-privacy",
@@ -64,7 +69,8 @@
             "package_name":"switchboard-plug-useraccounts",
             "package_version":"0.1.3",
             "rpm_last_release":"2%{?dist}",
-            "rpm_last_version":"0.1.3"
+            "rpm_last_version":"0.1.3",
+            "url_last_version":"0.1.3"
         },
         "41":{
             "name":"pantheon-greeter",

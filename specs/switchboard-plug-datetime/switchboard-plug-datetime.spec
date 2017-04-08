@@ -7,7 +7,7 @@ Release:        3%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/switchboard-plug-datetime
 
-Source0:        %{name}-%{version}.tar.xz
+Source0:        https://launchpad.net/switchboard-plug-datetime/loki/0.1.1.1/+download/switchboard-plug-datetime-0.1.1.1.tar.xz
 Source1:        %{name}.conf
 
 BuildRequires:  cmake

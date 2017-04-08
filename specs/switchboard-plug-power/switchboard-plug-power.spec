@@ -7,7 +7,7 @@ Release:        2%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/switchboard-plug-power
 
-Source0:        %{name}-%{version}.tar.xz
+Source0:        https://launchpad.net/switchboard-plug-power/loki/0.3/+download/switchboard-plug-power-0.3.tar.xz
 Source1:        %{name}.conf
 
 BuildRequires:  cmake

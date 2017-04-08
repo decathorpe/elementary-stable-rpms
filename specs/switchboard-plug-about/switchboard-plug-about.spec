@@ -7,7 +7,7 @@ Release:        3%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/switchboard-plug-about
 
-Source0:        %{name}-%{version}.tar.xz
+Source0:        https://launchpad.net/switchboard-plug-about/loki/0.2.1.1/+download/switchboard-plug-about-0.2.1.1.tar.xz
 Source1:        %{name}.conf
 
 Patch0:         00-s-elementaryos-fedora.patch

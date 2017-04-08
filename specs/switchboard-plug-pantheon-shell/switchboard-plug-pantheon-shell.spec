@@ -7,7 +7,7 @@ Release:        1%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/switchboard-plug-pantheon-shell
 
-Source0:        %{name}-%{version}.tar.xz
+Source0:        https://launchpad.net/switchboard-plug-pantheon-shell/loki/0.2.4/+download/switchboard-plug-pantheon-shell-0.2.4.tar.xz
 Source1:        %{name}.conf
 
 BuildRequires:  cmake
