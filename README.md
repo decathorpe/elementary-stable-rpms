@@ -31,7 +31,6 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 | package name                          | f25                   | Upstream Project URL                                          |
 | ------------------------------------- | --------------------- | ------------------------------------------------------------- |
 | pantheon-agent-polkit                 | DONE                  | <https://launchpad.net/pantheon-agent-polkit>                 |
-| pantheon-greeter                      | DONE                  | <https://launchpad.net/pantheon-greeter>                      |
 
 
 ### switchboard plugs
