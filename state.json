@@ -11,10 +11,10 @@
         "20": {
             "name": "switchboard-plug-datetime",
             "package_name": "switchboard-plug-datetime",
-            "package_version": "0.1.1.1",
-            "rpm_last_release": "3%{?dist}",
-            "rpm_last_version": "0.1.1.1",
-            "url_last_version": "0.1.1.1"
+            "package_version": "0.1.2",
+            "rpm_last_release": "1%{?dist}",
+            "rpm_last_version": "0.1.2",
+            "url_last_version": "0.1.2"
         },
         "23": {
             "name": "switchboard-plug-locale",

@@ -2,12 +2,12 @@
 
 Summary:        Switchboard plug to configure DateTime settings
 Name:           switchboard-plug-datetime
-Version:        0.1.1.1
-Release:        3%{?dist}
+Version:        0.1.2
+Release:        1%{?dist}
 License:        GPLv3
 URL:            https://launchpad.net/switchboard-plug-datetime
 
-Source0:        https://launchpad.net/switchboard-plug-datetime/loki/0.1.1.1/+download/switchboard-plug-datetime-0.1.1.1.tar.xz
+Source0:        https://launchpad.net/%{name}/loki/%{version}/+download/%{name}-%{version}.tar.xz
 Source1:        %{name}.conf
 
 BuildRequires:  cmake
@@ -54,6 +54,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Sat Apr 22 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.2-1
+- Update to version 0.1.2.
+
 * Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.1.1-3
 - Clean up spec.
 
