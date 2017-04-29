@@ -27,6 +27,7 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 
 | package name                          | f25                   | f26                   | Upstream Project URL                                          |
 | ------------------------------------- | --------------------- | --------------------- | ------------------------------------------------------------- |
+| pantheon-agent-geoclue2               | NO RELEASE YET        | NO RELEASE YET        | <https://launchpad.net/pantheon-agent-geoclue2>               |
 | pantheon-agent-polkit                 | DONE                  | DONE                  | <https://launchpad.net/pantheon-agent-polkit>                 |
 
 
