@@ -37,7 +37,7 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 | ------------------------------------- | --------------------- | --------------------- | ------------------------------------------------------------- |
 | switchboard-plug-datetime             | DONE                  | DONE                  | <https://launchpad.net/switchboard-plug-datetime>             |
 | switchboard-plug-locale               | DONE                  | DONE                  | <https://launchpad.net/switchboard-plug-locale>               |
-| switchboard-plug-onlineaccounts       | IN PROGRESS           | IN PROGRESS           | <https://launchpad.net/switchboard-plug-onlineaccounts>       |
+| switchboard-plug-onlineaccounts       | DONE                  | DONE                  | <https://launchpad.net/switchboard-plug-onlineaccounts>       |
 | switchboard-plug-pantheon-shell       | DONE                  | DONE                  | <https://launchpad.net/switchboard-plug-pantheon-shell>       |
 | switchboard-plug-parental-controls    | DONE                  | DONE                  | <https://launchpad.net/switchboard-plug-parental-controls>    |
 | switchboard-plug-power                | DONE                  | DONE                  | <https://launchpad.net/switchboard-plug-power>                |
