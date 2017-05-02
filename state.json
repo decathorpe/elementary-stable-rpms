@@ -67,10 +67,10 @@
         "44": {
             "name": "pantheon-agent-polkit",
             "package_name": "pantheon-agent-polkit",
-            "package_version": "0.1.2",
+            "package_version": "0.1.3",
             "rpm_last_release": "1%{?dist}",
-            "rpm_last_version": "0.1.2",
-            "url_last_version": "0.1.2"
+            "rpm_last_version": "0.1.3",
+            "url_last_version": "0.1.3"
         },
         "50": {
             "bzr_branch": "",
