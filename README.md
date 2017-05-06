@@ -28,7 +28,6 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 | package name                          | f25                   | f26                   | Upstream Project URL                                          |
 | ------------------------------------- | --------------------- | --------------------- | ------------------------------------------------------------- |
 | pantheon-agent-geoclue2               | NO RELEASE YET        | NO RELEASE YET        | <https://launchpad.net/pantheon-agent-geoclue2>               |
-| pantheon-agent-polkit                 | DONE                  | DONE                  | <https://launchpad.net/pantheon-agent-polkit>                 |
 
 
 ### switchboard plugs
@@ -37,7 +36,6 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 | ------------------------------------- | --------------------- | --------------------- | ------------------------------------------------------------- |
 | switchboard-plug-datetime             | DONE                  | DONE                  | <https://launchpad.net/switchboard-plug-datetime>             |
 | switchboard-plug-locale               | DONE                  | DONE                  | <https://launchpad.net/switchboard-plug-locale>               |
-| switchboard-plug-onlineaccounts       | DONE                  | DONE                  | <https://launchpad.net/switchboard-plug-onlineaccounts>       |
 | switchboard-plug-pantheon-shell       | DONE                  | DONE                  | <https://launchpad.net/switchboard-plug-pantheon-shell>       |
 | switchboard-plug-parental-controls    | DONE                  | DONE                  | <https://launchpad.net/switchboard-plug-parental-controls>    |
 | switchboard-plug-power                | DONE                  | DONE                  | <https://launchpad.net/switchboard-plug-power>                |
