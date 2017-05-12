@@ -1,13 +1,11 @@
-%global debug_package %{nil}
-
-Summary:        Switchboard Power Plug
 Name:           switchboard-plug-power
-Version:        0.3
-Release:        2%{?dist}
+Summary:        Switchboard Power Plug
+Version:        0.3.1
+Release:        1%{?dist}
 License:        GPLv3
-URL:            https://launchpad.net/switchboard-plug-power
 
-Source0:        https://launchpad.net/switchboard-plug-power/loki/0.3/+download/switchboard-plug-power-0.3.tar.xz
+URL:            https://github.com/elementary/%{name}
+Source0:        https://github.com/elementary/%{name}/archive/%{version}/%{name}-%{version}.tar.gz
 Source1:        %{name}.conf
 
 BuildRequires:  cmake
@@ -23,7 +21,7 @@ BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  pkgconfig(polkit-gobject-1)
 BuildRequires:  pkgconfig(switchboard-2.0)
 
-Supplements:    switchboard
+Supplements:    switchboard%{?_isa}
 
 Requires:       elementary-dpms-helper
 
@@ -31,25 +29,24 @@ Requires:       elementary-dpms-helper
 %description
 Control system power consumption with this Switchboard preference plug.
 
-Designed for elementary OS.
-
 
 %prep
 %autosetup
 
 
 %build
-%cmake
+mkdir build && pushd build
+%cmake ..
 %make_build
+popd
 
 
 %install
+pushd build
 %make_install
+popd
+
 %find_lang pantheon-power-plug
-
-
-%clean
-rm -rf %{buildroot}
 
 
 %files -f pantheon-power-plug.lang
@@ -59,6 +56,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Fri May 12 2017 Fabio Valentini <decathorpe@gmail.com> - 0.3.1-1
+- Update to version 0.3.1.
+
 * Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 0.3-2
 - Mass rebuild.
 
