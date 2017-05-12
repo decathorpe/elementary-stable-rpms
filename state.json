@@ -11,10 +11,10 @@
         "23": {
             "name": "switchboard-plug-locale",
             "package_name": "switchboard-plug-locale",
-            "package_version": "0.2.1",
-            "rpm_last_release": "2%{?dist}",
-            "rpm_last_version": "0.2.1",
-            "url_last_version": "0.2.1"
+            "package_version": "0.2.2",
+            "rpm_last_release": "1%{?dist}",
+            "rpm_last_version": "0.2.2",
+            "url_last_version": "0.2.2"
         },
         "27": {
             "name": "switchboard-plug-pantheon-shell",

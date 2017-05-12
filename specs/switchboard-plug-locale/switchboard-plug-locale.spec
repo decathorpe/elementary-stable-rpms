@@ -1,13 +1,11 @@
-%global debug_package %{nil}
-
-Summary:        Adjust Locale settings from Switchboard
 Name:           switchboard-plug-locale
-Version:        0.2.1
-Release:        2%{?dist}
+Summary:        Adjust Locale settings from Switchboard
+Version:        0.2.2
+Release:        1%{?dist}
 License:        LGPLv3
-URL:            https://launchpad.net/switchboard-plug-locale
 
-Source0:        https://launchpad.net/switchboard-plug-locale/loki/0.2.1/+download/switchboard-plug-locale-0.2.1.tar.xz
+URL:            https://github.com/elementary/%{name}
+Source0:        https://github.com/elementary/%{name}/archive/%{version}/%{name}-%{version}.tar.gz
 Source1:        %{name}.conf
 
 BuildRequires:  cmake
@@ -25,13 +23,11 @@ BuildRequires:  pkgconfig(ibus-1.0)
 BuildRequires:  pkgconfig(polkit-gobject-1)
 BuildRequires:  pkgconfig(switchboard-2.0)
 
-Supplements:    switchboard
+Supplements:    switchboard%{?_isa}
 
 
 %description
-Adjust Locale settings from Switchboard
-
-Designed for elementary OS.
+Adjust Locale settings from Switchboard.
 
 
 %prep
@@ -39,17 +35,18 @@ Designed for elementary OS.
 
 
 %build
-%cmake
+mkdir build && pushd build
+%cmake ..
 %make_build
+popd
 
 
 %install
+pushd build
 %make_install
+popd
+
 %find_lang locale-plug
-
-
-%clean
-rm -rf %{buildroot}
 
 
 %files -f locale-plug.lang
@@ -62,6 +59,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Fri May 12 2017 Fabio Valentini <decathorpe@gmail.com> - 0.2.2-1
+- Update to version 0.2.2.
+
 * Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 0.2.1-2
 - Mass rebuild.
 
