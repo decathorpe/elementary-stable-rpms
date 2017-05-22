@@ -1,13 +1,11 @@
-%global debug_package %{nil}
-
-Summary:        Switchboard Privacy and Security Plug
 Name:           switchboard-plug-security-privacy
-Version:        0.1.1.1
-Release:        3%{?dist}
+Summary:        Switchboard Privacy and Security Plug
+Version:        0.1.2
+Release:        1%{?dist}
 License:        LGPLv2.1, LGPLv3
-URL:            https://launchpad.net/switchboard-plug-security-privacy
 
-Source0:        https://launchpad.net/switchboard-plug-security-privacy/loki/0.1.1.1/+download/switchboard-plug-security-privacy-0.1.1.1.tar.xz
+URL:            https://github.com/elementary/%{name}
+Source0:        https://github.com/elementary/%{name}/archive/%{version}/%{name}-%{version}.tar.gz
 Source1:        %{name}.conf
 
 Patch0:         0001-Use-Firewalld-instead-of-UFW.patch
@@ -25,7 +23,7 @@ BuildRequires:  pkgconfig(polkit-gobject-1)
 BuildRequires:  pkgconfig(switchboard-2.0)
 BuildRequires:  pkgconfig(zeitgeist-2.0)
 
-Supplements:    switchboard
+Supplements:    switchboard%{?_isa}
 
 Requires:       elementary-dpms-helper
 Requires:       firewalld
@@ -45,12 +43,17 @@ Designed for elementary OS.
 
 
 %build
-%cmake
+mkdir build && pushd build
+%cmake ..
 %make_build
+popd
 
 
 %install
+pushd build
 %make_install
+popd
+
 %find_lang pantheon-security-privacy-plug
 
 
@@ -63,6 +66,9 @@ Designed for elementary OS.
 
 
 %changelog
+* Mon May 22 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.2-1
+- Update to version 0.1.2.
+
 * Tue Jan 03 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.1.1-3
 - Add missing Requires: firewalld.
 
