@@ -8,8 +8,6 @@ URL:            https://github.com/elementary/%{name}
 Source0:        https://github.com/elementary/%{name}/archive/%{version}/%{name}-%{version}.tar.gz
 Source1:        %{name}.conf
 
-Patch0:         0001-Use-Firewalld-instead-of-UFW.patch
-
 BuildRequires:  cmake
 BuildRequires:  gettext
 BuildRequires:  pkgconfig
@@ -26,8 +24,8 @@ BuildRequires:  pkgconfig(zeitgeist-2.0)
 Supplements:    switchboard%{?_isa}
 
 Requires:       elementary-dpms-helper
-Requires:       firewalld
 Requires:       light-locker
+Requires:       ufw
 
 
 %description
@@ -35,11 +33,9 @@ The security & privacy plug is a section in Switchboard, the elementary
 System Settings app, where users can configure the security and the
 level of privacy according to his needs.
 
-Designed for elementary OS.
-
 
 %prep
-%autosetup -p1
+%autosetup
 
 
 %build
@@ -57,12 +53,14 @@ popd
 %find_lang pantheon-security-privacy-plug
 
 
-
 %files -f pantheon-security-privacy-plug.lang
 %doc AUTHORS
 %license COPYING
 
 %{_libdir}/switchboard/personal/pantheon-security-privacy/
+
+%{_datadir}/glib-2.0/schemas/org.pantheon.security-privacy.gschema.xml
+%{_datadir}/polkit-1/actions/org.pantheon.security-privacy.policy
 
 
 %changelog
