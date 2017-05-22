@@ -1,13 +1,11 @@
-%global debug_package %{nil}
-
-Summary:        Switchboard User Accounts Plug
 Name:           switchboard-plug-useraccounts
-Version:        0.1.3
-Release:        2%{?dist}
+Summary:        Switchboard User Accounts Plug
+Version:        0.1.4
+Release:        1%{?dist}
 License:        LGPLv3
-URL:            https://launchpad.net/switchboard-plug-useraccounts
 
-Source0:        https://launchpad.net/switchboard-plug-useraccounts/loki/0.1.3/+download/switchboard-plug-useraccounts-0.1.3.tar.xz
+URL:            https://github.com/elementary/%{name}
+Source0:        https://github.com/elementary/%{name}/archive/%{version}/%{name}-%{version}.tar.gz
 Source1:        %{name}.conf
 
 BuildRequires:  cmake
@@ -26,13 +24,11 @@ BuildRequires:  pkgconfig(polkit-gobject-1)
 BuildRequires:  pkgconfig(pwquality)
 BuildRequires:  pkgconfig(switchboard-2.0)
 
-Supplements:    switchboard
+Supplements:    switchboard%{?_isa}
 
 
 %description
 Switchboard Plug for managing local user accounts.
-
-Designed for elementary OS.
 
 
 %prep
@@ -40,17 +36,18 @@ Designed for elementary OS.
 
 
 %build
-%cmake
+mkdir build && pushd build
+%cmake ..
 %make_build
+popd
 
 
 %install
+pushd build
 %make_install
+popd
+
 %find_lang useraccounts-plug
-
-
-%clean
-rm -rf %{buildroot}
 
 
 %files -f useraccounts-plug.lang
@@ -63,6 +60,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Mon May 22 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.4-1
+- Update to version 0.1.4.
+
 * Thu Sep 29 2016 Fabio Valentini <decathorpe@gmail.com> - 0.1.3-2
 - Mass rebuild.
 
