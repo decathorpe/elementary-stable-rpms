@@ -1,6 +1,6 @@
 Name:           switchboard-plug-locale
 Summary:        Adjust Locale settings from Switchboard
-Version:        0.2.2
+Version:        0.2.3
 Release:        1%{?dist}
 License:        LGPLv3
 
@@ -59,6 +59,9 @@ popd
 
 
 %changelog
+* Mon May 22 2017 Fabio Valentini <decathorpe@gmail.com> - 0.2.3-1
+- Update to version 0.2.3.
+
 * Fri May 12 2017 Fabio Valentini <decathorpe@gmail.com> - 0.2.2-1
 - Update to version 0.2.2.
 
