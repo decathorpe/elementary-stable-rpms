@@ -1,12 +1,12 @@
-%global debug_package %{nil}
+%global __provides_exclude_from ^%{_libdir}/switchboard/.*\\.so$
 
-Summary:        Switchboard Sharing Plug
 Name:           switchboard-plug-sharing
+Summary:        Switchboard Sharing Plug
 Version:        0.1.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
-URL:            https://launchpad.net/switchboard-plug-sharing
 
+URL:            https://launchpad.net/%{name}
 Source0:        https://launchpad.net/%{name}/loki/%{version}/+download/%{name}-%{version}.tar.xz
 Source1:        %{name}.conf
 
@@ -21,13 +21,12 @@ BuildRequires:  pkgconfig(granite)
 BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  pkgconfig(switchboard-2.0)
 
-Supplements:    switchboard
+Requires:       switchboard%{?_isa}
+Supplements:    switchboard%{?_isa}
 
 
 %description
 Configure the sharing of system services.
-
-Designed for elementary OS.
 
 
 %prep
@@ -35,17 +34,18 @@ Designed for elementary OS.
 
 
 %build
-%cmake
+mkdir build && pushd build
+%cmake ..
 %make_build
+popd
 
 
 %install
+pushd build
 %make_install
+popd
+
 %find_lang pantheon-sharing
-
-
-%clean
-rm -rf %{buildroot}
 
 
 %files -f pantheon-sharing.lang
@@ -56,6 +56,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Tue Jun 20 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-2
+- Clean up .spec file.
+
 * Tue Feb 07 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-1
 - Update to version 0.1.1.
 
