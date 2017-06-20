@@ -1,12 +1,12 @@
-%global debug_package %{nil}
+%global __provides_exclude_from ^%{_libdir}/switchboard/.*\\.so$
 
-Summary:        An easy parental controls plug
 Name:           switchboard-plug-parental-controls
+Summary:        Switchboard Parental Controls plug
 Version:        0.1.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
-URL:            https://launchpad.net/switchboard-plug-parental-controls
 
+URL:            https://launchpad.net/%{name}
 Source0:        https://launchpad.net/%{name}/loki/%{version}/+download/%{name}-%{version}.tar.xz
 Source1:        %{name}.conf
 
@@ -25,11 +25,14 @@ BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  pkgconfig(polkit-gobject-1)
 BuildRequires:  pkgconfig(switchboard-2.0)
 
-Supplements:    switchboard
+%{?systemd_requires}
+
+Requires:       switchboard%{?_isa}
+Supplements:    switchboard%{?_isa}
 
 
 %description
-An easy parental controls plug
+An easy parental controls plug.
 
 
 %prep
@@ -37,19 +40,25 @@ An easy parental controls plug
 
 
 %build
-%cmake
+mkdir build && pushd build
+%cmake ..
 %make_build
+popd
 
 
 %install
+pushd build
 %make_install
+popd
+
 %find_lang pantheon-parental-controls-plug
 
+# move systemd unit file to correct location
 mkdir -p %{buildroot}/%{_unitdir}
+mv -v %{buildroot}/lib/systemd/system/pantheon-parental-controls.service %{buildroot}/%{_unitdir}/
 
-mv %{buildroot}/lib/systemd/system/pantheon-parental-controls.service %{buildroot}/%{_unitdir}/
-
-rm %{buildroot}/%{_libdir}/*.a
+# remove .a files
+find %{buildroot} -name *.a -print -delete
 
 
 %check
@@ -68,14 +77,14 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
 
 %files -f pantheon-parental-controls-plug.lang
 %doc AUTHORS
-%license COPYING
+%license COPYING COPYRIGHT
 
 %{_sysconfdir}/dbus-1/system.d/org.pantheon.ParentalControls.conf
 
 %{_bindir}/pantheon-parental-controls-client
 %{_bindir}/pantheon-parental-controls-daemon
 
-%{_libdir}/switchboard/system/pantheon-parental-controls/libpantheon-parental-controls.so
+%{_libdir}/switchboard/system/pantheon-parental-controls/
 
 %{_datadir}/applications/pantheon-parental-controls-client.desktop
 %{_datadir}/dbus-1/system-services/org.pantheon.ParentalControls.service
@@ -86,6 +95,9 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
 
 
 %changelog
+* Tue Jun 20 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.3-2
+- Clean up .spec file.
+
 * Sat Feb 11 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.3-1
 - Update to version 0.1.3.
 
