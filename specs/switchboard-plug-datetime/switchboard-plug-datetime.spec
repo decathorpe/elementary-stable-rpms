@@ -1,12 +1,12 @@
-%global debug_package %{nil}
+%global __provides_exclude_from ^%{_libdir}/switchboard/.*\\.so$
 
-Summary:        Switchboard plug to configure DateTime settings
 Name:           switchboard-plug-datetime
+Summary:        Switchboard Date and Time plug
 Version:        0.1.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
-URL:            https://launchpad.net/switchboard-plug-datetime
 
+URL:            https://launchpad.net/%{name}
 Source0:        https://launchpad.net/%{name}/loki/%{version}/+download/%{name}-%{version}.tar.xz
 Source1:        %{name}.conf
 
@@ -22,13 +22,12 @@ BuildRequires:  pkgconfig(gthread-2.0)
 BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  pkgconfig(switchboard-2.0)
 
-Supplements:    switchboard
+Requires:       switchboard%{?_isa}
+Supplements:    switchboard%{?_isa}
 
 
 %description
-Configure the date & time of the user.
-
-Designed for elementary OS.
+A switchboard plug to configure date and time settings.
 
 
 %prep
@@ -36,24 +35,30 @@ Designed for elementary OS.
 
 
 %build
-%cmake
+mkdir build && pushd build
+%cmake ..
 %make_build
+popd
 
 
 %install
+pushd build
 %make_install
+popd
+
 %find_lang pantheon-datetime-plug
 
 
-%clean
-rm -rf %{buildroot}
-
-
 %files -f pantheon-datetime-plug.lang
+%doc README.md
+
 %{_libdir}/switchboard/system/pantheon-datetime/
 
 
 %changelog
+* Tue Jun 20 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.2-2
+- Clean up .spec file.
+
 * Sat Apr 22 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.2-1
 - Update to version 0.1.2.
 
