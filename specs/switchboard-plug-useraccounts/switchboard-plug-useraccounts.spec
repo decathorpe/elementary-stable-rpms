@@ -2,8 +2,8 @@
 
 Name:           switchboard-plug-useraccounts
 Summary:        Switchboard User Accounts Plug
-Version:        0.1.4
-Release:        2%{?dist}
+Version:        0.1.5
+Release:        1%{?dist}
 License:        LGPLv3
 
 URL:            https://github.com/elementary/%{name}
@@ -54,7 +54,7 @@ popd
 
 
 %files -f useraccounts-plug.lang
-%doc AUTHORS
+%doc README.md
 %license COPYING COPYRIGHT
 
 %{_libdir}/switchboard/system/pantheon-useraccounts/
@@ -63,6 +63,12 @@ popd
 
 
 %changelog
+* Wed Jun 28 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.5-1
+- Update to version 0.1.5.
+
+* Wed Jun 28 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.5-1
+- Update to version 0.1.5.
+
 * Tue Jun 20 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.4-2
 - Clean up .spec file.
 
