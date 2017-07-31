@@ -58,7 +58,7 @@
         },
         "50": {
             "bzr_branch": "",
-            "bzr_last_rev": "227",
+            "bzr_last_rev": "228",
             "bzr_rev": "",
             "name": "elementary-dpms-helper-bzr",
             "package_name": "elementary-dpms-helper",
