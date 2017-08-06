@@ -1,14 +1,24 @@
 # elementary-stable-rpms
 I use this repository to keep track of files related to packaging / building stable
-releases of elementaryOS / pantheon desktop components and applications for fedora.
+releases of elementaryOS / Pantheon desktop components and applications for fedora.
 
-I am starting the process of submitting these packages to fedora for review and inclusion
+I am in the process of submitting these packages to fedora for review and inclusion
 in the official fedora repositories, but that will still take some time.
+
+Most components of a Pantheon session and almost all elementary apps are available
+from the official fedora repositories now. The packages maintained here have
+outstanding problems that prevent them from working right on fedora.
 
 
 ## Known Issues
 
-- GTK3 > 3.18 is not yet supported by the elementary GTK theme
+- The Date & Time switchboard plug doesn't fully work as expected.
+- The Locale plug doesn't seem to work at all under fedora.
+- The Parental Controls plug might not work as advertised.
+- The Power plug needs a patch to not crash and it might not work as expected.
+- The Security & Privacy plug doesn't work as expected (and it depends on a non-standard firewall, `ufw`).
+- The Sharing plug doesn't work on fedora, since it depends on deprecated / removed gsettings keys.
+- The User Accounts plug isn't tested enough to enter fedora repositories.
 
 
 ## Package Status
