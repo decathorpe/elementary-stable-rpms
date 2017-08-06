@@ -55,16 +55,6 @@
             "rpm_last_release": "1%{?dist}",
             "rpm_last_version": "0.1.5",
             "url_last_version": "0.1.4"
-        },
-        "50": {
-            "bzr_branch": "",
-            "bzr_last_rev": "229",
-            "bzr_rev": "",
-            "name": "elementary-dpms-helper-bzr",
-            "package_name": "elementary-dpms-helper",
-            "package_version": "0.1",
-            "rpm_last_release": "1%{?dist}",
-            "rpm_last_version": "0.1+rev%{rev}"
         }
     }
 }
