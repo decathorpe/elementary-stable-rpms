@@ -30,7 +30,7 @@ The current build status can be seen at <https://copr.fedorainfracloud.org/coprs
 
 | package name                          | f25                   | f26                   | Upstream Project URL                                          |
 | ------------------------------------- | --------------------- | --------------------- | ------------------------------------------------------------- |
-| pantheon-mail                         | DONE                  | FTBFS                 | <https://launchpad.net/pantheon-mail>                         |
+| pantheon-mail                         | DONE                  | DONE                  | <https://launchpad.net/pantheon-mail>                         |
 
 
 ### Pantheon desktop
