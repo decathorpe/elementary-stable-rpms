@@ -2,7 +2,7 @@
 
 Name:           switchboard-plug-useraccounts
 Summary:        Switchboard User Accounts Plug
-Version:        0.1.5
+Version:        0.1.6
 Release:        1%{?dist}
 License:        LGPLv3
 
@@ -63,6 +63,9 @@ popd
 
 
 %changelog
+* Thu Oct 12 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.6-1
+- Update to version 0.1.6.
+
 * Wed Jun 28 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.5-1
 - Update to version 0.1.5.
 
