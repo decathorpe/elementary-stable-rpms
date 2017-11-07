@@ -3,7 +3,7 @@
 Name:           pantheon-mail
 Summary:        E-Mail client for Pantheon
 Version:        1.0.6
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        LGPLv2+
 
 URL:            https://github.com/elementary/%{srcname}
@@ -99,6 +99,9 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
+* Tue Nov 07 2017 Fabio Valentini <decathorpe@gmail.com> - 1.0.6-2
+- Rebuild for the granite 0.5 soname bump.
+
 * Thu Aug 24 2017 Fabio Valentini <decathorpe@gmail.com> - 1.0.6-1
 - Update to version 1.0.6.
 

@@ -3,7 +3,7 @@
 Name:           switchboard-plug-security-privacy
 Summary:        Switchboard Privacy and Security Plug
 Version:        0.1.2
-Release:        3%{?dist}
+Release:        4%{?dist}
 License:        LGPLv2.1, LGPLv3
 
 URL:            https://github.com/elementary/%{name}
@@ -66,6 +66,9 @@ popd
 
 
 %changelog
+* Tue Nov 07 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.2-4
+- Rebuild for the granite 0.5 soname bump.
+
 * Sun Aug 06 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.2-3
 - Remove unnecessary Requires: e-dpms-helper.
 

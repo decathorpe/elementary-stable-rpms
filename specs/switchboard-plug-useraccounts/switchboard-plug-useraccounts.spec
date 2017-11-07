@@ -3,7 +3,7 @@
 Name:           switchboard-plug-useraccounts
 Summary:        Switchboard User Accounts Plug
 Version:        0.1.6
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        LGPLv3
 
 URL:            https://github.com/elementary/%{name}
@@ -63,6 +63,9 @@ popd
 
 
 %changelog
+* Tue Nov 07 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.6-2
+- Rebuild for the granite 0.5 soname bump.
+
 * Thu Oct 12 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.6-1
 - Update to version 0.1.6.
 

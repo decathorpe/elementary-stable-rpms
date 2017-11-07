@@ -3,7 +3,7 @@
 Name:           switchboard-plug-sharing
 Summary:        Switchboard Sharing Plug
 Version:        0.1.1
-Release:        2%{?dist}
+Release:        3%{?dist}
 License:        GPLv3
 
 URL:            https://launchpad.net/%{name}
@@ -56,6 +56,9 @@ popd
 
 
 %changelog
+* Tue Nov 07 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-3
+- Rebuild for the granite 0.5 soname bump.
+
 * Tue Jun 20 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-2
 - Clean up .spec file.
 

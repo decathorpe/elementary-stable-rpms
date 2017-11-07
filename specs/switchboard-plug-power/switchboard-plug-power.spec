@@ -3,7 +3,7 @@
 Name:           switchboard-plug-power
 Summary:        Switchboard Power Plug
 Version:        0.3.2
-Release:        2%{?dist}
+Release:        3%{?dist}
 License:        GPLv3
 
 URL:            https://github.com/elementary/%{name}
@@ -71,6 +71,9 @@ popd
 
 
 %changelog
+* Tue Nov 07 2017 Fabio Valentini <decathorpe@gmail.com> - 0.3.2-3
+- Rebuild for the granite 0.5 soname bump.
+
 * Sun Aug 06 2017 Fabio Valentini <decathorpe@gmail.com> - 0.3.2-2
 - Add patch to remove elementary-dpms-helper usage and dependency.
 

@@ -3,7 +3,7 @@
 Name:           switchboard-plug-locale
 Summary:        Adjust Locale settings from Switchboard
 Version:        0.2.3
-Release:        2%{?dist}
+Release:        3%{?dist}
 License:        LGPLv3
 
 URL:            https://github.com/elementary/%{name}
@@ -63,6 +63,9 @@ popd
 
 
 %changelog
+* Tue Nov 07 2017 Fabio Valentini <decathorpe@gmail.com> - 0.2.3-3
+- Rebuild for the granite 0.5 soname bump.
+
 * Tue Jun 20 2017 Fabio Valentini <decathorpe@gmail.com> - 0.2.3-2
 - Clean up .spec file.
 
