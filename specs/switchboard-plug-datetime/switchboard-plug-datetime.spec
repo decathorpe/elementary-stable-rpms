@@ -3,16 +3,14 @@
 Name:           switchboard-plug-datetime
 Summary:        Switchboard Date and Time plug
 Version:        0.1.2
-Release:        3%{?dist}
+Release:        4%{?dist}
 License:        GPLv3
 
-URL:            https://launchpad.net/%{name}
+URL:            https://github.com/elementary/%{name}
 Source0:        https://launchpad.net/%{name}/loki/%{version}/+download/%{name}-%{version}.tar.xz
-Source1:        %{name}.conf
 
 BuildRequires:  cmake
 BuildRequires:  gettext
-BuildRequires:  pkgconfig
 BuildRequires:  vala >= 0.22.0
 BuildRequires:  vala-tools
 
@@ -22,7 +20,6 @@ BuildRequires:  pkgconfig(gthread-2.0)
 BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  pkgconfig(switchboard-2.0)
 
-Requires:       switchboard%{?_isa}
 Supplements:    switchboard%{?_isa}
 
 
@@ -56,6 +53,9 @@ popd
 
 
 %changelog
+* Thu Jan 04 2018 Fabio Valentini <decathorpe@gmail.com> - 0.1.2-4
+- Clean up .spec file.
+
 * Tue Nov 07 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.2-3
 - Rebuild for the granite 0.5 soname bump.
 
