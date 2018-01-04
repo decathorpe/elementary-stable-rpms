@@ -3,16 +3,14 @@
 Name:           switchboard-plug-locale
 Summary:        Adjust Locale settings from Switchboard
 Version:        0.2.3
-Release:        3%{?dist}
+Release:        4%{?dist}
 License:        LGPLv3
 
 URL:            https://github.com/elementary/%{name}
 Source0:        https://github.com/elementary/%{name}/archive/%{version}/%{name}-%{version}.tar.gz
-Source1:        %{name}.conf
 
 BuildRequires:  cmake
 BuildRequires:  gettext
-BuildRequires:  pkgconfig
 BuildRequires:  vala >= 0.22.0
 BuildRequires:  vala-tools
 
@@ -25,7 +23,6 @@ BuildRequires:  pkgconfig(ibus-1.0)
 BuildRequires:  pkgconfig(polkit-gobject-1)
 BuildRequires:  pkgconfig(switchboard-2.0)
 
-Requires:       switchboard%{?_isa}
 Supplements:    switchboard%{?_isa}
 
 
@@ -63,6 +60,9 @@ popd
 
 
 %changelog
+* Thu Jan 04 2018 Fabio Valentini <decathorpe@gmail.com> - 0.2.3-4
+- Clean up .spec file.
+
 * Tue Nov 07 2017 Fabio Valentini <decathorpe@gmail.com> - 0.2.3-3
 - Rebuild for the granite 0.5 soname bump.
 
