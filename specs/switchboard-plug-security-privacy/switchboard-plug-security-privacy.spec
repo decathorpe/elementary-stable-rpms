@@ -3,16 +3,14 @@
 Name:           switchboard-plug-security-privacy
 Summary:        Switchboard Privacy and Security Plug
 Version:        0.1.2
-Release:        4%{?dist}
-License:        LGPLv2.1, LGPLv3
+Release:        5%{?dist}
+License:        LGPLv3
 
 URL:            https://github.com/elementary/%{name}
 Source0:        https://github.com/elementary/%{name}/archive/%{version}/%{name}-%{version}.tar.gz
-Source1:        %{name}.conf
 
 BuildRequires:  cmake
 BuildRequires:  gettext
-BuildRequires:  pkgconfig
 BuildRequires:  vala >= 0.22.0
 BuildRequires:  vala-tools
 
@@ -66,6 +64,9 @@ popd
 
 
 %changelog
+* Fri Jan 05 2018 Fabio Valentini <decathorpe@gmail.com> - 0.1.2-5
+- Clean up .spec file.
+
 * Tue Nov 07 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.2-4
 - Rebuild for the granite 0.5 soname bump.
 
