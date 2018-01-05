@@ -3,7 +3,7 @@
 Name:           switchboard-plug-power
 Summary:        Switchboard Power Plug
 Version:        0.3.2
-Release:        3%{?dist}
+Release:        4%{?dist}
 License:        GPLv3
 
 URL:            https://github.com/elementary/%{name}
@@ -15,7 +15,6 @@ Patch0:         00-no-e-dpms-helper.patch
 
 BuildRequires:  cmake
 BuildRequires:  gettext
-BuildRequires:  pkgconfig
 BuildRequires:  vala >= 0.30.0
 BuildRequires:  vala-tools
 
@@ -28,7 +27,6 @@ BuildRequires:  pkgconfig(switchboard-2.0)
 
 Requires:       dbus
 
-Requires:       switchboard%{?_isa}
 Supplements:    switchboard%{?_isa}
 
 
@@ -71,6 +69,9 @@ popd
 
 
 %changelog
+* Fri Jan 05 2018 Fabio Valentini <decathorpe@gmail.com> - 0.3.2-4
+- Clean up .spec file.
+
 * Tue Nov 07 2017 Fabio Valentini <decathorpe@gmail.com> - 0.3.2-3
 - Rebuild for the granite 0.5 soname bump.
 
