@@ -3,17 +3,16 @@
 Name:           switchboard-plug-parental-controls
 Summary:        Switchboard Parental Controls plug
 Version:        0.1.3
-Release:        3%{?dist}
+Release:        4%{?dist}
 License:        GPLv3
 
-URL:            https://launchpad.net/%{name}
+URL:            https://github.com/elementary/%{name}
 Source0:        https://launchpad.net/%{name}/loki/%{version}/+download/%{name}-%{version}.tar.xz
 Source1:        %{name}.conf
 
 BuildRequires:  cmake
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
-BuildRequires:  pkgconfig
 BuildRequires:  systemd
 BuildRequires:  vala >= 0.22.0
 BuildRequires:  vala-tools
@@ -27,7 +26,6 @@ BuildRequires:  pkgconfig(switchboard-2.0)
 
 %{?systemd_requires}
 
-Requires:       switchboard%{?_isa}
 Supplements:    switchboard%{?_isa}
 
 
@@ -62,7 +60,8 @@ find %{buildroot} -name *.a -print -delete
 
 
 %check
-desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
+desktop-file-validate \
+    %{buildroot}/%{_datadir}/applications/pantheon-parental-controls-client.desktop
 
 
 %post
@@ -95,6 +94,9 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
 
 
 %changelog
+* Fri Jan 05 2018 Fabio Valentini <decathorpe@gmail.com> - 0.1.3-4
+- Clean up .spec file.
+
 * Tue Nov 07 2017 Fabio Valentini <decathorpe@gmail.com> - 0.1.3-3
 - Rebuild for the granite 0.5 soname bump.
 
