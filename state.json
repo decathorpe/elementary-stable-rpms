@@ -63,6 +63,13 @@
             "rpm_last_release": "2%{?dist}",
             "rpm_last_version": "1.0.6",
             "url_last_version": "1.0.6"
+        },
+        "35": {
+            "name": "agenda",
+            "package_name": "agenda",
+            "package_version": "1.0.9",
+            "rpm_last_release": "1%{?dist}",
+            "rpm_last_version": "1.0.9"
         }
     }
 }
