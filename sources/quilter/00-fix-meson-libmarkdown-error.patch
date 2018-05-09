@@ -1,0 +1,14 @@
+diff --git a/meson.build b/meson.build
+index 0f76b7f..f317407 100644
+--- a/meson.build
++++ b/meson.build
+@@ -75,8 +75,7 @@ executable(
+         libmarkdown
+     ],
+     vala_args: [
+-        meson.source_root() + '/vapi/config.vapi',
+-        meson.source_root() + '/vapi/libmarkdown.vapi'
++        meson.source_root() + '/vapi/config.vapi'
+     ],
+     install : true
+ )

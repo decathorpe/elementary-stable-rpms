@@ -102,6 +102,14 @@
             "rpm_last_release": "1%{?dist}",
             "rpm_last_version": "0.2.0",
             "url_last_version": "0.2.0"
+        },
+        "40": {
+            "name": "quilter",
+            "package_name": "quilter",
+            "package_version": "1.5.6",
+            "rpm_last_release": "1%{?dist}",
+            "rpm_last_version": "1.5.6",
+            "url_last_version": "1.5.6"
         }
     }
 }
