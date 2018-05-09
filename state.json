@@ -118,6 +118,14 @@
             "rpm_last_release": "1%{?dist}",
             "rpm_last_version": "1.3.2",
             "url_last_version": "1.3.2"
+        },
+        "42": {
+            "name": "tomato",
+            "package_name": "tomato",
+            "package_version": "2.0.2",
+            "rpm_last_release": "1%{?dist}",
+            "rpm_last_version": "2.0.2",
+            "url_last_version": "2.0.2"
         }
     }
 }

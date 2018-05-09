@@ -1,0 +1,69 @@
+From df92593b4ccb292577912c0685ede3accd961f26 Mon Sep 17 00:00:00 2001
+From: Fabio Valentini <decathorpe@users.noreply.github.com>
+Date: Mon, 1 Jan 2018 22:09:42 +0100
+Subject: [PATCH] remove zero-width-space (U+200B) chars from appdata
+
+This removes some U+200B (Unicode zero-width space) characters from the appdata file, because those characters break libappstream-glib.
+---
+ data/com.github.luizaugustomm.tomato.appdata.xml | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+diff --git a/data/com.github.luizaugustomm.tomato.appdata.xml b/data/com.github.luizaugustomm.tomato.appdata.xml
+index 581adbb..b8c32a5 100644
+--- a/data/com.github.luizaugustomm.tomato.appdata.xml
++++ b/data/com.github.luizaugustomm.tomato.appdata.xml
+@@ -66,7 +66,7 @@
+          <li>Bug fixes</li>
+        </ul>
+      ⁠</description>
+-    ​ </release>
++     </release>
+ 
+       <release version="1.2.8" urgency="medium" date="2017-04-29">
+          ⁠<description>
+@@ -76,7 +76,7 @@
+              <li>Fixed minor bugs</li>
+            </ul>
+          ⁠</description>
+-     ​ </release>
++      </release>
+ 
+       <release version="1.2.7" urgency="medium" date="2017-04-11">
+          ⁠<description>
+@@ -84,7 +84,7 @@
+              <li>Fixed minor bugs</li>
+            </ul>
+          ⁠</description>
+-     ​ </release>
++      </release>
+ 
+       <release version="1.2.6" urgency="medium" date="2017-04-10">
+          ⁠<description>
+@@ -92,7 +92,7 @@
+              <li>Fixed minor bugs</li>
+            </ul>
+          ⁠</description>
+-     ​ </release>
++      </release>
+ 
+       <release version="1.2.5" urgency="medium" date="2017-04-08"/>
+ 
+@@ -103,7 +103,7 @@
+              <li>Fixed minor bugs</li>
+            </ul>
+          ⁠</description>
+-     ​ </release>
++      </release>
+ 
+       <release version="1.2.3" urgency="medium" date="2017-04-06"/>
+ 
+@@ -115,6 +115,6 @@
+              <li>Integration with AppCenter</li>
+            </ul>
+          ⁠</description>
+-     ​ </release>
++      </release>
+   </releases>
+-</component>
+\ No newline at end of file
++</component>
