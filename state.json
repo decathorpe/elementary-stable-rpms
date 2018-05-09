@@ -110,6 +110,14 @@
             "rpm_last_release": "1%{?dist}",
             "rpm_last_version": "1.5.6",
             "url_last_version": "1.5.6"
+        },
+        "41": {
+            "name": "Spice-up",
+            "package_name": "Spice-up",
+            "package_version": "1.3.2",
+            "rpm_last_release": "1%{?dist}",
+            "rpm_last_version": "1.3.2",
+            "url_last_version": "1.3.2"
         }
     }
 }
