@@ -86,6 +86,14 @@
             "rpm_last_release": "1%{?dist}",
             "rpm_last_version": "1.1.1",
             "url_last_version": "1.1.1"
+        },
+        "38": {
+            "name": "nasc",
+            "package_name": "nasc",
+            "package_version": "0.4.7",
+            "rpm_last_release": "1%{?dist}",
+            "rpm_last_version": "0.4.7",
+            "url_last_version": "0.4.7"
         }
     }
 }
