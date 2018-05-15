@@ -56,14 +56,6 @@
             "rpm_last_version": "0.1.6",
             "url_last_version": "0.1.6"
         },
-        "34": {
-            "name": "pantheon-mail",
-            "package_name": "pantheon-mail",
-            "package_version": "1.0.6",
-            "rpm_last_release": "2%{?dist}",
-            "rpm_last_version": "1.0.6",
-            "url_last_version": "1.0.6"
-        },
         "35": {
             "name": "agenda",
             "package_name": "agenda",
