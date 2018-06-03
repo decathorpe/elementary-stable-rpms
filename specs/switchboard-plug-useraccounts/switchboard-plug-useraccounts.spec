@@ -3,7 +3,7 @@
 Name:           switchboard-plug-useraccounts
 Summary:        Switchboard User Accounts Plug
 Version:        0.1.6
-Release:        3%{?dist}
+Release:        4%{?dist}
 License:        LGPLv3
 
 URL:            https://github.com/elementary/%{name}
@@ -61,6 +61,9 @@ popd
 
 
 %changelog
+* Sun Jun 03 2018 Fabio Valentini <decathorpe@gmail.com> - 0.1.6-4
+- Rebuild for fedora changes.
+
 * Fri Jan 05 2018 Fabio Valentini <decathorpe@gmail.com> - 0.1.6-3
 - Clean up .spec file.
 

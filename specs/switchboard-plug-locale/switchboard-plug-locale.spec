@@ -3,7 +3,7 @@
 Name:           switchboard-plug-locale
 Summary:        Adjust Locale settings from Switchboard
 Version:        0.2.3
-Release:        4%{?dist}
+Release:        5%{?dist}
 License:        LGPLv3
 
 URL:            https://github.com/elementary/%{name}
@@ -60,6 +60,9 @@ popd
 
 
 %changelog
+* Sun Jun 03 2018 Fabio Valentini <decathorpe@gmail.com> - 0.2.3-5
+- Rebuild for fedora changes.
+
 * Thu Jan 04 2018 Fabio Valentini <decathorpe@gmail.com> - 0.2.3-4
 - Clean up .spec file.
 
