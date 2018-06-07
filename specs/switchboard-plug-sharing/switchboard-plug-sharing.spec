@@ -2,17 +2,16 @@
 
 Name:           switchboard-plug-sharing
 Summary:        Switchboard Sharing Plug
-Version:        0.1.1
-Release:        4%{?dist}
+Version:        0.1.2
+Release:        1%{?dist}
 License:        GPLv3
 
 URL:            https://github.com/elementary/%{name}
-Source0:        https://launchpad.net/%{name}/loki/%{version}/+download/%{name}-%{version}.tar.xz
+Source0:        https://github.com/elementary/%{name}/archive/%{version}/%{name}-%{version}.tar.gz
 
-BuildRequires:  cmake
 BuildRequires:  gettext
+BuildRequires:  meson
 BuildRequires:  vala >= 0.22.0
-BuildRequires:  vala-tools
 
 BuildRequires:  pkgconfig(glib-2.0) >= 2.32
 BuildRequires:  pkgconfig(granite)
@@ -32,28 +31,27 @@ Configure the sharing of system services.
 
 
 %build
-mkdir build && pushd build
-%cmake ..
-%make_build
-popd
+%meson
+%meson_build
 
 
 %install
-pushd build
-%make_install
-popd
+%meson_install
 
-%find_lang pantheon-sharing
+%find_lang sharing-plug
 
 
-%files -f pantheon-sharing.lang
+%files -f sharing-plug.lang
 %doc AUTHORS
 %license COPYING
 
-%{_libdir}/switchboard/network/pantheon-sharing/
+%{_libdir}/switchboard/network/libsharing.so
 
 
 %changelog
+* Thu Jun 07 2018 Fabio Valentini <decathorpe@gmail.com> - 0.1.2-1
+- Update to version 0.1.2.
+
 * Fri Jan 05 2018 Fabio Valentini <decathorpe@gmail.com> - 0.1.1-4
 - Clean up .spec file.
 
