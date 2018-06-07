@@ -2,17 +2,16 @@
 
 Name:           switchboard-plug-datetime
 Summary:        Switchboard Date and Time plug
-Version:        0.1.2
-Release:        4%{?dist}
+Version:        0.1.3
+Release:        1%{?dist}
 License:        GPLv3
 
 URL:            https://github.com/elementary/%{name}
-Source0:        https://launchpad.net/%{name}/loki/%{version}/+download/%{name}-%{version}.tar.xz
+Source0:        https://github.com/elementary/%{name}/archive/%{version}/%{name}-%{version}.tar.gz
 
-BuildRequires:  cmake
 BuildRequires:  gettext
+BuildRequires:  meson
 BuildRequires:  vala >= 0.22.0
-BuildRequires:  vala-tools
 
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(granite)
@@ -32,27 +31,27 @@ A switchboard plug to configure date and time settings.
 
 
 %build
-mkdir build && pushd build
-%cmake ..
-%make_build
-popd
+%meson
+%meson_build
 
 
 %install
-pushd build
-%make_install
-popd
+%meson_install
 
-%find_lang pantheon-datetime-plug
+%find_lang datetime-plug
 
 
-%files -f pantheon-datetime-plug.lang
+%files -f datetime-plug.lang
 %doc README.md
+%license COPYING
 
-%{_libdir}/switchboard/system/pantheon-datetime/
+%{_libdir}/switchboard/system/libdatetime.so
 
 
 %changelog
+* Thu Jun 07 2018 Fabio Valentini <decathorpe@gmail.com> - 0.1.3-1
+- Update to version 0.1.3.
+
 * Thu Jan 04 2018 Fabio Valentini <decathorpe@gmail.com> - 0.1.2-4
 - Clean up .spec file.
 
