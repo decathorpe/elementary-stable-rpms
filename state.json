@@ -91,10 +91,10 @@
         "40": {
             "name": "quilter",
             "package_name": "quilter",
-            "package_version": "1.5.6",
+            "package_version": "1.6.1",
             "rpm_last_release": "1%{?dist}",
-            "rpm_last_version": "1.5.6",
-            "url_last_version": "1.5.6"
+            "rpm_last_version": "1.6.1",
+            "url_last_version": "1.6.1"
         },
         "41": {
             "name": "Spice-up",
