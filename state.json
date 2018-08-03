@@ -83,10 +83,10 @@
         "39": {
             "name": "nimbus",
             "package_name": "nimbus",
-            "package_version": "0.2.0",
+            "package_version": "0.3.1",
             "rpm_last_release": "1%{?dist}",
-            "rpm_last_version": "0.2.0",
-            "url_last_version": "0.2.0"
+            "rpm_last_version": "0.3.1",
+            "url_last_version": "0.3.1"
         },
         "40": {
             "name": "quilter",
