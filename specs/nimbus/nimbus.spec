@@ -2,7 +2,7 @@
 
 Name:           nimbus
 Summary:        Minimal weather applet
-Version:        0.3.1
+Version:        0.3.2
 Release:        1%{?dist}
 License:        GPLv2+
 
@@ -67,6 +67,9 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
+* Sat Aug 04 2018 Fabio Valentini <decathorpe@gmail.com> - 0.3.2-1
+- Update to version 0.3.2.
+
 * Fri Aug 03 2018 Fabio Valentini <decathorpe@gmail.com> - 0.3.1-1
 - Update to version 0.3.1.
 
