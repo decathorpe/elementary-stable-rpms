@@ -3,7 +3,7 @@
 Name:           nasc
 Summary:        Do maths like a normal person
 Version:        0.4.7
-Release:        2%{?dist}
+Release:        3%{?dist}
 License:        GPLv3
 
 URL:            https://github.com/parnold-x/%{name}
@@ -11,6 +11,8 @@ Source0:        https://github.com/parnold-x/%{name}/archive/%{version}/%{name}-
 
 BuildRequires:  cmake
 BuildRequires:  desktop-file-utils
+BuildRequires:  gcc
+BuildRequires:  gcc-c++
 BuildRequires:  gettext
 BuildRequires:  libappstream-glib
 BuildRequires:  vala
@@ -82,6 +84,9 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
+* Mon Aug 20 2018 Fabio Valentini <decathorpe@gmail.com> - 0.4.7-3
+- Add missing BR: gcc, gcc-c++.
+
 * Mon Aug 20 2018 Fabio Valentini <decathorpe@gmail.com> - 0.4.7-2
 - Fix installing libqalculatenasc.so.
 
