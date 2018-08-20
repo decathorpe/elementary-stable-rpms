@@ -3,7 +3,7 @@
 Name:           nasc
 Summary:        Do maths like a normal person
 Version:        0.4.7
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
 
 URL:            https://github.com/parnold-x/%{name}
@@ -24,6 +24,7 @@ BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  pkgconfig(libqalculate)
 BuildRequires:  pkgconfig(libsoup-2.4)
 
+Recommends:     gnuplot
 Requires:       hicolor-icon-theme
 
 
@@ -49,6 +50,10 @@ popd
 %install
 pushd build
 %make_install
+
+# Manually install libqalculatenasc.so, upstream CMake error
+mkdir -p %{buildroot}/%{_libdir}
+cp -pav libqalculatenasc/libqalculatenasc.so %{buildroot}/%{_libdir}/
 popd
 
 
@@ -66,6 +71,9 @@ appstream-util validate-relax --nonet \
 
 %{_bindir}/%{name}
 
+# FIXME the unversioned library is bad
+%{_libdir}/libqalculatenasc.so
+
 %{_datadir}/applications/%{appname}.desktop
 %{_datadir}/glib-2.0/schemas/%{appname}.gschema.xml
 %{_datadir}/icons/hicolor/*/apps/%{appname}.svg
@@ -74,6 +82,9 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
+* Mon Aug 20 2018 Fabio Valentini <decathorpe@gmail.com> - 0.4.7-2
+- Fix installing libqalculatenasc.so.
+
 * Tue Apr 10 2018 Fabio Valentini <decathorpe@gmail.com> - 0.4.7-1
 - Update to version 0.4.7.
 
