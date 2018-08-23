@@ -3,7 +3,7 @@
 
 Name:           Spice-up
 Summary:        Create simple and beautiful presentations on the Linux desktop
-Version:        1.5.0
+Version:        1.5.1
 Release:        1%{?dist}
 License:        GPLv3+
 
@@ -75,14 +75,16 @@ appstream-util validate-relax --nonet \
 %{_datadir}/icons/hicolor/*/apps/%{appname}*.svg
 %{_datadir}/icons/hicolor/*/mimetypes/application-x-spiceup.svg
 %{_datadir}/metainfo/%{dbusname}.appdata.xml
-%{_datadir}/mime/packages/%{appname}.mime.xml
+%{_datadir}/mime/packages/%{dbusname}.mime.xml
 
 
 %changelog
+* Thu Aug 23 2018 Fabio Valentini <decathorpe@gmail.com> - 1.5.1-1
+- Update to version 1.5.1.
+
 * Thu Aug 23 2018 Fabio Valentini <decathorpe@gmail.com> - 1.5.0-1
 - Update to version 1.5.0.
 
 * Sat Feb 24 2018 Fabio Valentini <decathorpe@gmail.com> - 1.3.2-1
 - Initial package.
-
 

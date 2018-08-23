@@ -99,9 +99,9 @@
         "41": {
             "name": "Spice-up",
             "package_name": "Spice-up",
-            "package_version": "1.5.0",
+            "package_version": "1.5.1",
             "rpm_last_release": "1%{?dist}",
-            "rpm_last_version": "1.5.0",
+            "rpm_last_version": "1.5.1",
             "url_last_version": "1.5.0"
         },
         "42": {
