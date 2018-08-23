@@ -1,8 +1,9 @@
-%global appname com.github.philip-scott.spice-up
+%global appname  com.github.philip-scott.spice-up
+%global dbusname com.github.philip_scott.spice_up
 
 Name:           Spice-up
 Summary:        Create simple and beautiful presentations on the Linux desktop
-Version:        1.3.2
+Version:        1.5.0
 Release:        1%{?dist}
 License:        GPLv3+
 
@@ -11,6 +12,8 @@ Source0:        https://github.com/Philip-Scott/%{name}/archive/%{version}/%{nam
 
 BuildRequires:  cmake
 BuildRequires:  desktop-file-utils
+BuildRequires:  gcc
+BuildRequires:  gcc-c++
 BuildRequires:  gettext
 BuildRequires:  libappstream-glib
 BuildRequires:  vala >= 0.26
@@ -21,6 +24,7 @@ BuildRequires:  pkgconfig(gtk+-3.0) >= 3.9.10
 BuildRequires:  pkgconfig(gudev-1.0)
 BuildRequires:  pkgconfig(json-glib-1.0)
 BuildRequires:  pkgconfig(libevdev)
+BuildRequires:  pkgconfig(libsoup-2.4)
 
 Requires:       hicolor-icon-theme
 
@@ -56,7 +60,7 @@ desktop-file-validate \
     %{buildroot}/%{_datadir}/applications/%{appname}.desktop
 
 appstream-util validate-relax --nonet \
-    %{buildroot}/%{_datadir}/metainfo/%{appname}.appdata.xml
+    %{buildroot}/%{_datadir}/metainfo/%{dbusname}.appdata.xml
 
 
 %files -f %{appname}.lang
@@ -70,11 +74,14 @@ appstream-util validate-relax --nonet \
 %{_datadir}/glib-2.0/schemas/%{appname}.gschema.xml
 %{_datadir}/icons/hicolor/*/apps/%{appname}*.svg
 %{_datadir}/icons/hicolor/*/mimetypes/application-x-spiceup.svg
-%{_datadir}/metainfo/%{appname}.appdata.xml
+%{_datadir}/metainfo/%{dbusname}.appdata.xml
 %{_datadir}/mime/packages/%{appname}.mime.xml
 
 
 %changelog
+* Thu Aug 23 2018 Fabio Valentini <decathorpe@gmail.com> - 1.5.0-1
+- Update to version 1.5.0.
+
 * Sat Feb 24 2018 Fabio Valentini <decathorpe@gmail.com> - 1.3.2-1
 - Initial package.
 
