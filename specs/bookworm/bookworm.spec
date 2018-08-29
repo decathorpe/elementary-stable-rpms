@@ -43,7 +43,7 @@
 Name:           bookworm
 Summary:        Simple ebook reader
 Version:        0.9.9
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
 
 URL:            https://github.com/babluboy/%{name}
@@ -51,6 +51,8 @@ Source0:        https://github.com/babluboy/%{name}/archive/%{version}/%{name}-%
 
 BuildRequires:  cmake
 BuildRequires:  desktop-file-utils
+BuildRequires:  gcc
+BuildRequires:  gcc-c++
 BuildRequires:  gettext
 BuildRequires:  libappstream-glib
 BuildRequires:  vala
@@ -116,6 +118,9 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
+* Wed Aug 29 2018 Fabio Valentini <decathorpe@gmail.com> - 0.9.9-2
+- Add missing BR: gcc, gcc-c++.
+
 * Sun Jan 21 2018 Fabio Valentini <decathorpe@gmail.com> - 0.9.9-1
 - Initial package.
 
