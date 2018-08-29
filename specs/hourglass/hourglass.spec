@@ -6,7 +6,7 @@
 Name:           hourglass
 Summary:        Simple time keeping application
 Version:        1.1.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv3
 
 URL:            https://github.com/sgpthomas/%{name}
@@ -17,6 +17,8 @@ Patch0:         00-remove-empty-releases.patch
 
 BuildRequires:  cmake
 BuildRequires:  desktop-file-utils
+BuildRequires:  gcc
+BuildRequires:  gcc-c++
 BuildRequires:  gettext
 BuildRequires:  libappstream-glib
 BuildRequires:  vala
@@ -82,6 +84,9 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
+* Wed Aug 29 2018 Fabio Valentini <decathorpe@gmail.com> - 1.1.1-2
+- Add missing BR: gcc, gcc-c++.
+
 * Mon Jan 15 2018 Fabio Valentini <decathorpe@gmail.com> - 1.1.1-1
 - Initial package.
 

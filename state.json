@@ -68,7 +68,7 @@
             "name": "hourglass",
             "package_name": "hourglass",
             "package_version": "1.1.1",
-            "rpm_last_release": "1%{?dist}",
+            "rpm_last_release": "2%{?dist}",
             "rpm_last_version": "1.1.1",
             "url_last_version": "1.1.1"
         },
