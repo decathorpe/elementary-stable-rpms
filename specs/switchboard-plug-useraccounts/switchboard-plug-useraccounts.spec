@@ -3,13 +3,15 @@
 Name:           switchboard-plug-useraccounts
 Summary:        Switchboard User Accounts Plug
 Version:        0.1.6
-Release:        4%{?dist}
+Release:        5%{?dist}
 License:        LGPLv3
 
 URL:            https://github.com/elementary/%{name}
 Source0:        https://github.com/elementary/%{name}/archive/%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires:  cmake
+BuildRequires:  gcc
+BuildRequires:  gcc-c++
 BuildRequires:  gettext
 BuildRequires:  vala >= 0.22.0
 BuildRequires:  vala-tools
@@ -61,6 +63,9 @@ popd
 
 
 %changelog
+* Wed Aug 29 2018 Fabio Valentini <decathorpe@gmail.com> - 0.1.6-5
+- Add missing BR: gcc, gcc-c++.
+
 * Sun Jun 03 2018 Fabio Valentini <decathorpe@gmail.com> - 0.1.6-4
 - Rebuild for fedora changes.
 
