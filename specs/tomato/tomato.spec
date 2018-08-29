@@ -3,7 +3,7 @@
 Name:           tomato
 Summary:        Simple, usable and efficient pomodoro app
 Version:        2.0.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv2+
 
 URL:            https://github.com/luizaugustomm/%{name}
@@ -14,6 +14,8 @@ Patch0:         00-appdata-unicode-cleanup.patch
 
 BuildRequires:  cmake
 BuildRequires:  desktop-file-utils
+BuildRequires:  gcc
+BuildRequires:  gcc-c++
 BuildRequires:  gettext
 BuildRequires:  libappstream-glib
 BuildRequires:  vala >= 0.22
@@ -73,6 +75,9 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
+* Wed Aug 29 2018 Fabio Valentini <decathorpe@gmail.com> - 2.0.2-2
+- Add missing BR: gcc, gcc-c++.
+
 * Wed Jan 31 2018 Fabio Valentini <decathorpe@gmail.com> - 2.0.2-1
 - Initial package.
 
