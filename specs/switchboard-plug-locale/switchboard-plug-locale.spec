@@ -3,13 +3,15 @@
 Name:           switchboard-plug-locale
 Summary:        Adjust Locale settings from Switchboard
 Version:        0.2.3
-Release:        5%{?dist}
+Release:        6%{?dist}
 License:        LGPLv3
 
 URL:            https://github.com/elementary/%{name}
 Source0:        https://github.com/elementary/%{name}/archive/%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires:  cmake
+BuildRequires:  gcc
+BuildRequires:  gcc-c++
 BuildRequires:  gettext
 BuildRequires:  vala >= 0.22.0
 BuildRequires:  vala-tools
@@ -60,6 +62,9 @@ popd
 
 
 %changelog
+* Wed Aug 29 2018 Fabio Valentini <decathorpe@gmail.com> - 0.2.3-6
+- Add missing BR: gcc, gcc-c++.
+
 * Sun Jun 03 2018 Fabio Valentini <decathorpe@gmail.com> - 0.2.3-5
 - Rebuild for fedora changes.
 
