@@ -3,7 +3,7 @@
 Name:           quilter
 Summary:        Focus on your writing
 Version:        1.6.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 # quilter is GPLv3
 # highlight.js is BSD
 # katex is MIT
@@ -11,9 +11,6 @@ License:        GPLv3 and BSD and MIT
 
 URL:            https://github.com/lainsce/%{name}
 Source0:        https://github.com/lainsce/%{name}/archive/%{version}/%{name}-%{version}.tar.gz
-
-# Patch the build system to not include the vapi file twice
-Patch0:         00-fix-meson-libmarkdown-error.patch
 
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
@@ -70,7 +67,7 @@ appstream-util validate-relax --nonet \
 
 %{_datadir}/applications/%{appname}.desktop
 %{_datadir}/%{appname}/
-%{_datadir}/fonts/truetype/pt-mono/PTM55FT.ttf
+%{_datadir}/fonts/truetype/quilt/QuiltMono.ttf
 %{_datadir}/glib-2.0/schemas/%{appname}.gschema.xml
 %{_datadir}/gtksourceview-3.0/styles/quilter*.xml
 %{_datadir}/icons/hicolor/*/apps/%{appname}*.svg
@@ -78,6 +75,9 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
+* Fri Sep 07 2018 Fabio Valentini <decathorpe@gmail.com> - 1.6.3-2
+- Fix build with newer vala versions.
+
 * Sat Aug 18 2018 Fabio Valentini <decathorpe@gmail.com> - 1.6.3-1
 - Update to version 1.6.3.
 
