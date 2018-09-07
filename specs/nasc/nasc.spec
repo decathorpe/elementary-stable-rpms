@@ -3,11 +3,13 @@
 Name:           nasc
 Summary:        Do maths like a normal person
 Version:        0.4.7
-Release:        3%{?dist}
+Release:        4%{?dist}
 License:        GPLv3
 
 URL:            https://github.com/parnold-x/%{name}
 Source0:        https://github.com/parnold-x/%{name}/archive/%{version}/%{name}-%{version}.tar.gz
+
+Patch0:         00-link-privately.patch
 
 BuildRequires:  cmake
 BuildRequires:  desktop-file-utils
@@ -39,7 +41,7 @@ in.
 
 
 %prep
-%autosetup
+%autosetup -p1
 
 
 %build
@@ -52,10 +54,6 @@ popd
 %install
 pushd build
 %make_install
-
-# Manually install libqalculatenasc.so, upstream CMake error
-mkdir -p %{buildroot}/%{_libdir}
-cp -pav libqalculatenasc/libqalculatenasc.so %{buildroot}/%{_libdir}/
 popd
 
 
@@ -73,9 +71,6 @@ appstream-util validate-relax --nonet \
 
 %{_bindir}/%{name}
 
-# FIXME the unversioned library is bad
-%{_libdir}/libqalculatenasc.so
-
 %{_datadir}/applications/%{appname}.desktop
 %{_datadir}/glib-2.0/schemas/%{appname}.gschema.xml
 %{_datadir}/icons/hicolor/*/apps/%{appname}.svg
@@ -84,6 +79,9 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
+* Fri Sep 07 2018 Fabio Valentini <decathorpe@gmail.com> - 0.4.7-4
+- Add patch to fix libqalculatenasc library.
+
 * Mon Aug 20 2018 Fabio Valentini <decathorpe@gmail.com> - 0.4.7-3
 - Add missing BR: gcc, gcc-c++.
 
